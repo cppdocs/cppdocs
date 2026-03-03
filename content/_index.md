@@ -1,7 +1,6 @@
 ---
 title: "Modern C++ Reference"
-description: "A fast, searchable C++ reference built from cppreference.com."
+description: "A fast, structured reference for modern C++."
 ---
 
-A static C++ reference generated from the [cppreference](https://en.cppreference.com/) offline dump.
-Browse by language section below.
+Built on cppreference data. Refined for clarity and navigation.
