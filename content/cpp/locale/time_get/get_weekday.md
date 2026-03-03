@@ -1,0 +1,112 @@
+---
+title: "std::time_get<CharT,InputIt>::get_weekday, std::time_get<CharT,InputIt>::do_get_weekday"
+source_path: "cpp/locale/time_get/get_weekday"
+header: "<locale>"
+category: "locale"
+---
+
+1) Public member function, calls the protected virtual member function do_get_weekday of the most derived class.
+
+## Declarations
+```cpp
+public:
+iter_type get_weekday( iter_type beg, iter_type end, std::ios_base& str,
+std::ios_base::iostate& err, std::tm* t ) const;
+```
+
+```cpp
+protected:
+virtual iter_type do_get_weekday( iter_type beg, iter_type end, std::ios_base& str,
+std::ios_base::iostate& err, std::tm* t ) const;
+```
+
+## Parameters
+- `beg`: iterator designating the start of the sequence to parse
+- `end`: one past the end iterator for the sequence to parse
+- `str`: a stream object that this function uses to obtain locale facets when needed, e.g. std::ctype to skip whitespace or std::collate to compare strings
+- `err`: stream error flags object that is modified by this function to indicate errors
+- `t`: pointer to the std::tm object that will hold the result of this function call
+
+## Return value
+Iterator pointing one past the last character in [beg,end) that was recognized as a part of a valid weekday name.
+
+## Notes
+This function is usually case-insensitive.
+
+If a parsing error is encountered, most implementations of this function leave *t unmodified.
+
+## Example
+```cpp
+#include <initializer_list>
+#include <iostream>
+#include <iterator>
+#include <locale>
+#include <sstream>
+#include <string_view>
+ 
+void try_get_wday(std::string_view s)
+{
+    std::cout << "Parsing the weekday out of '" << s
+              << "' in the locale " << std::locale().name() << '\n';
+    std::istringstream str{s.data()};
+    std::ios_base::iostate err{std::ios_base::goodbit};
+ 
+    std::tm t;
+    std::time_get<char> const& facet = std::use_facet<std::time_get<char>>(str.getloc());
+    std::istreambuf_iterator<char> ret = facet.get_weekday({str}, {}, str, err, &t);
+    str.setstate(err);
+    std::istreambuf_iterator<char> last{};
+ 
+    if (str)
+    {
+        std::cout << "Successfully parsed, weekday number is " << t.tm_wday;
+ 
+        if (ret != last)
+        {
+            std::cout << " Remaining content: ";
+            std::copy(ret, last, std::ostreambuf_iterator<char>(std::cout));
+        }
+        else
+            std::cout << " the input was fully consumed";
+    }
+    else
+    {
+        std::cout << "Parse failed. Unparsed string: ";
+        std::copy(ret, last, std::ostreambuf_iterator<char>(std::cout));
+    }
+ 
+    std::cout << '\n';
+}
+ 
+void demo(std::string_view locale_name, std::initializer_list<std::string_view>&& data)
+{
+    try
+    {
+        std::locale::global(std::locale(locale_name.data()));
+    }
+    catch (std::runtime_error const& ex)
+    {
+        std::cout << "Cannot setup locale: " << locale_name << "\n"
+                     "Exception: " << ex.what() << '\n';
+        return;
+    }
+ 
+    for (std::string_view const weekday : data)
+        try_get_wday(weekday);
+}
+ 
+int main()
+{
+    demo("lt_LT.utf8", {"Št", "Šeštadienis"});
+    demo("en_US.utf8", {"SATELLITE"});
+    demo("ja_JP.utf8", {"土曜日"});
+}
+```
+
+## Defect reports
+| DR | Applied to | Behavior as published | Correct behavior |
+| --- | --- | --- | --- |
+| LWG 248 | C++98 | eofbit was not set upon reaching the end iterator | sets eofbit if a valid weekday name has not been read |
+
+## See also
+- [get_time](/cpp/io/manip/get_time/)

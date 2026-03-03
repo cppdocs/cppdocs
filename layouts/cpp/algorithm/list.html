@@ -1,0 +1,199 @@
+{{ define "algorithm-hub-card" }}
+  {{ $entity := . }}
+  {{ $displayRaw := or (index $entity "display_name") (index $entity "name") (index $entity "title") (index $entity "entity_key") }}
+  {{ $display := replaceRE "^std::(ranges::)?" "" $displayRaw }}
+  {{ $url := or (index $entity "canonical_url") (index $entity "url") }}
+  {{ $since := index $entity "since" }}
+  {{ $page := site.GetPage $url }}
+  {{ $desc := "" }}
+  {{ if $page }}{{ $desc = ($page.Summary | plainify | truncate 130) }}{{ end }}
+  {{ $variantScratch := newScratch }}
+  {{ $variantScratch.Set "ranges" false }}
+  {{ $variantScratch.Set "policy" false }}
+  {{ range (index $entity "variants") }}
+    {{ with index . "family" }}
+      {{ if eq . "ranges" }}{{ $variantScratch.Set "ranges" true }}{{ end }}
+    {{ end }}
+    {{ with index . "execution_policy" }}
+      {{ if . }}{{ $variantScratch.Set "policy" true }}{{ end }}
+    {{ end }}
+  {{ end }}
+
+  <article class="algorithm-hub-card is-clickable" data-card-href="{{ $url }}" role="link" tabindex="0" onclick="if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; window.location.href='{{ $url }}';" onkeydown="if (event.key !== 'Enter' && event.key !== ' ') return; if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; event.preventDefault(); window.location.href='{{ $url }}';">
+    <div class="algorithm-hub-card-top">
+      <h3 class="algorithm-hub-card-title"><a href="{{ $url }}">{{ $display }}</a></h3>
+      <div class="algorithm-hub-badges">
+        {{ if $variantScratch.Get "ranges" }}<span class="algorithm-hub-badge algorithm-hub-badge-ranges">ranges</span>{{ end }}
+        {{ if $variantScratch.Get "policy" }}<span class="algorithm-hub-badge algorithm-hub-badge-policy">policy</span>{{ end }}
+        {{ with $since }}<span class="algorithm-hub-badge algorithm-hub-badge-since">{{ . }}</span>{{ end }}
+      </div>
+    </div>
+    {{ with $desc }}<p class="algorithm-hub-card-desc">{{ . }}</p>{{ end }}
+    <a class="algorithm-hub-link" href="{{ $url }}">Canonical reference</a>
+  </article>
+{{ end }}
+
+{{ define "algorithm-hub-row" }}
+  {{ $entity := . }}
+  {{ $displayRaw := or (index $entity "display_name") (index $entity "name") (index $entity "title") (index $entity "entity_key") }}
+  {{ $display := replaceRE "^std::(ranges::)?" "" $displayRaw }}
+  {{ $url := or (index $entity "canonical_url") (index $entity "url") }}
+  {{ $since := index $entity "since" }}
+  {{ $page := site.GetPage $url }}
+  {{ $desc := "" }}
+  {{ if $page }}{{ $desc = ($page.Summary | plainify | truncate 110) }}{{ end }}
+  {{ $variantScratch := newScratch }}
+  {{ $variantScratch.Set "ranges" false }}
+  {{ $variantScratch.Set "policy" false }}
+  {{ range (index $entity "variants") }}
+    {{ with index . "family" }}
+      {{ if eq . "ranges" }}{{ $variantScratch.Set "ranges" true }}{{ end }}
+    {{ end }}
+    {{ with index . "execution_policy" }}
+      {{ if . }}{{ $variantScratch.Set "policy" true }}{{ end }}
+    {{ end }}
+  {{ end }}
+
+  <li class="algorithm-task-item">
+    <div class="algorithm-task-main">
+      <div class="algorithm-task-heading">
+        <a class="algorithm-task-name" href="{{ $url }}">{{ $display }}</a>
+        <div class="algorithm-hub-badges algorithm-task-badges">
+          {{ if $variantScratch.Get "ranges" }}<span class="algorithm-hub-badge algorithm-hub-badge-ranges">ranges</span>{{ end }}
+          {{ if $variantScratch.Get "policy" }}<span class="algorithm-hub-badge algorithm-hub-badge-policy">policy</span>{{ end }}
+          {{ with $since }}<span class="algorithm-hub-badge algorithm-hub-badge-since">{{ . }}</span>{{ end }}
+        </div>
+      </div>
+      {{ with $desc }}<p class="algorithm-task-desc">{{ . }}</p>{{ end }}
+    </div>
+  </li>
+{{ end }}
+
+{{ define "main" }}
+{{ $path := strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink) }}
+{{ partial "breadcrumb.html" (dict "path" $path) }}
+
+{{ $data := site.Data.algorithm_index }}
+{{ $entities := index $data "entities" | default (slice) }}
+{{ $byKey := newScratch }}
+{{ range $entities }}
+  {{ $key := index . "entity_key" }}
+  {{ if $key }}{{ $byKey.SetInMap "entities" $key . }}{{ end }}
+{{ end }}
+{{ $entityMap := $byKey.Get "entities" | default dict }}
+
+{{ $coreKeys := slice "sort" "stable_sort" "find" "lower_bound" "transform" "copy" "remove" "partition" "merge" "accumulate" }}
+{{ $coreScratch := newScratch }}
+{{ range $coreKeys }}
+  {{ with index $entityMap . }}{{ $coreScratch.Add "items" (slice .) }}{{ end }}
+{{ end }}
+{{ $coreItems := $coreScratch.Get "items" | default (slice) }}
+
+{{ $categoryScratch := newScratch }}
+{{ range $entities }}
+  {{ $category := or (index . "category") "utility" }}
+  {{ $categoryScratch.Add (printf "cat:%s" $category) (slice .) }}
+{{ end }}
+
+{{ $sortingOrdering := sort ($categoryScratch.Get "cat:sorting_ordering" | default (slice)) "display_name" }}
+{{ $searching := sort ($categoryScratch.Get "cat:searching" | default (slice)) "display_name" }}
+{{ $modifyingSequences := sort ($categoryScratch.Get "cat:modifying_sequences" | default (slice)) "display_name" }}
+{{ $partitioning := sort ($categoryScratch.Get "cat:partitioning" | default (slice)) "display_name" }}
+{{ $setOps := sort ($categoryScratch.Get "cat:set_operations" | default (slice)) "display_name" }}
+{{ $numeric := sort ($categoryScratch.Get "cat:numeric" | default (slice)) "display_name" }}
+{{ $comparisonMinMax := sort ($categoryScratch.Get "cat:comparison_min_max" | default (slice)) "display_name" }}
+{{ $heap := sort ($categoryScratch.Get "cat:heap" | default (slice)) "display_name" }}
+{{ $permutations := sort ($categoryScratch.Get "cat:permutations" | default (slice)) "display_name" }}
+{{ $cCompat := sort ($categoryScratch.Get "cat:c_compat" | default (slice)) "display_name" }}
+{{ $panels := slice
+  (dict "title" "Searching and lookup" "key" "searching" "items" $searching)
+  (dict "title" "Sorting and ordering" "key" "sorting_ordering" "items" $sortingOrdering)
+  (dict "title" "Modifying sequences" "key" "modifying_sequences" "items" $modifyingSequences)
+  (dict "title" "Partitioning" "key" "partitioning" "items" $partitioning)
+  (dict "title" "Set operations and merge" "key" "set_operations" "items" $setOps)
+  (dict "title" "Numeric and scans" "key" "numeric" "items" $numeric)
+  (dict "title" "Comparison and min/max" "key" "comparison_min_max" "items" $comparisonMinMax)
+  (dict "title" "Heap and priority structure" "key" "heap" "items" $heap)
+  (dict "title" "Permutations" "key" "permutations" "items" $permutations)
+  (dict "title" "C compatibility" "key" "c_compat" "items" $cCompat)
+}}
+{{ $panelCols := newScratch }}
+{{ $panelCols.Set "leftCount" 0 }}
+{{ $panelCols.Set "rightCount" 0 }}
+{{ range $panel := $panels }}
+  {{ $itemCount := len (index $panel "items") }}
+  {{ if le ($panelCols.Get "leftCount") ($panelCols.Get "rightCount") }}
+    {{ $panelCols.Add "left" (slice $panel) }}
+    {{ $panelCols.Set "leftCount" (add ($panelCols.Get "leftCount") $itemCount) }}
+  {{ else }}
+    {{ $panelCols.Add "right" (slice $panel) }}
+    {{ $panelCols.Set "rightCount" (add ($panelCols.Get "rightCount") $itemCount) }}
+  {{ end }}
+{{ end }}
+{{ $leftPanels := $panelCols.Get "left" | default (slice) }}
+{{ $rightPanels := $panelCols.Get "right" | default (slice) }}
+
+<section class="section-hero algorithm-hub-hero">
+  <p class="section-kicker">Section hub</p>
+  <h1>{{ .Title }}</h1>
+  <div class="section-intro algorithm-hub-intro">
+    {{ .Content }}
+    <p>This hub groups algorithms by task first, then points back to the canonical reference page. Ranges forms and execution-policy overloads stay attached to the same conceptual item.</p>
+  </div>
+</section>
+
+<section class="algorithm-hub-section" aria-labelledby="algorithm-core-title">
+  <div class="algorithm-hub-section-head">
+    <h2 id="algorithm-core-title">Core algorithms</h2>
+    <p>Start here for the small set of algorithms that anchor most day-to-day work: ordering, searching, transformation, partitioning, and numeric accumulation.</p>
+  </div>
+  <div class="algorithm-core-grid">
+    {{ range $coreItems }}{{ template "algorithm-hub-card" . }}{{ end }}
+  </div>
+</section>
+
+<section class="algorithm-hub-section" aria-labelledby="algorithm-task-title">
+  <div class="algorithm-hub-section-head">
+    <h2 id="algorithm-task-title">Full index by task</h2>
+    <p>Each panel groups one algorithm family and keeps the rows compact enough to scan like an index rather than a card wall.</p>
+  </div>
+  <div class="algorithm-index-panels">
+    <div class="algorithm-index-column">
+      {{ range $leftPanels }}
+        <section class="algorithm-index-panel" data-category="{{ index . "key" }}" data-expanded="true">
+          <div class="algorithm-index-panel-head">
+            <h3>{{ index . "title" }}</h3>
+            <div class="algorithm-index-panel-meta">
+              <span class="algorithm-index-count">{{ len (index . "items") }}</span>
+              <button
+                class="algorithm-index-toggle"
+                type="button"
+                aria-expanded="true"
+              >Hide</button>
+            </div>
+          </div>
+          <ul class="algorithm-task-list">{{ range (index . "items") }}{{ template "algorithm-hub-row" . }}{{ end }}</ul>
+        </section>
+      {{ end }}
+    </div>
+    <div class="algorithm-index-column">
+      {{ range $rightPanels }}
+        <section class="algorithm-index-panel" data-category="{{ index . "key" }}" data-expanded="true">
+          <div class="algorithm-index-panel-head">
+            <h3>{{ index . "title" }}</h3>
+            <div class="algorithm-index-panel-meta">
+              <span class="algorithm-index-count">{{ len (index . "items") }}</span>
+              <button
+                class="algorithm-index-toggle"
+                type="button"
+                aria-expanded="true"
+              >Hide</button>
+            </div>
+          </div>
+          <ul class="algorithm-task-list">{{ range (index . "items") }}{{ template "algorithm-hub-row" . }}{{ end }}</ul>
+        </section>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

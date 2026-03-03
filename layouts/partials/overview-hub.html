@@ -1,0 +1,78 @@
+{{ $page := . }}
+{{ $extraClass := "" }}
+{{ with .page }}
+  {{ $page = . }}
+{{ end }}
+{{ with .extraClass }}
+  {{ $extraClass = . }}
+{{ end }}
+{{ $sourcePath := $page.Params.source_path | default "" }}
+{{ $isCppOverview := or (strings.HasPrefix $sourcePath "cpp") (eq $page.RelPermalink "/cpp/") (strings.HasPrefix $page.RelPermalink "/cpp/") }}
+<article class="overview-page{{ with $page.Params.overview_page_class }} {{ . }}{{ end }}{{ with $extraClass }} {{ . }}{{ end }}">
+  {{- with $page.Params.source_path -}}
+    {{ partial "breadcrumb.html" (dict "path" .) }}
+  {{- end }}
+  <div class="page-heading">
+    <h1>{{ $page.Title }}</h1>
+    <button
+      class="pin-toggle"
+      type="button"
+      data-pin-url="{{ $page.RelPermalink }}"
+      data-pin-title="{{ $page.Title }}"
+      aria-pressed="false"
+    >
+      ☆ Pin
+    </button>
+  </div>
+  {{ with $page.Params.description }}
+    <p class="overview-lead">{{ . }}</p>
+  {{ end }}
+  {{ if $isCppOverview }}
+    {{ partial "min-standard-status.html" (dict
+      "scope" "cpp"
+      "kind" "overview"
+      "hint" ($page.Params.min_standard_status_hint | default "")
+    ) }}
+  {{ end }}
+  {{ $toc := $page.TableOfContents }}
+  {{ if $toc }}
+    <aside class="page-local-toc" aria-label="On this page">
+      <p class="page-local-toc-title">On this page</p>
+      {{ $toc }}
+    </aside>
+  {{ end }}
+  <div class="overview-content">
+    {{ $page.Content }}
+  </div>
+  <script>
+    (function () {
+      var root = document.currentScript && document.currentScript.previousElementSibling;
+      if (!root) return;
+      root.querySelectorAll(".section-card").forEach(function (card) {
+        var link = card.querySelector(".card-title a[href]");
+        if (!link) return;
+        var href = link.getAttribute("href");
+        if (!href) return;
+
+        card.classList.add("is-clickable");
+        card.setAttribute("data-card-href", href);
+        card.setAttribute("role", "link");
+        card.setAttribute("tabindex", "0");
+
+        card.onclick = function (event) {
+          var target = event.target instanceof Element ? event.target : event.target && event.target.parentElement;
+          if (target && target.closest("a, button, input, textarea, select, summary, label, details")) return;
+          window.location.href = href;
+        };
+
+        card.onkeydown = function (event) {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          var target = event.target instanceof Element ? event.target : event.target && event.target.parentElement;
+          if (target && target.closest("a, button, input, textarea, select, summary, label, details")) return;
+          event.preventDefault();
+          window.location.href = href;
+        };
+      });
+    })();
+  </script>
+</article>

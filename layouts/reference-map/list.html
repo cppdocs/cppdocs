@@ -1,0 +1,122 @@
+{{ define "main" }}
+{{ $path := strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink) }}
+{{ partial "breadcrumb.html" (dict "path" $path) }}
+
+<section class="section-hero reference-map-hero">
+  <p class="section-kicker">Navigation</p>
+  <h1>{{ .Title }}</h1>
+  {{ if .Content }}<div class="section-intro">{{ .Content }}</div>{{ end }}
+</section>
+
+{{ partial "min-standard-status.html" (dict
+  "scope" "cpp"
+  "kind" "reference-map"
+  "copy" "Showing C++ items available in"
+  "hint" "On this page, the filter mainly affects C++ groups and entries that carry standard metadata."
+) }}
+
+{{ $map := site.Data.reference_map | default dict }}
+{{ $domains := index $map "domains" | default dict }}
+{{ $cppDomain := or (index $domains "cpp") (index $map "cpp") (index $map "cxx") (index $map "cplusplus") }}
+{{ $cDomain := or (index $domains "c") (index $map "c") (index $map "c_language") (index $map "clib") }}
+{{ $cpp := or (index $cppDomain "areas") $cppDomain }}
+{{ $c := or (index $cDomain "areas") $cDomain }}
+
+{{ if not (or $cpp $c) }}
+  <section class="refmap-empty">
+    <p>Reference map data is missing. Add <code>data/reference_map.json</code> to populate this page.</p>
+  </section>
+{{ end }}
+
+<section class="refmap-lang" aria-labelledby="refmap-cpp-title">
+  <div class="refmap-lang-head">
+    <h2 id="refmap-cpp-title">C++</h2>
+    <button type="button" class="refmap-toolbar-btn" data-refmap-toggle aria-pressed="false">Collapse all</button>
+  </div>
+  {{ if $cpp }}
+  <div class="refmap-grid">
+    {{ range $cpp }}
+      {{ $group := . }}
+      {{ $groupTitle := or (index $group "title") (index $group "name") (index $group "label") }}
+      {{ $groupUrl := or (index $group "url") (index $group "path") (index $group "href") }}
+      {{ $groupSince := index $group "since" }}
+      {{ $entries := or (index $group "links") (index $group "entries") (index $group "items") }}
+      <details class="refmap-card" open{{ if $groupSince }} data-min-standard-item data-min-standard-scope="cpp" data-min-standard-path="{{ $groupUrl }}" data-min-standard-since="{{ $groupSince }}"{{ end }}>
+        <summary class="refmap-card-head">
+          {{ if $groupUrl }}
+            <a href="{{ $groupUrl }}">{{ $groupTitle }}</a>
+          {{ else }}
+            <span>{{ $groupTitle }}</span>
+          {{ end }}
+          {{ with $groupSince }}<span class="refmap-since">{{ . }}</span>{{ end }}
+        </summary>
+        {{ with $entries }}
+          <ul class="refmap-links">
+            {{ range . }}
+              {{ $entry := . }}
+              {{ $entryTitle := or (index $entry "title") (index $entry "name") (index $entry "label") }}
+              {{ $entryUrl := or (index $entry "url") (index $entry "path") (index $entry "href") }}
+              {{ $entrySince := index $entry "since" }}
+              {{ if and $entryTitle $entryUrl }}
+                <li{{ if $entrySince }} data-min-standard-item data-min-standard-scope="cpp" data-min-standard-path="{{ $entryUrl }}" data-min-standard-since="{{ $entrySince }}"{{ end }}>
+                  <a href="{{ $entryUrl }}">{{ $entryTitle }}</a>
+                  {{ with $entrySince }}<span class="refmap-since">{{ . }}</span>{{ end }}
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        {{ end }}
+      </details>
+    {{ end }}
+  </div>
+  {{ else }}
+    <p class="refmap-empty-inline">No C++ entries found in <code>data/reference_map.json</code>.</p>
+  {{ end }}
+</section>
+
+<section class="refmap-lang" aria-labelledby="refmap-c-title">
+  <div class="refmap-lang-head">
+    <h2 id="refmap-c-title">C</h2>
+  </div>
+  {{ if $c }}
+  <div class="refmap-grid">
+    {{ range $c }}
+      {{ $group := . }}
+      {{ $groupTitle := or (index $group "title") (index $group "name") (index $group "label") }}
+      {{ $groupUrl := or (index $group "url") (index $group "path") (index $group "href") }}
+      {{ $groupSince := index $group "since" }}
+      {{ $entries := or (index $group "links") (index $group "entries") (index $group "items") }}
+      <details class="refmap-card" open>
+        <summary class="refmap-card-head">
+          {{ if $groupUrl }}
+            <a href="{{ $groupUrl }}">{{ $groupTitle }}</a>
+          {{ else }}
+            <span>{{ $groupTitle }}</span>
+          {{ end }}
+          {{ with $groupSince }}<span class="refmap-since">{{ . }}</span>{{ end }}
+        </summary>
+        {{ with $entries }}
+          <ul class="refmap-links">
+            {{ range . }}
+              {{ $entry := . }}
+              {{ $entryTitle := or (index $entry "title") (index $entry "name") (index $entry "label") }}
+              {{ $entryUrl := or (index $entry "url") (index $entry "path") (index $entry "href") }}
+              {{ $entrySince := index $entry "since" }}
+              {{ if and $entryTitle $entryUrl }}
+                <li>
+                  <a href="{{ $entryUrl }}">{{ $entryTitle }}</a>
+                  {{ with $entrySince }}<span class="refmap-since">{{ . }}</span>{{ end }}
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        {{ end }}
+      </details>
+    {{ end }}
+  </div>
+  {{ else }}
+    <p class="refmap-empty-inline">No C entries found in <code>data/reference_map.json</code>.</p>
+  {{ end }}
+</section>
+
+{{ end }}

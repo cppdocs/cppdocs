@@ -1,0 +1,24 @@
+---
+title: "operator==,!=(std::unordered_set)"
+source_path: "cpp/container/unordered_set/operator_cmp"
+category: "container"
+---
+
+Compares the contents of two unordered containers.
+
+## Declarations
+```cpp
+template< class Key, class Hash, class KeyEqual, class Alloc >
+bool operator==( const std::unordered_set<Key, Hash, KeyEqual, Alloc>& lhs,
+const std::unordered_set<Key, Hash, KeyEqual, Alloc>& rhs );
+```
+
+```cpp
+template< class Key, class Hash, class KeyEqual, class Alloc >
+bool operator!=( const std::unordered_set<Key, Hash, KeyEqual, Alloc>& lhs,
+const std::unordered_set<Key, Hash, KeyEqual, Alloc>& rhs );
+```
+_(until C++20)_
+
+## Parameters
+- `lhs, rhs`: unordered containers to compare

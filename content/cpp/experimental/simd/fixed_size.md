@@ -1,0 +1,28 @@
+---
+title: "std::experimental::simd_abi::fixed_size"
+source_path: "cpp/experimental/simd/fixed_size"
+header: "<experimental/simd>"
+category: "experimental"
+---
+
+The simd_abi::fixed_size<N> tag type ensures data-parallel types to store and manipulate N elements (i.e. simd<T, simd_abi::fixed_size<N>>::size() returns N). An implementation shall support at least all N ∈ [1,32]. Additionally, for every supported simd<T, Abi>, where Abi is an implementation-defined ABI tag, N = simd<T, Abi>::size() shall be supported.
+
+## Declarations
+```cpp
+template< int N >
+struct fixed_size {};
+```
+_(parallelism TS v2)_
+
+## Notes
+An implementation may choose to forego ABI compatibility between differently compiled translation units for simd and simd_mask instantiations using the same simd_abi::fixed_size<N> tag. Otherwise, the efficiency of simd<T, Abi> is likely to be better than simd<T, fixed_size<simd_size_v<T, Abi>>> (with Abi not an instance of simd_abi::fixed_size).
+
+## Example
+This section is incompleteReason: no example
+
+## See also
+- [max_fixed_size](/cpp/experimental/simd/max_fixed_size/)
+- [scalar](/cpp/experimental/simd/scalar/)
+- [compatible](/cpp/experimental/simd/compatible/)
+- [native](/cpp/experimental/simd/native/)
+- [deducededuce_t](/cpp/experimental/simd/deduce/)

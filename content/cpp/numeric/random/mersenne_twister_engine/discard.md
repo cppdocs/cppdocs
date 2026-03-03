@@ -1,0 +1,21 @@
+---
+title: "std::mersenne_twister_engine<UIntType,w,n,m,r,a,u,d,s,b,t,c,l,f>::discard"
+source_path: "cpp/numeric/random/mersenne_twister_engine/discard"
+category: "numeric"
+---
+
+Advances the internal state by z times.
+
+## Declarations
+```cpp
+void discard( unsigned long long z );
+```
+
+## Parameters
+- `z`: integer value specifying the number of times to advance the state by
+
+## Notes
+This function can use “fast jump” algorithms which advance the state by many steps (order of millions) without calculating intermediate state transitions can be used instead of naive loops that calls [operator()](/cpp/numeric/random/mersenne_twister_engine/operator/) z times and discarding the result.
+
+## See also
+- [operator()](/cpp/numeric/random/mersenne_twister_engine/operator/)

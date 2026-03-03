@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem("cppdocs.theme") || "auto";
+          var ligatures = localStorage.getItem("cppdocs.ligatures") || "on";
+          var minStandard = localStorage.getItem("cppdocs.min_standard") || "any";
+          document.documentElement.setAttribute("data-theme", theme);
+          document.documentElement.setAttribute("data-ligatures", ligatures);
+          document.documentElement.setAttribute("data-min-standard", minStandard);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "auto");
+          document.documentElement.setAttribute("data-ligatures", "on");
+          document.documentElement.setAttribute("data-min-standard", "any");
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+    <link rel="shortcut icon" href="/favicon.png?v=2" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body
+    data-page-title="{{ .Title }}"
+    data-page-header="{{ with .Params.header }}{{ . }}{{ end }}"
+    data-page-since="{{ with .Params.since }}{{ . }}{{ end }}"
+    data-source-path="{{ if .Params.source_path }}{{ .Params.source_path }}{{ else }}{{ strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink) }}{{ end }}"
+    data-page-kind="{{ .Kind }}"
+  >
+    <div id="top-bar" class="top-bar">
+      <div class="top-bar-left">
+        <div class="top-nav">
+          <button
+            id="top-nav-btn"
+            class="top-brand top-nav-btn"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            title="Open navigation"
+          >
+            <span class="badge-ns">std</span><span class="badge-op">::</span><span class="badge-name">docs</span>
+            <span class="top-nav-caret" aria-hidden="true">▼</span>
+          </button>
+          <div id="top-nav-menu" class="top-nav-menu" hidden>
+            <a class="top-nav-link" href="/cpp/">C++ reference</a>
+            <a class="top-nav-link" href="/c/">C reference</a>
+            <a class="top-nav-link" href="/reference-map/">Reference map</a>
+            <div class="top-nav-separator" aria-hidden="true"></div>
+            <a class="top-nav-link" href="/cpp/ranges/">Ranges</a>
+            <a class="top-nav-link" href="/cpp/algorithm/">Algorithms</a>
+            <a class="top-nav-link" href="/cpp/container/">Containers</a>
+            <a class="top-nav-link" href="/cpp/string/">Strings</a>
+            <a class="top-nav-link" href="/cpp/io/">Input/output</a>
+          </div>
+        </div>
+        <span id="top-context" class="top-context"></span>
+      </div>
+      <div class="top-bar-center">
+        <div class="search-widget top-search" data-search-scope="global">
+          <label class="sr-only" for="top-search-input">Search</label>
+          <input id="top-search-input" class="search-input" type="search" placeholder="Search..." autocomplete="off" />
+          <div class="search-dropdown" hidden>
+            <ul class="search-results"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="min-standard-control">
+          <label for="top-min-standard" class="min-standard-label">Min standard</label>
+          <select id="top-min-standard" class="min-standard-select" aria-label="Minimum C++ standard">
+            <option value="any">Any</option>
+            <option value="c++11">C++11</option>
+            <option value="c++14">C++14</option>
+            <option value="c++17">C++17</option>
+            <option value="c++20">C++20</option>
+            <option value="c++23">C++23</option>
+            <option value="c++26">C++26</option>
+          </select>
+        </div>
+        <button id="top-pinned-btn" class="icon-btn" type="button" title="Pinned" aria-label="Pinned">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>
+          </svg>
+        </button>
+        <button id="top-theme-btn" class="icon-btn" type="button" title="Theme" aria-label="Theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 5h4"/>
+            <path d="M20 3v4"/>
+            <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/>
+          </svg>
+        </button>
+        <button id="top-settings-btn" class="icon-btn" type="button" aria-haspopup="true" aria-expanded="false" title="Settings" aria-label="Settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </button>
+        <div id="settings-menu" class="settings-menu" hidden>
+          <section class="settings-group">
+            <p class="settings-title">Theme</p>
+            <div class="segmented" role="group" aria-label="Theme mode">
+              <button type="button" data-theme-choice="auto">Auto</button>
+              <button type="button" data-theme-choice="dark">Dark</button>
+              <button type="button" data-theme-choice="light">Light</button>
+            </div>
+          </section>
+          <section class="settings-group">
+            <p class="settings-title">Keyboard</p>
+            <div class="segmented" role="group" aria-label="Keyboard mode">
+              <button type="button" data-keys-choice="default">Default</button>
+              <button type="button" data-keys-choice="vim">Vim</button>
+            </div>
+            <p class="settings-help">Press <code>?</code> for shortcuts.</p>
+          </section>
+          <section class="settings-group">
+            <p class="settings-title">Code Ligatures</p>
+            <div class="segmented" role="group" aria-label="Code ligatures">
+              <button type="button" data-liga-choice="on">On</button>
+              <button type="button" data-liga-choice="off">Off</button>
+            </div>
+          </section>
+          <section class="settings-group">
+            <p class="settings-title">Pinned</p>
+            <div id="pinned-list" class="pinned-list"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
+      <div class="build-info">
+        Build: {{ now.Format "2006-01-02" }} · Pages: {{ len .Site.RegularPages }}
+      </div>
+    </footer>
+    <dialog id="shortcuts-modal" class="shortcuts-modal" hidden>
+      <h3>Keyboard shortcuts</h3>
+      <ul>
+        <li><code>?</code> Open shortcuts</li>
+        <li><code>S</code> Open bookmark spotlight</li>
+        <li><code>b</code> Toggle bookmark</li>
+        <li><code>/</code> Focus search</li>
+        <li><code>Esc</code> Close dialogs/menus</li>
+        <li><code>j</code> Scroll down (Vim mode)</li>
+        <li><code>k</code> Scroll up (Vim mode)</li>
+        <li><code>g g</code> Go to top (Vim mode)</li>
+        <li><code>G</code> Go to bottom (Vim mode)</li>
+      </ul>
+      <button type="button" class="shortcuts-close">Close</button>
+    </dialog>
+    <dialog id="pinned-modal" class="shortcuts-modal" hidden></dialog>
+    <dialog id="bookmark-spotlight" class="shortcuts-modal spotlight-modal" hidden>
+      <div class="spotlight-head">
+        <h3>Bookmarks</h3>
+        <button type="button" class="shortcuts-close spotlight-close">Close</button>
+      </div>
+      <input type="search" class="spotlight-input" placeholder="Filter bookmarks..." autocomplete="off" />
+      <p class="spotlight-help">Enter: open · ↑/↓: move · Backspace/Delete: remove selected when query is empty</p>
+      <ul class="spotlight-results" role="listbox" aria-label="Bookmarks"></ul>
+    </dialog>
+    <script src="/js/min-standard.js" defer></script>
+    <script src="/js/search.js" defer></script>
+    <script src="/js/ui.js" defer></script>
+  </body>
+</html>

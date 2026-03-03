@@ -1,0 +1,20 @@
+---
+title: "std::chrono::operator==(std::chrono::zoned_time)"
+source_path: "cpp/chrono/zoned_time/operator_cmp"
+header: "<chrono>"
+category: "chrono"
+since: "C++20"
+---
+
+Compares the two zoned_time values x and y. Two zoned_time objects compare equal if their time points and time zone pointers both compare equal according to operator==.
+
+## Declarations
+```cpp
+template< class Duration1, class Duration2, class TimeZonePtr >
+bool operator==( const std::chrono::zoned_time<Duration1, TimeZonePtr>& x,
+const std::chrono::zoned_time<Duration2, TimeZonePtr>& y );
+```
+_(since C++20)_
+
+## Return value
+x.get_time_zone() == y.get_time_zone() && x.get_sys_time() == y.get_sys_time(), except that the comparisons are performed on the nonstatic data members of x and y directly and no copying is performed.

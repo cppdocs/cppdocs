@@ -1,0 +1,268 @@
+{
+  "overrides": {
+    "elements_view": {
+      "entity_key": "elements",
+      "category": "transforming",
+      "canonical_url": "/cpp/ranges/elements_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/keys_view/",
+          "title": "keys_view"
+        },
+        {
+          "url": "/cpp/ranges/values_view/",
+          "title": "values_view"
+        }
+      ],
+      "notes": "Base projection primitive; keep separate from keys/values but anchor on the top-level adaptor page."
+    },
+    "keys_view": {
+      "entity_key": "keys",
+      "category": "transforming",
+      "canonical_url": "/cpp/ranges/keys_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/elements_view/",
+          "title": "elements_view"
+        },
+        {
+          "url": "/cpp/ranges/values_view/",
+          "title": "values_view"
+        }
+      ],
+      "notes": "keys is a user-facing projection name and should not collapse into elements_view in hub navigation."
+    },
+    "values_view": {
+      "entity_key": "values",
+      "category": "transforming",
+      "canonical_url": "/cpp/ranges/values_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/elements_view/",
+          "title": "elements_view"
+        },
+        {
+          "url": "/cpp/ranges/keys_view/",
+          "title": "keys_view"
+        }
+      ],
+      "notes": "values is a user-facing projection name and should not collapse into elements_view in hub navigation."
+    },
+    "join_view": {
+      "entity_key": "join",
+      "category": "combining",
+      "canonical_url": "/cpp/ranges/join_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/join_with_view/",
+          "title": "join_with_view"
+        },
+        {
+          "url": "/cpp/ranges/split_view/",
+          "title": "split_view"
+        }
+      ],
+      "notes": "Flattening behavior is the conceptual entry; iterator internals are related pages, not primary navigation."
+    },
+    "join_with_view": {
+      "entity_key": "join_with",
+      "category": "combining",
+      "canonical_url": "/cpp/ranges/join_with_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/join_view/",
+          "title": "join_view"
+        },
+        {
+          "url": "/cpp/ranges/split_view/",
+          "title": "split_view"
+        }
+      ],
+      "notes": "Delimiter-aware flattening needs an explicit canonical root because helper mechanics are noisy."
+    },
+    "adjacent_view": {
+      "entity_key": "adjacent",
+      "category": "filtering_slicing",
+      "canonical_url": "/cpp/ranges/adjacent_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/slide_view/",
+          "title": "slide_view"
+        },
+        {
+          "url": "/cpp/ranges/adjacent_transform_view/",
+          "title": "adjacent_transform_view"
+        }
+      ],
+      "notes": "Treat adjacent as windowing/slicing rather than combining."
+    },
+    "adjacent_transform_view": {
+      "entity_key": "adjacent_transform",
+      "category": "transforming",
+      "canonical_url": "/cpp/ranges/adjacent_transform_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/adjacent_view/",
+          "title": "adjacent_view"
+        },
+        {
+          "url": "/cpp/ranges/transform_view/",
+          "title": "transform_view"
+        }
+      ],
+      "notes": "Treat adjacent_transform as transform-first even though it is built on a windowing primitive."
+    },
+    "chunk_view": {
+      "entity_key": "chunk",
+      "category": "filtering_slicing",
+      "canonical_url": "/cpp/ranges/chunk_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/slide_view/",
+          "title": "slide_view"
+        },
+        {
+          "url": "/cpp/ranges/stride_view/",
+          "title": "stride_view"
+        }
+      ],
+      "notes": "chunk_view has the worst outer/inner iterator fragmentation, so canonical entry must be pinned."
+    },
+    "transform_view": {
+      "entity_key": "transform",
+      "category": "transforming",
+      "canonical_url": "/cpp/ranges/transform_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/algorithm/ranges/transform/",
+          "title": "ranges::transform algorithm"
+        },
+        {
+          "url": "/cpp/ranges/zip_transform_view/",
+          "title": "zip_transform_view"
+        }
+      ],
+      "notes": "transform should stay on the adaptor root despite deep iterator/sentinel subtrees."
+    },
+    "zip_view": {
+      "entity_key": "zip",
+      "category": "combining",
+      "canonical_url": "/cpp/ranges/zip_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/zip_transform_view/",
+          "title": "zip_transform_view"
+        },
+        {
+          "url": "/cpp/ranges/elements_view/",
+          "title": "elements_view"
+        }
+      ],
+      "notes": "zip is a combine primitive; do not let subtype mechanics choose the canonical URL."
+    },
+    "zip_transform_view": {
+      "entity_key": "zip_transform",
+      "category": "combining",
+      "canonical_url": "/cpp/ranges/zip_transform_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/zip_view/",
+          "title": "zip_view"
+        },
+        {
+          "url": "/cpp/ranges/transform_view/",
+          "title": "transform_view"
+        }
+      ],
+      "notes": "zip_transform stays in combining because multi-range composition is still the dominant task framing."
+    },
+    "enumerate_view": {
+      "entity_key": "enumerate",
+      "category": "transforming",
+      "canonical_url": "/cpp/ranges/enumerate_view/",
+      "notes": "enumerate adds index context and is best grouped with transform-style adaptors."
+    },
+    "slide_view": {
+      "entity_key": "slide",
+      "category": "filtering_slicing",
+      "canonical_url": "/cpp/ranges/slide_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/chunk_view/",
+          "title": "chunk_view"
+        },
+        {
+          "url": "/cpp/ranges/adjacent_view/",
+          "title": "adjacent_view"
+        }
+      ],
+      "notes": "slide is a windowing operation and belongs with slicing, not with utility internals."
+    },
+    "chunk_by_view": {
+      "entity_key": "chunk_by",
+      "category": "filtering_slicing",
+      "canonical_url": "/cpp/ranges/chunk_by_view/",
+      "notes": "chunk_by groups adjacent elements by predicate, but the user entry is still the adaptor root."
+    },
+    "stride_view": {
+      "entity_key": "stride",
+      "category": "filtering_slicing",
+      "canonical_url": "/cpp/ranges/stride_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/chunk_view/",
+          "title": "chunk_view"
+        },
+        {
+          "url": "/cpp/ranges/drop_view/",
+          "title": "drop_view"
+        }
+      ],
+      "notes": "stride is a slicing adaptor; pin the canonical page to avoid helper/member drift."
+    },
+    "lazy_split_view": {
+      "entity_key": "lazy_split",
+      "category": "filtering_slicing",
+      "canonical_url": "/cpp/ranges/lazy_split_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/split_view/",
+          "title": "split_view"
+        },
+        {
+          "url": "/cpp/ranges/join_view/",
+          "title": "join_view"
+        }
+      ],
+      "notes": "lazy_split has helper/member fragmentation; the conceptual entry is the top-level adaptor page."
+    },
+    "split_view": {
+      "entity_key": "split",
+      "category": "filtering_slicing",
+      "canonical_url": "/cpp/ranges/split_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/lazy_split_view/",
+          "title": "lazy_split_view"
+        },
+        {
+          "url": "/cpp/ranges/join_view/",
+          "title": "join_view"
+        }
+      ],
+      "notes": "split remains a task-level slicing adaptor despite its helper-heavy page tree."
+    }
+  },
+  "ambiguous_hints": {
+    "elements_view": "Projection primitive that overlaps with keys_view and values_view but should remain its own entry.",
+    "keys_view": "Alias-like specialization of elements_view, but users search for keys directly.",
+    "values_view": "Alias-like specialization of elements_view, but users search for values directly.",
+    "join_view": "Flattening could be described as combining or transforming; the hub treats it as combining.",
+    "join_with_view": "Flattening with delimiter crosses task boundaries, so explicit categorization is safer than heuristics.",
+    "adjacent_view": "Windowing has both slicing and combining flavors; the hub uses slicing.",
+    "adjacent_transform_view": "Combines windowing and mapping, so transform-first classification is an explicit UX choice.",
+    "zip_view": "zip has deep iterator/sentinel trees that should not displace the main adaptor entry.",
+    "zip_transform_view": "zip_transform spans combining and transforming, so it needs an explicit tie-break.",
+    "chunk_view": "chunk_view has the worst nested iterator tree and should always resolve to the adaptor root."
+  }
+}

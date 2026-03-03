@@ -1,0 +1,7 @@
+{{- $metaRaw := partial "instantiated-member-meta.json" . -}}
+{{- if $metaRaw -}}
+  {{- $meta := $metaRaw | transform.Unmarshal -}}
+  {{- $meta.member -}}
+{{- else -}}
+  {{- .Title -}}
+{{- end -}}

@@ -1,0 +1,186 @@
+{{ define "ranges-hub-card" }}
+  {{ $entry := .entry }}
+  {{ $dataMap := .dataMap }}
+  {{ $key := index $entry "key" }}
+  {{ $fallbackTitle := index $entry "label" }}
+  {{ $fallbackPath := index $entry "page" }}
+  {{ $fallbackDesc := index $entry "desc" }}
+  {{ $fallbackRelated := index $entry "related" }}
+  {{ $data := index $dataMap $key }}
+  {{ $page := site.GetPage $fallbackPath }}
+  {{ $title := $fallbackTitle }}
+  {{ $since := "" }}
+  {{ $desc := $fallbackDesc }}
+  {{ $url := "" }}
+
+  {{ with $page }}
+    {{ $url = .RelPermalink }}
+    {{ with .Params.since }}{{ $since = . }}{{ end }}
+    {{ if not $desc }}{{ $desc = (.Summary | plainify | truncate 140) }}{{ end }}
+  {{ end }}
+
+  {{ with $data }}
+    {{ with or (index . "short_name") (index . "name") (index . "label") (index . "title") }}{{ $title = . }}{{ end }}
+    {{ with or (index . "canonical_url") (index . "url") (index . "path") }}{{ $url = . }}{{ end }}
+    {{ with or (index . "summary") (index . "description") (index . "blurb") }}{{ $desc = . }}{{ end }}
+    {{ with index . "since" }}{{ $since = . }}{{ end }}
+  {{ end }}
+
+  <article class="ranges-hub-card">
+    <div class="ranges-card-top">
+      <h3 class="ranges-card-title"><a href="{{ $url }}">{{ $title }}</a></h3>
+      {{ with $since }}<span class="ranges-card-since">{{ . }}</span>{{ end }}
+    </div>
+    {{ with $desc }}<p class="ranges-card-desc">{{ . }}</p>{{ end }}
+    <div class="ranges-card-meta">
+      <a class="ranges-card-link" href="{{ $url }}">Canonical reference</a>
+    </div>
+    {{ with $fallbackRelated }}
+      <details class="ranges-related">
+        <summary>Related pages</summary>
+        <ul class="ranges-related-list">
+          {{ range . }}
+            <li><a href="{{ index . "url" }}">{{ index . "title" }}</a></li>
+          {{ end }}
+        </ul>
+      </details>
+    {{ end }}
+  </article>
+{{ end }}
+
+{{ define "main" }}
+{{ $path := strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink) }}
+{{ partial "breadcrumb.html" (dict "path" $path) }}
+
+{{ $entityScratch := newScratch }}
+{{ with site.Data.ranges_index }}
+  {{ $entities := . }}
+  {{ with index . "entities" }}{{ $entities = . }}{{ end }}
+  {{ range $entities }}
+    {{ $k := or (index . "entity_key") (index . "key") (index . "id") }}
+    {{ if $k }}{{ $entityScratch.SetInMap "entities" $k . }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ $dataMap := $entityScratch.Get "entities" | default dict }}
+
+{{ $core := slice
+  (dict "key" "transform" "label" "transform" "page" "/cpp/ranges/transform_view" "desc" "Apply a function to each element lazily." "related" (slice (dict "title" "ranges::transform algorithm" "url" "/cpp/algorithm/ranges/transform/") (dict "title" "zip_transform" "url" "/cpp/ranges/zip_transform_view/")))
+  (dict "key" "filter" "label" "filter" "page" "/cpp/ranges/filter_view" "desc" "Keep only elements that satisfy a predicate." "related" (slice (dict "title" "remove-if style algorithm" "url" "/cpp/algorithm/ranges/remove/") ))
+  (dict "key" "take" "label" "take" "page" "/cpp/ranges/take_view" "desc" "Keep the first N elements from a source range.")
+  (dict "key" "drop" "label" "drop" "page" "/cpp/ranges/drop_view" "desc" "Skip the first N elements and expose the rest.")
+  (dict "key" "chunk" "label" "chunk" "page" "/cpp/ranges/chunk_view" "desc" "Split a range into non-overlapping fixed-size subranges.")
+  (dict "key" "join" "label" "join" "page" "/cpp/ranges/join_view" "desc" "Flatten a range of ranges into a single lazy sequence.")
+}}
+
+{{ $taskTransforming := slice
+  (dict "key" "transform" "label" "transform" "page" "/cpp/ranges/transform_view")
+  (dict "key" "adjacent_transform" "label" "adjacent_transform" "page" "/cpp/ranges/adjacent_transform_view")
+  (dict "key" "enumerate" "label" "enumerate" "page" "/cpp/ranges/enumerate_view")
+}}
+{{ $taskFiltering := slice
+  (dict "key" "filter" "label" "filter" "page" "/cpp/ranges/filter_view")
+  (dict "key" "take" "label" "take" "page" "/cpp/ranges/take_view")
+  (dict "key" "drop" "label" "drop" "page" "/cpp/ranges/drop_view")
+  (dict "key" "split" "label" "split" "page" "/cpp/ranges/split_view")
+  (dict "key" "slide" "label" "slide" "page" "/cpp/ranges/slide_view")
+  (dict "key" "stride" "label" "stride" "page" "/cpp/ranges/stride_view")
+}}
+{{ $taskCombining := slice
+  (dict "key" "zip" "label" "zip" "page" "/cpp/ranges/zip_view")
+  (dict "key" "join" "label" "join" "page" "/cpp/ranges/join_view")
+  (dict "key" "join_with" "label" "join_with" "page" "/cpp/ranges/join_with_view")
+  (dict "key" "concat" "label" "concat" "page" "/cpp/ranges/concat_view")
+}}
+{{ $taskGenerators := slice
+  (dict "key" "iota" "label" "iota" "page" "/cpp/ranges/iota_view")
+  (dict "key" "repeat" "label" "repeat" "page" "/cpp/ranges/repeat_view")
+  (dict "key" "basic_istream" "label" "istream" "page" "/cpp/ranges/basic_istream_view")
+}}
+
+{{ $utility := slice
+  (dict "key" "all" "label" "all" "page" "/cpp/ranges/all_view" "desc" "Normalize a range into a view-compatible form.")
+  (dict "key" "common" "label" "common" "page" "/cpp/ranges/common_view" "desc" "Adapt iterator/sentinel pairs into a common-range shape.")
+  (dict "key" "ref" "label" "ref" "page" "/cpp/ranges/ref_view" "desc" "Wrap an existing range by reference.")
+  (dict "key" "owning" "label" "owning" "page" "/cpp/ranges/owning_view" "desc" "Store and expose a range with unique ownership.")
+  (dict "key" "subrange" "label" "subrange" "page" "/cpp/ranges/subrange" "desc" "Package iterator + sentinel as a view-like object.")
+  (dict "key" "keys" "label" "keys" "page" "/cpp/ranges/keys_view" "desc" "Project tuple-like elements to their key component.")
+  (dict "key" "values" "label" "values" "page" "/cpp/ranges/values_view" "desc" "Project tuple-like elements to their value component.")
+}}
+
+{{ $newEra := slice
+  (dict "key" "chunk" "label" "chunk" "page" "/cpp/ranges/chunk_view")
+  (dict "key" "slide" "label" "slide" "page" "/cpp/ranges/slide_view")
+  (dict "key" "stride" "label" "stride" "page" "/cpp/ranges/stride_view")
+  (dict "key" "zip" "label" "zip" "page" "/cpp/ranges/zip_view")
+  (dict "key" "zip_transform" "label" "zip_transform" "page" "/cpp/ranges/zip_transform_view")
+  (dict "key" "adjacent_transform" "label" "adjacent_transform" "page" "/cpp/ranges/adjacent_transform_view")
+  (dict "key" "enumerate" "label" "enumerate" "page" "/cpp/ranges/enumerate_view")
+  (dict "key" "repeat" "label" "repeat" "page" "/cpp/ranges/repeat_view")
+  (dict "key" "join_with" "label" "join_with" "page" "/cpp/ranges/join_with_view")
+  (dict "key" "concat" "label" "concat" "page" "/cpp/ranges/concat_view")
+}}
+
+<section class="section-hero ranges-hub-hero">
+  <p class="section-kicker">Section hub</p>
+  <h1>{{ .Title }}</h1>
+  <div class="section-intro ranges-hub-intro">
+    {{ .Content }}
+    <p>This hub groups the ranges library by user task rather than by raw reference tree shape. View types and adaptor objects are presented as the same conceptual item.</p>
+  </div>
+</section>
+
+<section class="ranges-hub-section" aria-labelledby="ranges-core-title">
+  <div class="ranges-hub-section-head">
+    <h2 id="ranges-core-title">Core adapters</h2>
+    <p>Start here for the adapters most people reach for first when building pipelines.</p>
+  </div>
+  <div class="ranges-hub-grid">
+    {{ range $core }}{{ template "ranges-hub-card" (dict "entry" . "dataMap" $dataMap) }}{{ end }}
+  </div>
+</section>
+
+<section class="ranges-hub-section" aria-labelledby="ranges-task-title">
+  <div class="ranges-hub-section-head">
+    <h2 id="ranges-task-title">By task</h2>
+    <p>Use task-oriented buckets when you know the operation you want, but not the exact adaptor name.</p>
+  </div>
+  <div class="ranges-task-grid">
+    <div class="ranges-task-group">
+      <h3>Transforming</h3>
+      <div class="ranges-hub-grid ranges-hub-grid-compact">{{ range $taskTransforming }}{{ template "ranges-hub-card" (dict "entry" . "dataMap" $dataMap) }}{{ end }}</div>
+    </div>
+    <div class="ranges-task-group">
+      <h3>Filtering / slicing</h3>
+      <div class="ranges-hub-grid ranges-hub-grid-compact">{{ range $taskFiltering }}{{ template "ranges-hub-card" (dict "entry" . "dataMap" $dataMap) }}{{ end }}</div>
+    </div>
+    <div class="ranges-task-group">
+      <h3>Combining</h3>
+      <div class="ranges-hub-grid ranges-hub-grid-compact">{{ range $taskCombining }}{{ template "ranges-hub-card" (dict "entry" . "dataMap" $dataMap) }}{{ end }}</div>
+    </div>
+    <div class="ranges-task-group">
+      <h3>Generators</h3>
+      <div class="ranges-hub-grid ranges-hub-grid-compact">{{ range $taskGenerators }}{{ template "ranges-hub-card" (dict "entry" . "dataMap" $dataMap) }}{{ end }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="ranges-hub-section" aria-labelledby="ranges-utility-title">
+  <div class="ranges-hub-section-head">
+    <h2 id="ranges-utility-title">Utility views</h2>
+    <p>These adapt shape, ownership, or projection rather than representing the “headline” pipeline steps.</p>
+  </div>
+  <div class="ranges-hub-grid">
+    {{ range $utility }}{{ template "ranges-hub-card" (dict "entry" . "dataMap" $dataMap) }}{{ end }}
+  </div>
+</section>
+
+<section class="ranges-hub-section" aria-labelledby="ranges-new-title">
+  <div class="ranges-hub-section-head">
+    <h2 id="ranges-new-title">New in C++23 / C++26</h2>
+    <p>A compact view of the newer adapters, with badges kept visible for quick standards filtering.</p>
+  </div>
+  <div class="ranges-hub-grid">
+    {{ range $newEra }}{{ template "ranges-hub-card" (dict "entry" . "dataMap" $dataMap) }}{{ end }}
+  </div>
+</section>
+{{ end }}

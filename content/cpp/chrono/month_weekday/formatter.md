@@ -1,0 +1,27 @@
+---
+title: "std::formatter<std::chrono::month_weekday>"
+source_path: "cpp/chrono/month_weekday/formatter"
+header: "<chrono>"
+category: "chrono"
+since: "C++20"
+---
+
+Specialization of [std::formatter](/cpp/utility/format/formatter/) that defines formatting rules for std::chrono::month_weekday.
+
+## Declarations
+```cpp
+template< class CharT >
+struct formatter<std::chrono::month_weekday, CharT>;
+```
+_(since C++20)_
+
+## Example
+This section is incompleteReason: no example
+
+## Defect reports
+| DR | Applied to | Behavior as published | Correct behavior |
+| --- | --- | --- | --- |
+| P2372R3 | C++20 | formatter used the global locale or passed locale | default "C" locale is used when L is absent |
+
+## See also
+- [format](/cpp/utility/format/format/)

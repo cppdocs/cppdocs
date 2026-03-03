@@ -1,0 +1,50 @@
+---
+title: "std::chrono::gps_clock::now"
+source_path: "cpp/chrono/gps_clock/now"
+category: "chrono"
+since: "C++20"
+---
+
+Returns a time point representing the current point in time.
+The result is calculated as if by [std::chrono::gps_clock::from_utc](/cpp/chrono/gps_clock/from_utc/)([std::chrono::utc_clock::now](/cpp/chrono/utc_clock/now/)()). Implementations may use a more accurate value of GPS time.
+
+## Declarations
+```cpp
+static std::chrono::time_point<std::chrono::gps_clock> now();
+```
+_(since C++20)_
+
+## Return value
+A time point representing the current time.
+
+## Example
+```cpp
+#include <chrono>
+#include <cstddef>
+#include <iomanip>
+#include <iostream>
+#include <numeric>
+#include <vector>
+ 
+volatile int sink; // prevents optimization
+ 
+void do_some_work(std::size_t size)
+{
+    std::vector<int> v(size, 42);
+    sink = std::accumulate(v.begin(), v.end(), 0); // ensures side effect
+}
+ 
+int main()
+{
+    std::cout << std::fixed << std::setprecision(9) << std::left;
+    for (auto size{1ull}; size < 1000'000'000ull; size *= 100)
+    {
+        const auto start = std::chrono::gps_clock::now();
+        do_some_work(size);
+        const auto end = std::chrono::gps_clock::now();
+        const std::chrono::duration<double> diff = end - start;
+        std::cout << "start = " << start << "; end = " << end << ";\n";
+        std::cout << "diff = " << diff << "; size = " << size << '\n';
+    }
+}
+```

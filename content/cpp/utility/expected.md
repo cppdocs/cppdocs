@@ -1,0 +1,83 @@
+---
+title: "std::expected"
+source_path: "cpp/utility/expected"
+header: "<expected>"
+category: "utility"
+since: "C++23"
+---
+
+The class template std::expected provides a way to represent either of two values: an expected value of type T, or an unexpected value of type E. std::expected is never valueless.
+
+## Declarations
+```cpp
+template< class T, class E >
+class expected;
+```
+_(since C++23)_
+
+```cpp
+template< class T, class E >
+requires std::is_void_v<T>
+class expected<T, E>;
+```
+_(since C++23)_
+
+## Notes
+Types with the same functionality are called [Result](https://doc.rust-lang.org/std/result/enum.Result.html) in Rust and [Either](https://hackage.haskell.org/package/base-4.17.0.0/docs/Data-Either.html) in Haskell.
+
+## Example
+```cpp
+#include <cmath>
+#include <expected>
+#include <iomanip>
+#include <iostream>
+#include <string_view>
+ 
+enum class parse_error
+{
+    invalid_input,
+    overflow
+};
+ 
+auto parse_number(std::string_view& str) -> std::expected<double, parse_error>
+{
+    const char* begin = str.data();
+    char* end;
+    double retval = std::strtod(begin, &end);
+ 
+    if (begin == end)
+        return std::unexpected(parse_error::invalid_input);
+    else if (std::isinf(retval))
+        return std::unexpected(parse_error::overflow);
+ 
+    str.remove_prefix(end - begin);
+    return retval;
+}
+ 
+int main()
+{
+    auto process = [](std::string_view str)
+    {
+        std::cout << "str: " << std::quoted(str) << ", ";
+        if (const auto num = parse_number(str); num.has_value())
+            std::cout << "value: " << *num << '\n';
+            // If num did not have a value, dereferencing num
+            // would cause an undefined behavior, and
+            // num.value() would throw std::bad_expected_access.
+            // num.value_or(123) uses specified default value 123.
+        else if (num.error() == parse_error::invalid_input)
+            std::cout << "error: invalid input\n";
+        else if (num.error() == parse_error::overflow)
+            std::cout << "error: overflow\n";
+        else
+            std::cout << "unexpected!\n"; // or invoke std::unreachable();
+    };
+ 
+    for (auto src : {"42", "42abc", "meow", "inf"})
+        process(src);
+}
+```
+
+## See also
+- [variant](/cpp/utility/variant/)
+- [optional](/cpp/utility/optional/)

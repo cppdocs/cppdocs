@@ -1,0 +1,53 @@
+{
+  "_comment": "Manual curation overrides for canonical reference map generation.",
+  "force_include": [
+    "/cpp/standard_library/",
+    "/cpp/container/",
+    "/cpp/algorithm/",
+    "/cpp/utility/",
+    "/cpp/thread/",
+    "/cpp/error/"
+  ],
+  "force_exclude": [
+    "/cpp/identifier_with_special_meaning/",
+    "/cpp/header/experimental/ranges/"
+  ],
+  "canonical_rewrite": {
+    "/cpp/algorithm/ranges/return_types/": "/cpp/algorithm/ranges/",
+    "/cpp/experimental/ranges/concepts/equality_comparable/": "/cpp/concepts/equality_comparable/",
+    "/cpp/numeric/complex/operator%22%22i/": "/cpp/numeric/complex/operator/"
+  },
+  "block_limits": {
+    "default": 12,
+    "thread": 10,
+    "error": 10
+  },
+  "block_priority": {
+    "thread": [
+      "/cpp/thread/",
+      "/cpp/thread/mutex/",
+      "/cpp/thread/condition_variable/",
+      "/cpp/thread/future/"
+    ],
+    "error": [
+      "/cpp/error/",
+      "/cpp/error/exception/",
+      "/cpp/error/error_code/",
+      "/cpp/error/error_condition/"
+    ],
+    "container": [
+      "/cpp/container/",
+      "/cpp/container/vector/",
+      "/cpp/container/map/",
+      "/cpp/container/unordered_map/",
+      "/cpp/container/span/",
+      "/cpp/string/"
+    ],
+    "algorithm": [
+      "/cpp/algorithm/",
+      "/cpp/algorithm/sort/",
+      "/cpp/algorithm/find/",
+      "/cpp/algorithm/accumulate/"
+    ]
+  }
+}

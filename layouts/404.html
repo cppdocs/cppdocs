@@ -1,0 +1,198 @@
+{{ define "main" }}
+<section class="section-hero">
+  <p class="section-kicker">Error</p>
+  <h1>404: Page not found</h1>
+  <p id="ghp-404-message">
+    The page does not exist. Try the lowercase canonical URL or return to
+    <a href="/">Home</a>.
+  </p>
+</section>
+
+<script>
+  (function () {
+    var path = window.location.pathname || "/";
+    var search = window.location.search || "";
+    var hash = window.location.hash || "";
+
+    var exactMap = {
+      // TS ranges pseudo-index that lowercase fallback keeps under a non-canonical subtree.
+      "/cpp/experimental/ranges/random/": "/cpp/ranges/",
+      // TS ranges pseudo-index that lowercase fallback keeps under a non-canonical subtree.
+      "/cpp/experimental/ranges/tuple/": "/cpp/ranges/",
+      // TS concept slug that has no direct modern page under experimental/ranges/.
+      "/cpp/experimental/ranges/concepts/equality_comparable/": "/cpp/concepts/equality_comparable/",
+      // Legacy header taxonomy page replaced by unified /cpp/ranges/ landing.
+      "/cpp/header/experimental/ranges/": "/cpp/ranges/",
+      // Legacy return_types endpoint merged into canonical ranges algorithm page.
+      "/cpp/algorithm/ranges/return_types/": "/cpp/algorithm/ranges/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/chrono/operator/": "/cpp/chrono/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/chrono/weekday_last/operator/": "/cpp/chrono/weekday_last/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/chrono/local_info/operator/": "/cpp/chrono/local_info/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/chrono/month_weekday/operator/": "/cpp/chrono/month_weekday/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/chrono/system_clock/operator/": "/cpp/chrono/system_clock/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/chrono/gps_clock/operator/": "/cpp/chrono/gps_clock/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/ranges/subrange/operator/": "/cpp/ranges/subrange/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/ranges/transform_view/sentinel/operator/": "/cpp/ranges/transform_view/sentinel/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/ranges/zip_view/sentinel/operator/": "/cpp/ranges/zip_view/sentinel/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/ranges/enumerate_view/sentinel/operator/": "/cpp/ranges/enumerate_view/sentinel/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/ranges/zip_transform_view/sentinel/operator/": "/cpp/ranges/zip_transform_view/sentinel/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/ranges/adjacent_transform_view/sentinel/operator/": "/cpp/ranges/adjacent_transform_view/sentinel/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/ranges/adjacent_view/sentinel/operator/": "/cpp/ranges/adjacent_view/sentinel/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/ranges/slide_view/sentinel/operator/": "/cpp/ranges/slide_view/sentinel/",
+      // Residual operator leaf fallback to canonical parent page.
+      "/cpp/ranges/elements_view/sentinel/operator/": "/cpp/ranges/elements_view/sentinel/",
+
+      // Deprecated index endpoint retained only as redirect to the language landing.
+      "/cpp/identifier_with_special_meaning/": "/cpp/language/",
+
+      // Symbolic operator== URL variant that cannot be inferred by generic operator token mapping.
+      "/cpp/container/mdspan/extents/operator==/": "/cpp/container/mdspan/extents/operator/",
+      // Symbolic operator== URL variant that cannot be inferred by generic operator token mapping.
+      "/cpp/container/mdspan/layout_stride/mapping/operator==/": "/cpp/container/mdspan/layout_stride/mapping/operator/",
+      // Symbolic operator== URL variant that cannot be inferred by generic operator token mapping.
+      "/cpp/container/mdspan/layout_left/mapping/operator==/": "/cpp/container/mdspan/layout_left/mapping/operator/",
+      // Symbolic operator== URL variant that cannot be inferred by generic operator token mapping.
+      "/cpp/container/mdspan/layout_right/mapping/operator==/": "/cpp/container/mdspan/layout_right/mapping/operator/",
+      // Symbolic operator== URL variant that cannot be inferred by generic operator token mapping.
+      "/cpp/utility/functional/move_only_function/operator==/": "/cpp/utility/functional/move_only_function/operator/",
+      // Symbolic operator== URL variant that cannot be inferred by generic operator token mapping.
+      "/cpp/utility/functional/copyable_function/operator==/": "/cpp/utility/functional/copyable_function/operator/",
+
+      // URL-encoded user-defined-literal token that decode+lowercase cannot canonicalize alone.
+      "/cpp/numeric/complex/operator%22%22i/": "/cpp/numeric/complex/operator/",
+      // URL-encoded user-defined-literal token that decode+lowercase cannot canonicalize alone.
+      "/cpp/string/basic_string_view/operator%22%22sv/": "/cpp/string/basic_string_view/operator/",
+      // URL-encoded user-defined-literal token that decode+lowercase cannot canonicalize alone.
+      "/cpp/chrono/operator%22%22s/": "/cpp/chrono/"
+    };
+
+    var OPERATOR_BOOL_TOKENS = { "operator!": true, "operator bool": true };
+    var OPERATOR_AT_TOKENS = { "operator[]": true };
+    var OPERATOR_CMP_TOKENS = {
+      "operator==": true,
+      "operator!=": true,
+      "operator<": true,
+      "operator<=": true,
+      "operator>": true,
+      "operator>=": true,
+      "operator<=>": true
+    };
+    var OPERATOR_GENERIC_TOKENS = {
+      "operator=": true,
+      "operator*": true,
+      "operator()": true,
+      "operator+": true,
+      "operator-": true,
+      "operator++": true,
+      "operator--": true,
+      "operator+=": true,
+      "operator-=": true,
+      "operator/=": true,
+      "operator%=": true,
+      "operator&=": true,
+      "operator|=": true,
+      "operator^=": true,
+      "operator<<": true,
+      "operator>>": true,
+      "operator<<=": true,
+      "operator>>=": true,
+      "operator/": true,
+      "operator%": true,
+      "operator&": true,
+      "operator|": true,
+      "operator^": true,
+      "operator~": true,
+      "operator->": true,
+      "operator->*": true
+    };
+
+    function safeDecodeURIComponent(segment) {
+      try {
+        return decodeURIComponent(segment);
+      } catch (e) {
+        return segment;
+      }
+    }
+
+    function canonicalizeLegacyPath(rawPath) {
+      if (!rawPath || rawPath === "/") {
+        return rawPath || "/";
+      }
+
+      var segments = rawPath.split("/").filter(Boolean);
+      if (!segments.length) {
+        return "/";
+      }
+
+      var normalized = segments
+        .map(function (seg) { return safeDecodeURIComponent(seg); })
+        .map(function (seg) { return seg.toLowerCase(); });
+
+      if (normalized[0] !== "cpp") {
+        return rawPath;
+      }
+
+      var candidate = "/" + normalized.join("/") + "/";
+      if (Object.prototype.hasOwnProperty.call(exactMap, candidate)) {
+        return exactMap[candidate];
+      }
+
+      var last = normalized[normalized.length - 1];
+      if (OPERATOR_AT_TOKENS[last]) {
+        normalized[normalized.length - 1] = "operator_at";
+      } else if (OPERATOR_BOOL_TOKENS[last]) {
+        normalized[normalized.length - 1] = "operator_bool";
+      } else if (OPERATOR_CMP_TOKENS[last]) {
+        normalized[normalized.length - 1] = "operator_cmp";
+      } else if (OPERATOR_GENERIC_TOKENS[last]) {
+        normalized[normalized.length - 1] = "operator";
+      }
+
+      candidate = "/" + normalized.join("/") + "/";
+      if (Object.prototype.hasOwnProperty.call(exactMap, candidate)) {
+        return exactMap[candidate];
+      }
+
+      return candidate;
+    }
+
+    if (Object.prototype.hasOwnProperty.call(exactMap, path)) {
+      window.location.replace(exactMap[path] + search + hash);
+      return;
+    }
+
+    var normalizedPath = canonicalizeLegacyPath(path);
+    if (normalizedPath && normalizedPath !== path) {
+      window.location.replace(normalizedPath + search + hash);
+      return;
+    }
+
+    var lowerPath = path.toLowerCase();
+    if (path !== lowerPath) {
+      var target = lowerPath + search + hash;
+      window.location.replace(target);
+      return;
+    }
+
+    var messageEl = document.getElementById("ghp-404-message");
+    if (messageEl) {
+      messageEl.innerHTML =
+        'Page not found. Return to <a href="/">Home</a> or verify the URL path.';
+    }
+  })();
+</script>
+{{ end }}

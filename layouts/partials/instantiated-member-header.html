@@ -1,0 +1,18 @@
+{{- $metaRaw := partial "instantiated-member-meta.json" . -}}
+{{- if $metaRaw -}}
+  {{- $meta := $metaRaw | transform.Unmarshal -}}
+  {{- .Scratch.Set "hasInstantiatedMemberHeader" true -}}
+<div class="instantiated-member-header">
+  <div class="instantiated-member-kicker">Instantiated member variants</div>
+  <h1>{{ $meta.member }}</h1>
+  <p class="instantiated-member-template">Template: <code>{{ $meta.family }}&lt;T&gt;</code></p>
+  <div class="instantiated-member-specializations">
+    <span class="instantiated-member-label">Specializations:</span>
+    <ul class="instantiated-member-chip-list">
+      {{- range $meta.specializations -}}
+        <li><code data-variant-token="{{ . }}">{{ . }}</code></li>
+      {{- end -}}
+    </ul>
+  </div>
+</div>
+{{- end -}}

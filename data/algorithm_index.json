@@ -1,0 +1,4167 @@
+{
+  "schema_version": 2,
+  "source_root": "content/cpp/algorithm",
+  "entity_count": 118,
+  "category_counts": {
+    "c_compat": 2,
+    "comparison_min_max": 11,
+    "heap": 6,
+    "modifying_sequences": 33,
+    "numeric": 17,
+    "partitioning": 5,
+    "permutations": 6,
+    "searching": 24,
+    "set_operations": 7,
+    "sorting_ordering": 7
+  },
+  "entities": [
+    {
+      "entity_key": "bsearch",
+      "display_name": "std::bsearch",
+      "canonical_url": "/cpp/algorithm/bsearch/",
+      "related_urls": [],
+      "category": "c_compat",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/bsearch/",
+          "title": "std::bsearch",
+          "source_path": "bsearch.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::bsearch"
+          ]
+        }
+      ],
+      "since": "",
+      "full_names": [
+        "std::bsearch"
+      ]
+    },
+    {
+      "entity_key": "qsort",
+      "display_name": "std::qsort",
+      "canonical_url": "/cpp/algorithm/qsort/",
+      "related_urls": [],
+      "category": "c_compat",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/qsort/",
+          "title": "std::qsort",
+          "source_path": "qsort.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::qsort"
+          ]
+        }
+      ],
+      "since": "",
+      "full_names": [
+        "std::qsort"
+      ]
+    },
+    {
+      "entity_key": "clamp",
+      "display_name": "std::clamp",
+      "canonical_url": "/cpp/algorithm/clamp/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/clamp/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/clamp/",
+          "title": "std::clamp",
+          "source_path": "clamp.md",
+          "since": "C++17",
+          "execution_policy": false,
+          "matched_names": [
+            "std::clamp"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/clamp/",
+          "title": "std::ranges::clamp",
+          "source_path": "ranges/clamp.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::clamp"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::clamp",
+        "std::ranges::clamp"
+      ]
+    },
+    {
+      "entity_key": "equal",
+      "display_name": "std::equal",
+      "canonical_url": "/cpp/algorithm/equal/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/equal/",
+        "/cpp/algorithm/mismatch/",
+        "/cpp/algorithm/lexicographical_compare/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/equal/",
+          "title": "std::equal",
+          "source_path": "equal.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::equal"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/equal/",
+          "title": "std::ranges::equal",
+          "source_path": "ranges/equal.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::equal"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::equal",
+        "std::ranges::equal"
+      ]
+    },
+    {
+      "entity_key": "lexicographical_compare",
+      "display_name": "std::lexicographical_compare",
+      "canonical_url": "/cpp/algorithm/lexicographical_compare/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/lexicographical_compare/",
+        "/cpp/algorithm/equal/",
+        "/cpp/algorithm/mismatch/",
+        "/cpp/algorithm/lexicographical_compare_three_way/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/lexicographical_compare/",
+          "title": "std::lexicographical_compare",
+          "source_path": "lexicographical_compare.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::lexicographical_compare"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/lexicographical_compare/",
+          "title": "std::ranges::lexicographical_compare",
+          "source_path": "ranges/lexicographical_compare.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::lexicographical_compare"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::lexicographical_compare",
+        "std::ranges::lexicographical_compare"
+      ]
+    },
+    {
+      "entity_key": "lexicographical_compare_three_way",
+      "display_name": "std::lexicographical_compare_three_way",
+      "canonical_url": "/cpp/algorithm/lexicographical_compare_three_way/",
+      "related_urls": [
+        "/cpp/algorithm/lexicographical_compare/",
+        "/cpp/algorithm/equal/",
+        "/cpp/algorithm/mismatch/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/lexicographical_compare_three_way/",
+          "title": "std::lexicographical_compare_three_way",
+          "source_path": "lexicographical_compare_three_way.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::lexicographical_compare_three_way"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::lexicographical_compare_three_way"
+      ]
+    },
+    {
+      "entity_key": "max",
+      "display_name": "std::max",
+      "canonical_url": "/cpp/algorithm/max/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/max/",
+        "/cpp/algorithm/min/",
+        "/cpp/algorithm/minmax/",
+        "/cpp/algorithm/max_element/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/max/",
+          "title": "std::max",
+          "source_path": "max.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::max"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/max/",
+          "title": "std::ranges::max",
+          "source_path": "ranges/max.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::max"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::max",
+        "std::ranges::max"
+      ]
+    },
+    {
+      "entity_key": "max_element",
+      "display_name": "std::max_element",
+      "canonical_url": "/cpp/algorithm/max_element/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/max_element/",
+        "/cpp/algorithm/min_element/",
+        "/cpp/algorithm/minmax_element/",
+        "/cpp/algorithm/max/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/max_element/",
+          "title": "std::max_element",
+          "source_path": "max_element.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::max_element"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/max_element/",
+          "title": "std::ranges::max_element",
+          "source_path": "ranges/max_element.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::max_element"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::max_element",
+        "std::ranges::max_element"
+      ]
+    },
+    {
+      "entity_key": "min",
+      "display_name": "std::min",
+      "canonical_url": "/cpp/algorithm/min/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/min/",
+        "/cpp/algorithm/max/",
+        "/cpp/algorithm/minmax/",
+        "/cpp/algorithm/min_element/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/min/",
+          "title": "std::min",
+          "source_path": "min.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::min"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/min/",
+          "title": "std::ranges::min",
+          "source_path": "ranges/min.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::min"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::min",
+        "std::ranges::min"
+      ]
+    },
+    {
+      "entity_key": "min_element",
+      "display_name": "std::min_element",
+      "canonical_url": "/cpp/algorithm/min_element/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/min_element/",
+        "/cpp/algorithm/max_element/",
+        "/cpp/algorithm/minmax_element/",
+        "/cpp/algorithm/min/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/min_element/",
+          "title": "std::min_element",
+          "source_path": "min_element.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::min_element"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/min_element/",
+          "title": "std::ranges::min_element",
+          "source_path": "ranges/min_element.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::min_element"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::min_element",
+        "std::ranges::min_element"
+      ]
+    },
+    {
+      "entity_key": "minmax",
+      "display_name": "std::minmax",
+      "canonical_url": "/cpp/algorithm/minmax/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/minmax/",
+        "/cpp/algorithm/min/",
+        "/cpp/algorithm/max/",
+        "/cpp/algorithm/minmax_element/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/minmax/",
+          "title": "std::minmax",
+          "source_path": "minmax.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::minmax"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/minmax/",
+          "title": "std::ranges::minmax, std::ranges::minmax_result",
+          "source_path": "ranges/minmax.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::minmax"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::minmax",
+        "std::ranges::minmax"
+      ]
+    },
+    {
+      "entity_key": "minmax_element",
+      "display_name": "std::minmax_element",
+      "canonical_url": "/cpp/algorithm/minmax_element/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/minmax_element/",
+        "/cpp/algorithm/min_element/",
+        "/cpp/algorithm/max_element/",
+        "/cpp/algorithm/minmax/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/minmax_element/",
+          "title": "std::minmax_element",
+          "source_path": "minmax_element.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::minmax_element"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/minmax_element/",
+          "title": "std::ranges::minmax_element, std::ranges::minmax_element_result",
+          "source_path": "ranges/minmax_element.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::minmax_element"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::minmax_element",
+        "std::ranges::minmax_element"
+      ]
+    },
+    {
+      "entity_key": "mismatch",
+      "display_name": "std::mismatch",
+      "canonical_url": "/cpp/algorithm/mismatch/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/mismatch/",
+        "/cpp/algorithm/equal/",
+        "/cpp/algorithm/lexicographical_compare/"
+      ],
+      "category": "comparison_min_max",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/mismatch/",
+          "title": "std::mismatch",
+          "source_path": "mismatch.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::mismatch"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/mismatch/",
+          "title": "std::ranges::mismatch, std::ranges::mismatch_result",
+          "source_path": "ranges/mismatch.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::mismatch"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::mismatch",
+        "std::ranges::mismatch"
+      ]
+    },
+    {
+      "entity_key": "is_heap",
+      "display_name": "std::is_heap",
+      "canonical_url": "/cpp/algorithm/is_heap/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/is_heap/",
+        "/cpp/algorithm/make_heap/",
+        "/cpp/algorithm/sort_heap/",
+        "/cpp/algorithm/is_heap_until/"
+      ],
+      "category": "heap",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/is_heap/",
+          "title": "std::is_heap",
+          "source_path": "is_heap.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::is_heap"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/is_heap/",
+          "title": "std::ranges::is_heap",
+          "source_path": "ranges/is_heap.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::is_heap"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::is_heap",
+        "std::ranges::is_heap"
+      ]
+    },
+    {
+      "entity_key": "is_heap_until",
+      "display_name": "std::is_heap_until",
+      "canonical_url": "/cpp/algorithm/is_heap_until/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/is_heap_until/",
+        "/cpp/algorithm/is_heap/",
+        "/cpp/algorithm/make_heap/",
+        "/cpp/algorithm/sort_heap/"
+      ],
+      "category": "heap",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/is_heap_until/",
+          "title": "std::is_heap_until",
+          "source_path": "is_heap_until.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::is_heap_until"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/is_heap_until/",
+          "title": "std::ranges::is_heap_until",
+          "source_path": "ranges/is_heap_until.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::is_heap_until"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::is_heap_until",
+        "std::ranges::is_heap_until"
+      ]
+    },
+    {
+      "entity_key": "make_heap",
+      "display_name": "std::make_heap",
+      "canonical_url": "/cpp/algorithm/make_heap/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/make_heap/",
+        "/cpp/algorithm/push_heap/",
+        "/cpp/algorithm/pop_heap/",
+        "/cpp/algorithm/sort_heap/",
+        "/cpp/algorithm/is_heap/",
+        "/cpp/algorithm/is_heap_until/"
+      ],
+      "category": "heap",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/make_heap/",
+          "title": "std::make_heap",
+          "source_path": "make_heap.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::make_heap"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/make_heap/",
+          "title": "std::ranges::make_heap",
+          "source_path": "ranges/make_heap.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::make_heap"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::make_heap",
+        "std::ranges::make_heap"
+      ]
+    },
+    {
+      "entity_key": "pop_heap",
+      "display_name": "std::pop_heap",
+      "canonical_url": "/cpp/algorithm/pop_heap/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/pop_heap/",
+        "/cpp/algorithm/make_heap/",
+        "/cpp/algorithm/push_heap/",
+        "/cpp/algorithm/sort_heap/",
+        "/cpp/algorithm/is_heap/"
+      ],
+      "category": "heap",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/pop_heap/",
+          "title": "std::pop_heap",
+          "source_path": "pop_heap.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::pop_heap"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/pop_heap/",
+          "title": "std::ranges::pop_heap",
+          "source_path": "ranges/pop_heap.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::pop_heap"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::pop_heap",
+        "std::ranges::pop_heap"
+      ]
+    },
+    {
+      "entity_key": "push_heap",
+      "display_name": "std::push_heap",
+      "canonical_url": "/cpp/algorithm/push_heap/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/push_heap/",
+        "/cpp/algorithm/make_heap/",
+        "/cpp/algorithm/pop_heap/",
+        "/cpp/algorithm/sort_heap/",
+        "/cpp/algorithm/is_heap/"
+      ],
+      "category": "heap",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/push_heap/",
+          "title": "std::push_heap",
+          "source_path": "push_heap.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::push_heap"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/push_heap/",
+          "title": "std::ranges::push_heap",
+          "source_path": "ranges/push_heap.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::push_heap"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::push_heap",
+        "std::ranges::push_heap"
+      ]
+    },
+    {
+      "entity_key": "sort_heap",
+      "display_name": "std::sort_heap",
+      "canonical_url": "/cpp/algorithm/sort_heap/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/sort_heap/",
+        "/cpp/algorithm/make_heap/",
+        "/cpp/algorithm/push_heap/",
+        "/cpp/algorithm/pop_heap/",
+        "/cpp/algorithm/is_heap/"
+      ],
+      "category": "heap",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/sort_heap/",
+          "title": "std::sort_heap",
+          "source_path": "sort_heap.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::sort_heap"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/sort_heap/",
+          "title": "std::ranges::sort_heap",
+          "source_path": "ranges/sort_heap.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::sort_heap"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::sort_heap",
+        "std::ranges::sort_heap"
+      ]
+    },
+    {
+      "entity_key": "copy",
+      "display_name": "std::copy",
+      "canonical_url": "/cpp/algorithm/copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/copy/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/copy/",
+          "title": "std::copy, std::copy_if",
+          "source_path": "copy.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::copy"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/copy/",
+          "title": "std::ranges::copy, std::ranges::copy_if, std::ranges::copy_result, std::ranges::copy_if_result",
+          "source_path": "ranges/copy.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::copy"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::copy",
+        "std::ranges::copy"
+      ]
+    },
+    {
+      "entity_key": "copy_backward",
+      "display_name": "std::copy_backward",
+      "canonical_url": "/cpp/algorithm/copy_backward/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/copy_backward/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/copy_backward/",
+          "title": "std::copy_backward",
+          "source_path": "copy_backward.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::copy_backward"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/copy_backward/",
+          "title": "std::ranges::copy_backward, std::ranges::copy_backward_result",
+          "source_path": "ranges/copy_backward.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::copy_backward"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::copy_backward",
+        "std::ranges::copy_backward"
+      ]
+    },
+    {
+      "entity_key": "copy_if",
+      "display_name": "std::copy_if",
+      "canonical_url": "/cpp/algorithm/copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/copy/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/copy/",
+          "title": "std::copy, std::copy_if",
+          "source_path": "copy.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::copy_if"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/copy/",
+          "title": "std::ranges::copy, std::ranges::copy_if, std::ranges::copy_result, std::ranges::copy_if_result",
+          "source_path": "ranges/copy.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::copy_if"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::copy_if",
+        "std::ranges::copy_if"
+      ]
+    },
+    {
+      "entity_key": "copy_n",
+      "display_name": "std::copy_n",
+      "canonical_url": "/cpp/algorithm/copy_n/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/copy_n/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/copy_n/",
+          "title": "std::copy_n",
+          "source_path": "copy_n.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::copy_n"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/copy_n/",
+          "title": "std::ranges::copy_n, std::ranges::copy_n_result",
+          "source_path": "ranges/copy_n.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::copy_n"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::copy_n",
+        "std::ranges::copy_n"
+      ]
+    },
+    {
+      "entity_key": "fill",
+      "display_name": "std::fill",
+      "canonical_url": "/cpp/algorithm/fill/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/fill/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/fill/",
+          "title": "std::fill",
+          "source_path": "fill.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::fill"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/fill/",
+          "title": "std::ranges::fill",
+          "source_path": "ranges/fill.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::fill"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::fill",
+        "std::ranges::fill"
+      ]
+    },
+    {
+      "entity_key": "fill_n",
+      "display_name": "std::fill_n",
+      "canonical_url": "/cpp/algorithm/fill_n/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/fill_n/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/fill_n/",
+          "title": "std::fill_n",
+          "source_path": "fill_n.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::fill_n"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/fill_n/",
+          "title": "std::ranges::fill_n",
+          "source_path": "ranges/fill_n.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::fill_n"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::fill_n",
+        "std::ranges::fill_n"
+      ]
+    },
+    {
+      "entity_key": "for_each",
+      "display_name": "std::for_each",
+      "canonical_url": "/cpp/algorithm/for_each/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/for_each/",
+        "/cpp/algorithm/ranges/return_types/in_fun_result/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/for_each/",
+          "title": "std::for_each",
+          "source_path": "for_each.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::for_each"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/for_each/",
+          "title": "std::ranges::for_each, std::ranges::for_each_result",
+          "source_path": "ranges/for_each.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::for_each"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::for_each",
+        "std::ranges::for_each"
+      ]
+    },
+    {
+      "entity_key": "for_each_n",
+      "display_name": "std::for_each_n",
+      "canonical_url": "/cpp/algorithm/for_each_n/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/for_each_n/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/for_each_n/",
+          "title": "std::for_each_n",
+          "source_path": "for_each_n.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::for_each_n"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/for_each_n/",
+          "title": "std::ranges::for_each_n, std::ranges::for_each_n_result",
+          "source_path": "ranges/for_each_n.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::for_each_n"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::for_each_n",
+        "std::ranges::for_each_n"
+      ]
+    },
+    {
+      "entity_key": "generate",
+      "display_name": "std::generate",
+      "canonical_url": "/cpp/algorithm/generate/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/generate/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/generate/",
+          "title": "std::generate",
+          "source_path": "generate.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::generate"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/generate/",
+          "title": "std::ranges::generate",
+          "source_path": "ranges/generate.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::generate"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::generate",
+        "std::ranges::generate"
+      ]
+    },
+    {
+      "entity_key": "generate_n",
+      "display_name": "std::generate_n",
+      "canonical_url": "/cpp/algorithm/generate_n/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/generate_n/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/generate_n/",
+          "title": "std::generate_n",
+          "source_path": "generate_n.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::generate_n"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/generate_n/",
+          "title": "std::ranges::generate_n",
+          "source_path": "ranges/generate_n.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::generate_n"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::generate_n",
+        "std::ranges::generate_n"
+      ]
+    },
+    {
+      "entity_key": "generate_random",
+      "display_name": "std::ranges::generate_random",
+      "canonical_url": "/cpp/algorithm/ranges/generate_random/",
+      "related_urls": [],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/generate_random/",
+          "title": "std::ranges::generate_random",
+          "source_path": "ranges/generate_random.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::generate_random"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::ranges::generate_random"
+      ]
+    },
+    {
+      "entity_key": "iter_swap",
+      "display_name": "std::iter_swap",
+      "canonical_url": "/cpp/algorithm/iter_swap/",
+      "related_urls": [],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/iter_swap/",
+          "title": "std::iter_swap",
+          "source_path": "iter_swap.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::iter_swap"
+          ]
+        }
+      ],
+      "since": "",
+      "full_names": [
+        "std::iter_swap"
+      ]
+    },
+    {
+      "entity_key": "move",
+      "display_name": "std::move",
+      "canonical_url": "/cpp/algorithm/move/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/move/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/move/",
+          "title": "std::move",
+          "source_path": "move.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::move"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/move/",
+          "title": "std::ranges::move, std::ranges::move_result",
+          "source_path": "ranges/move.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::move"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::move",
+        "std::ranges::move"
+      ]
+    },
+    {
+      "entity_key": "move_backward",
+      "display_name": "std::move_backward",
+      "canonical_url": "/cpp/algorithm/move_backward/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/move_backward/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/move_backward/",
+          "title": "std::move_backward",
+          "source_path": "move_backward.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::move_backward"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/move_backward/",
+          "title": "std::ranges::move_backward, std::ranges::move_backward_result",
+          "source_path": "ranges/move_backward.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::move_backward"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::move_backward",
+        "std::ranges::move_backward"
+      ]
+    },
+    {
+      "entity_key": "remove",
+      "display_name": "std::remove",
+      "canonical_url": "/cpp/algorithm/remove/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/remove/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/remove/",
+          "title": "std::remove, std::remove_if",
+          "source_path": "remove.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::remove"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/remove/",
+          "title": "std::ranges::remove, std::ranges::remove_if",
+          "source_path": "ranges/remove.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::remove"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::remove",
+        "std::ranges::remove"
+      ]
+    },
+    {
+      "entity_key": "remove_copy",
+      "display_name": "std::remove_copy",
+      "canonical_url": "/cpp/algorithm/remove_copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/remove_copy/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/remove_copy/",
+          "title": "std::remove_copy, std::remove_copy_if",
+          "source_path": "remove_copy.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::remove_copy"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/remove_copy/",
+          "title": "std::ranges::remove_copy, std::ranges::remove_copy_if, std::ranges::remove_copy_result, std::ranges::remove_copy_if_result",
+          "source_path": "ranges/remove_copy.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::remove_copy"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::remove_copy",
+        "std::ranges::remove_copy"
+      ]
+    },
+    {
+      "entity_key": "remove_copy_if",
+      "display_name": "std::remove_copy_if",
+      "canonical_url": "/cpp/algorithm/remove_copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/remove_copy/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/remove_copy/",
+          "title": "std::remove_copy, std::remove_copy_if",
+          "source_path": "remove_copy.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::remove_copy_if"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/remove_copy/",
+          "title": "std::ranges::remove_copy, std::ranges::remove_copy_if, std::ranges::remove_copy_result, std::ranges::remove_copy_if_result",
+          "source_path": "ranges/remove_copy.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::remove_copy_if"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::remove_copy_if",
+        "std::ranges::remove_copy_if"
+      ]
+    },
+    {
+      "entity_key": "remove_if",
+      "display_name": "std::remove_if",
+      "canonical_url": "/cpp/algorithm/remove/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/remove/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/remove/",
+          "title": "std::remove, std::remove_if",
+          "source_path": "remove.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::remove_if"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/remove/",
+          "title": "std::ranges::remove, std::ranges::remove_if",
+          "source_path": "ranges/remove.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::remove_if"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::remove_if",
+        "std::ranges::remove_if"
+      ]
+    },
+    {
+      "entity_key": "replace",
+      "display_name": "std::replace",
+      "canonical_url": "/cpp/algorithm/replace/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/replace/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/replace/",
+          "title": "std::replace, std::replace_if",
+          "source_path": "replace.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::replace"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/replace/",
+          "title": "std::ranges::replace, std::ranges::replace_if",
+          "source_path": "ranges/replace.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::replace"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::replace",
+        "std::ranges::replace"
+      ]
+    },
+    {
+      "entity_key": "replace_copy",
+      "display_name": "std::replace_copy",
+      "canonical_url": "/cpp/algorithm/replace_copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/replace_copy/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/replace_copy/",
+          "title": "std::replace_copy, std::replace_copy_if",
+          "source_path": "replace_copy.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::replace_copy"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/replace_copy/",
+          "title": "std::ranges::replace_copy, std::ranges::replace_copy_if, std::ranges::replace_copy_result, std::ranges::replace_copy_if_result",
+          "source_path": "ranges/replace_copy.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::replace_copy"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::replace_copy",
+        "std::ranges::replace_copy"
+      ]
+    },
+    {
+      "entity_key": "replace_copy_if",
+      "display_name": "std::replace_copy_if",
+      "canonical_url": "/cpp/algorithm/replace_copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/replace_copy/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/replace_copy/",
+          "title": "std::replace_copy, std::replace_copy_if",
+          "source_path": "replace_copy.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::replace_copy_if"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/replace_copy/",
+          "title": "std::ranges::replace_copy, std::ranges::replace_copy_if, std::ranges::replace_copy_result, std::ranges::replace_copy_if_result",
+          "source_path": "ranges/replace_copy.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::replace_copy_if"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::replace_copy_if",
+        "std::ranges::replace_copy_if"
+      ]
+    },
+    {
+      "entity_key": "replace_if",
+      "display_name": "std::replace_if",
+      "canonical_url": "/cpp/algorithm/replace/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/replace/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/replace/",
+          "title": "std::replace, std::replace_if",
+          "source_path": "replace.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::replace_if"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/replace/",
+          "title": "std::ranges::replace, std::ranges::replace_if",
+          "source_path": "ranges/replace.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::replace_if"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::replace_if",
+        "std::ranges::replace_if"
+      ]
+    },
+    {
+      "entity_key": "reverse",
+      "display_name": "std::reverse",
+      "canonical_url": "/cpp/algorithm/reverse/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/reverse/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/reverse/",
+          "title": "std::reverse",
+          "source_path": "reverse.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::reverse"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/reverse/",
+          "title": "std::ranges::reverse",
+          "source_path": "ranges/reverse.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::reverse"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::reverse",
+        "std::ranges::reverse"
+      ]
+    },
+    {
+      "entity_key": "reverse_copy",
+      "display_name": "std::reverse_copy",
+      "canonical_url": "/cpp/algorithm/reverse_copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/reverse_copy/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/reverse_copy/",
+          "title": "std::reverse_copy",
+          "source_path": "reverse_copy.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::reverse_copy"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/reverse_copy/",
+          "title": "std::ranges::reverse_copy, std::ranges::reverse_copy_result",
+          "source_path": "ranges/reverse_copy.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::reverse_copy"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::reverse_copy",
+        "std::ranges::reverse_copy"
+      ]
+    },
+    {
+      "entity_key": "rotate",
+      "display_name": "std::rotate",
+      "canonical_url": "/cpp/algorithm/rotate/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/rotate/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/rotate/",
+          "title": "std::rotate",
+          "source_path": "rotate.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::rotate"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/rotate/",
+          "title": "std::ranges::rotate",
+          "source_path": "ranges/rotate.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::rotate"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::rotate",
+        "std::ranges::rotate"
+      ]
+    },
+    {
+      "entity_key": "rotate_copy",
+      "display_name": "std::rotate_copy",
+      "canonical_url": "/cpp/algorithm/rotate_copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/rotate_copy/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/rotate_copy/",
+          "title": "std::rotate_copy",
+          "source_path": "rotate_copy.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::rotate_copy"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/rotate_copy/",
+          "title": "std::ranges::rotate_copy, std::ranges::rotate_copy_result",
+          "source_path": "ranges/rotate_copy.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::rotate_copy"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::rotate_copy",
+        "std::ranges::rotate_copy"
+      ]
+    },
+    {
+      "entity_key": "shift_left",
+      "display_name": "std::shift_left",
+      "canonical_url": "/cpp/algorithm/shift/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/shift/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/shift/",
+          "title": "std::shift_left, std::shift_right",
+          "source_path": "shift.md",
+          "since": "C++20",
+          "execution_policy": true,
+          "matched_names": [
+            "std::shift_left"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/shift/",
+          "title": "std::ranges::shift_left, std::ranges::shift_right",
+          "source_path": "ranges/shift.md",
+          "since": "C++23",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::shift_left"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::shift_left",
+        "std::ranges::shift_left"
+      ]
+    },
+    {
+      "entity_key": "shift_right",
+      "display_name": "std::shift_right",
+      "canonical_url": "/cpp/algorithm/shift/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/shift/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/shift/",
+          "title": "std::shift_left, std::shift_right",
+          "source_path": "shift.md",
+          "since": "C++20",
+          "execution_policy": true,
+          "matched_names": [
+            "std::shift_right"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/shift/",
+          "title": "std::ranges::shift_left, std::ranges::shift_right",
+          "source_path": "ranges/shift.md",
+          "since": "C++23",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::shift_right"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::shift_right",
+        "std::ranges::shift_right"
+      ]
+    },
+    {
+      "entity_key": "swap",
+      "display_name": "std::swap",
+      "canonical_url": "/cpp/algorithm/swap/",
+      "related_urls": [],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/swap/",
+          "title": "std::swap",
+          "source_path": "swap.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::swap"
+          ]
+        }
+      ],
+      "since": "",
+      "full_names": [
+        "std::swap"
+      ]
+    },
+    {
+      "entity_key": "swap_ranges",
+      "display_name": "std::swap_ranges",
+      "canonical_url": "/cpp/algorithm/swap_ranges/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/swap_ranges/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/swap_ranges/",
+          "title": "std::swap_ranges",
+          "source_path": "swap_ranges.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::swap_ranges"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/swap_ranges/",
+          "title": "std::ranges::swap_ranges, std::ranges::swap_ranges_result",
+          "source_path": "ranges/swap_ranges.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::swap_ranges"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::swap_ranges",
+        "std::ranges::swap_ranges"
+      ]
+    },
+    {
+      "entity_key": "transform",
+      "display_name": "std::transform",
+      "canonical_url": "/cpp/algorithm/transform/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/transform/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/transform/",
+          "title": "std::transform",
+          "source_path": "transform.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::transform"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/transform/",
+          "title": "std::ranges::transform, std::ranges::unary_transform_result, std::ranges::binary_transform_result",
+          "source_path": "ranges/transform.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::transform"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::transform",
+        "std::ranges::transform"
+      ]
+    },
+    {
+      "entity_key": "unique",
+      "display_name": "std::unique",
+      "canonical_url": "/cpp/algorithm/unique/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/unique/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/unique/",
+          "title": "std::unique",
+          "source_path": "unique.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::unique"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/unique/",
+          "title": "std::ranges::unique",
+          "source_path": "ranges/unique.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::unique"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::unique",
+        "std::ranges::unique"
+      ]
+    },
+    {
+      "entity_key": "unique_copy",
+      "display_name": "std::unique_copy",
+      "canonical_url": "/cpp/algorithm/unique_copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/unique_copy/"
+      ],
+      "category": "modifying_sequences",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/unique_copy/",
+          "title": "std::unique_copy",
+          "source_path": "unique_copy.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::unique_copy"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/unique_copy/",
+          "title": "std::ranges::unique_copy, std::ranges::unique_copy_result",
+          "source_path": "ranges/unique_copy.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::unique_copy"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::unique_copy",
+        "std::ranges::unique_copy"
+      ]
+    },
+    {
+      "entity_key": "accumulate",
+      "display_name": "std::accumulate",
+      "canonical_url": "/cpp/algorithm/accumulate/",
+      "related_urls": [
+        "/cpp/algorithm/reduce/"
+      ],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/accumulate/",
+          "title": "std::accumulate",
+          "source_path": "accumulate.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::accumulate"
+          ]
+        }
+      ],
+      "since": "",
+      "full_names": [
+        "std::accumulate"
+      ]
+    },
+    {
+      "entity_key": "adjacent_difference",
+      "display_name": "std::adjacent_difference",
+      "canonical_url": "/cpp/algorithm/adjacent_difference/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/adjacent_difference/",
+          "title": "std::adjacent_difference",
+          "source_path": "adjacent_difference.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::adjacent_difference"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::adjacent_difference"
+      ]
+    },
+    {
+      "entity_key": "exclusive_scan",
+      "display_name": "std::exclusive_scan",
+      "canonical_url": "/cpp/algorithm/exclusive_scan/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/exclusive_scan/",
+          "title": "std::exclusive_scan",
+          "source_path": "exclusive_scan.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::exclusive_scan"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::exclusive_scan"
+      ]
+    },
+    {
+      "entity_key": "fold_left",
+      "display_name": "std::ranges::fold_left",
+      "canonical_url": "/cpp/algorithm/ranges/fold_left/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/fold_left/",
+          "title": "std::ranges::fold_left",
+          "source_path": "ranges/fold_left.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::fold_left"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::ranges::fold_left"
+      ]
+    },
+    {
+      "entity_key": "fold_left_first",
+      "display_name": "std::ranges::fold_left_first",
+      "canonical_url": "/cpp/algorithm/ranges/fold_left_first/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/fold_left_first/",
+          "title": "std::ranges::fold_left_first",
+          "source_path": "ranges/fold_left_first.md",
+          "since": "C++23",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::fold_left_first"
+          ]
+        }
+      ],
+      "since": "C++23",
+      "full_names": [
+        "std::ranges::fold_left_first"
+      ]
+    },
+    {
+      "entity_key": "fold_left_first_with_iter",
+      "display_name": "std::ranges::fold_left_first_with_iter",
+      "canonical_url": "/cpp/algorithm/ranges/fold_left_first_with_iter/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/fold_left_first_with_iter/",
+          "title": "std::ranges::fold_left_first_with_iter, std::ranges::fold_left_first_with_iter_result",
+          "source_path": "ranges/fold_left_first_with_iter.md",
+          "since": "C++23",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::fold_left_first_with_iter"
+          ]
+        }
+      ],
+      "since": "C++23",
+      "full_names": [
+        "std::ranges::fold_left_first_with_iter"
+      ]
+    },
+    {
+      "entity_key": "fold_left_with_iter",
+      "display_name": "std::ranges::fold_left_with_iter",
+      "canonical_url": "/cpp/algorithm/ranges/fold_left_with_iter/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/fold_left_with_iter/",
+          "title": "std::ranges::fold_left_with_iter, std::ranges::fold_left_with_iter_result",
+          "source_path": "ranges/fold_left_with_iter.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::fold_left_with_iter"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::ranges::fold_left_with_iter"
+      ]
+    },
+    {
+      "entity_key": "fold_right",
+      "display_name": "std::ranges::fold_right",
+      "canonical_url": "/cpp/algorithm/ranges/fold_right/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/fold_right/",
+          "title": "std::ranges::fold_right",
+          "source_path": "ranges/fold_right.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::fold_right"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::ranges::fold_right"
+      ]
+    },
+    {
+      "entity_key": "fold_right_last",
+      "display_name": "std::ranges::fold_right_last",
+      "canonical_url": "/cpp/algorithm/ranges/fold_right_last/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/fold_right_last/",
+          "title": "std::ranges::fold_right_last",
+          "source_path": "ranges/fold_right_last.md",
+          "since": "C++23",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::fold_right_last"
+          ]
+        }
+      ],
+      "since": "C++23",
+      "full_names": [
+        "std::ranges::fold_right_last"
+      ]
+    },
+    {
+      "entity_key": "inclusive_scan",
+      "display_name": "std::inclusive_scan",
+      "canonical_url": "/cpp/algorithm/inclusive_scan/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/inclusive_scan/",
+          "title": "std::inclusive_scan",
+          "source_path": "inclusive_scan.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::inclusive_scan"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::inclusive_scan"
+      ]
+    },
+    {
+      "entity_key": "inner_product",
+      "display_name": "std::inner_product",
+      "canonical_url": "/cpp/algorithm/inner_product/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/inner_product/",
+          "title": "std::inner_product",
+          "source_path": "inner_product.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::inner_product"
+          ]
+        }
+      ],
+      "since": "",
+      "full_names": [
+        "std::inner_product"
+      ]
+    },
+    {
+      "entity_key": "iota",
+      "display_name": "std::iota",
+      "canonical_url": "/cpp/algorithm/iota/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/iota/"
+      ],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/iota/",
+          "title": "std::iota",
+          "source_path": "iota.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::iota"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/iota/",
+          "title": "std::ranges::iota, std::ranges::iota_result",
+          "source_path": "ranges/iota.md",
+          "since": "C++23",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::iota"
+          ]
+        }
+      ],
+      "since": "C++23",
+      "full_names": [
+        "std::iota",
+        "std::ranges::iota"
+      ]
+    },
+    {
+      "entity_key": "partial_sum",
+      "display_name": "std::partial_sum",
+      "canonical_url": "/cpp/algorithm/partial_sum/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/partial_sum/",
+          "title": "std::partial_sum",
+          "source_path": "partial_sum.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::partial_sum"
+          ]
+        }
+      ],
+      "since": "",
+      "full_names": [
+        "std::partial_sum"
+      ]
+    },
+    {
+      "entity_key": "reduce",
+      "display_name": "std::reduce",
+      "canonical_url": "/cpp/algorithm/reduce/",
+      "related_urls": [
+        "/cpp/algorithm/accumulate/"
+      ],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/reduce/",
+          "title": "std::reduce",
+          "source_path": "reduce.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::reduce"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::reduce"
+      ]
+    },
+    {
+      "entity_key": "transform_exclusive_scan",
+      "display_name": "std::transform_exclusive_scan",
+      "canonical_url": "/cpp/algorithm/transform_exclusive_scan/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/transform_exclusive_scan/",
+          "title": "std::transform_exclusive_scan",
+          "source_path": "transform_exclusive_scan.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::transform_exclusive_scan"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::transform_exclusive_scan"
+      ]
+    },
+    {
+      "entity_key": "transform_inclusive_scan",
+      "display_name": "std::transform_inclusive_scan",
+      "canonical_url": "/cpp/algorithm/transform_inclusive_scan/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/transform_inclusive_scan/",
+          "title": "std::transform_inclusive_scan",
+          "source_path": "transform_inclusive_scan.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::transform_inclusive_scan"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::transform_inclusive_scan"
+      ]
+    },
+    {
+      "entity_key": "transform_reduce",
+      "display_name": "std::transform_reduce",
+      "canonical_url": "/cpp/algorithm/transform_reduce/",
+      "related_urls": [],
+      "category": "numeric",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/transform_reduce/",
+          "title": "std::transform_reduce",
+          "source_path": "transform_reduce.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::transform_reduce"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::transform_reduce"
+      ]
+    },
+    {
+      "entity_key": "is_partitioned",
+      "display_name": "std::is_partitioned",
+      "canonical_url": "/cpp/algorithm/is_partitioned/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/is_partitioned/"
+      ],
+      "category": "partitioning",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/is_partitioned/",
+          "title": "std::is_partitioned",
+          "source_path": "is_partitioned.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::is_partitioned"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/is_partitioned/",
+          "title": "std::ranges::is_partitioned",
+          "source_path": "ranges/is_partitioned.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::is_partitioned"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::is_partitioned",
+        "std::ranges::is_partitioned"
+      ]
+    },
+    {
+      "entity_key": "partition",
+      "display_name": "std::partition",
+      "canonical_url": "/cpp/algorithm/partition/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/partition/"
+      ],
+      "category": "partitioning",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/partition/",
+          "title": "std::partition",
+          "source_path": "partition.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::partition"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/partition/",
+          "title": "std::ranges::partition",
+          "source_path": "ranges/partition.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::partition"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::partition",
+        "std::ranges::partition"
+      ]
+    },
+    {
+      "entity_key": "partition_copy",
+      "display_name": "std::partition_copy",
+      "canonical_url": "/cpp/algorithm/partition_copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/partition_copy/"
+      ],
+      "category": "partitioning",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/partition_copy/",
+          "title": "std::partition_copy",
+          "source_path": "partition_copy.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::partition_copy"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/partition_copy/",
+          "title": "std::ranges::partition_copy, std::ranges::partition_copy_result",
+          "source_path": "ranges/partition_copy.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::partition_copy"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::partition_copy",
+        "std::ranges::partition_copy"
+      ]
+    },
+    {
+      "entity_key": "partition_point",
+      "display_name": "std::partition_point",
+      "canonical_url": "/cpp/algorithm/partition_point/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/partition_point/"
+      ],
+      "category": "partitioning",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/partition_point/",
+          "title": "std::partition_point",
+          "source_path": "partition_point.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::partition_point"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/partition_point/",
+          "title": "std::ranges::partition_point",
+          "source_path": "ranges/partition_point.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::partition_point"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::partition_point",
+        "std::ranges::partition_point"
+      ]
+    },
+    {
+      "entity_key": "stable_partition",
+      "display_name": "std::stable_partition",
+      "canonical_url": "/cpp/algorithm/stable_partition/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/stable_partition/"
+      ],
+      "category": "partitioning",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/stable_partition/",
+          "title": "std::stable_partition",
+          "source_path": "stable_partition.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::stable_partition"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/stable_partition/",
+          "title": "std::ranges::stable_partition",
+          "source_path": "ranges/stable_partition.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::stable_partition"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::stable_partition",
+        "std::ranges::stable_partition"
+      ]
+    },
+    {
+      "entity_key": "is_permutation",
+      "display_name": "std::is_permutation",
+      "canonical_url": "/cpp/algorithm/is_permutation/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/is_permutation/"
+      ],
+      "category": "permutations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/is_permutation/",
+          "title": "std::is_permutation",
+          "source_path": "is_permutation.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::is_permutation"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/is_permutation/",
+          "title": "std::ranges::is_permutation",
+          "source_path": "ranges/is_permutation.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::is_permutation"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::is_permutation",
+        "std::ranges::is_permutation"
+      ]
+    },
+    {
+      "entity_key": "next_permutation",
+      "display_name": "std::next_permutation",
+      "canonical_url": "/cpp/algorithm/next_permutation/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/next_permutation/"
+      ],
+      "category": "permutations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/next_permutation/",
+          "title": "std::next_permutation",
+          "source_path": "next_permutation.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::next_permutation"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/next_permutation/",
+          "title": "std::ranges::next_permutation, std::ranges::next_permutation_result",
+          "source_path": "ranges/next_permutation.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::next_permutation"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::next_permutation",
+        "std::ranges::next_permutation"
+      ]
+    },
+    {
+      "entity_key": "prev_permutation",
+      "display_name": "std::prev_permutation",
+      "canonical_url": "/cpp/algorithm/prev_permutation/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/prev_permutation/"
+      ],
+      "category": "permutations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/prev_permutation/",
+          "title": "std::prev_permutation",
+          "source_path": "prev_permutation.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::prev_permutation"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/prev_permutation/",
+          "title": "std::ranges::prev_permutation, std::ranges::prev_permutation_result",
+          "source_path": "ranges/prev_permutation.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::prev_permutation"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::prev_permutation",
+        "std::ranges::prev_permutation"
+      ]
+    },
+    {
+      "entity_key": "random_shuffle",
+      "display_name": "std::random_shuffle",
+      "canonical_url": "/cpp/algorithm/random_shuffle/",
+      "related_urls": [],
+      "category": "permutations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/random_shuffle/",
+          "title": "std::random_shuffle, std::shuffle",
+          "source_path": "random_shuffle.md",
+          "since": "C++11",
+          "execution_policy": false,
+          "matched_names": [
+            "std::random_shuffle"
+          ]
+        }
+      ],
+      "since": "C++11",
+      "full_names": [
+        "std::random_shuffle"
+      ]
+    },
+    {
+      "entity_key": "sample",
+      "display_name": "std::sample",
+      "canonical_url": "/cpp/algorithm/sample/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/sample/"
+      ],
+      "category": "permutations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/sample/",
+          "title": "std::sample",
+          "source_path": "sample.md",
+          "since": "C++17",
+          "execution_policy": false,
+          "matched_names": [
+            "std::sample"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/sample/",
+          "title": "std::ranges::sample",
+          "source_path": "ranges/sample.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::sample"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::sample",
+        "std::ranges::sample"
+      ]
+    },
+    {
+      "entity_key": "shuffle",
+      "display_name": "std::shuffle",
+      "canonical_url": "/cpp/algorithm/ranges/shuffle/",
+      "related_urls": [
+        "/cpp/algorithm/random_shuffle/"
+      ],
+      "category": "permutations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/random_shuffle/",
+          "title": "std::random_shuffle, std::shuffle",
+          "source_path": "random_shuffle.md",
+          "since": "C++11",
+          "execution_policy": false,
+          "matched_names": [
+            "std::shuffle"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/shuffle/",
+          "title": "std::ranges::shuffle",
+          "source_path": "ranges/shuffle.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::shuffle"
+          ]
+        }
+      ],
+      "since": "C++20",
+      "full_names": [
+        "std::shuffle",
+        "std::ranges::shuffle"
+      ]
+    },
+    {
+      "entity_key": "adjacent_find",
+      "display_name": "std::adjacent_find",
+      "canonical_url": "/cpp/algorithm/adjacent_find/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/adjacent_find/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/adjacent_find/",
+          "title": "std::adjacent_find",
+          "source_path": "adjacent_find.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::adjacent_find"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/adjacent_find/",
+          "title": "std::ranges::adjacent_find",
+          "source_path": "ranges/adjacent_find.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::adjacent_find"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::adjacent_find",
+        "std::ranges::adjacent_find"
+      ]
+    },
+    {
+      "entity_key": "all_of",
+      "display_name": "std::all_of",
+      "canonical_url": "/cpp/algorithm/all_any_none_of/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/all_any_none_of/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/all_any_none_of/",
+          "title": "std::all_of, std::any_of, std::none_of",
+          "source_path": "all_any_none_of.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::all_of"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/all_any_none_of/",
+          "title": "std::ranges::all_of, std::ranges::any_of, std::ranges::none_of",
+          "source_path": "ranges/all_any_none_of.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::all_of"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::all_of",
+        "std::ranges::all_of"
+      ]
+    },
+    {
+      "entity_key": "any_of",
+      "display_name": "std::any_of",
+      "canonical_url": "/cpp/algorithm/all_any_none_of/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/all_any_none_of/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/all_any_none_of/",
+          "title": "std::all_of, std::any_of, std::none_of",
+          "source_path": "all_any_none_of.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::any_of"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/all_any_none_of/",
+          "title": "std::ranges::all_of, std::ranges::any_of, std::ranges::none_of",
+          "source_path": "ranges/all_any_none_of.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::any_of"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::any_of",
+        "std::ranges::any_of"
+      ]
+    },
+    {
+      "entity_key": "binary_search",
+      "display_name": "std::binary_search",
+      "canonical_url": "/cpp/algorithm/binary_search/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/binary_search/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/binary_search/",
+          "title": "std::binary_search",
+          "source_path": "binary_search.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::binary_search"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/binary_search/",
+          "title": "std::ranges::binary_search",
+          "source_path": "ranges/binary_search.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::binary_search"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::binary_search",
+        "std::ranges::binary_search"
+      ]
+    },
+    {
+      "entity_key": "contains",
+      "display_name": "std::ranges::contains",
+      "canonical_url": "/cpp/algorithm/ranges/contains/",
+      "related_urls": [],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/contains/",
+          "title": "std::ranges::contains, std::ranges::contains_subrange",
+          "source_path": "ranges/contains.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::contains"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::ranges::contains"
+      ]
+    },
+    {
+      "entity_key": "contains_subrange",
+      "display_name": "std::ranges::contains_subrange",
+      "canonical_url": "/cpp/algorithm/ranges/contains/",
+      "related_urls": [],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/contains/",
+          "title": "std::ranges::contains, std::ranges::contains_subrange",
+          "source_path": "ranges/contains.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::contains_subrange"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::ranges::contains_subrange"
+      ]
+    },
+    {
+      "entity_key": "count",
+      "display_name": "std::count",
+      "canonical_url": "/cpp/algorithm/count/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/count/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/count/",
+          "title": "std::count, std::count_if",
+          "source_path": "count.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::count"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/count/",
+          "title": "std::ranges::count, std::ranges::count_if",
+          "source_path": "ranges/count.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::count"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::count",
+        "std::ranges::count"
+      ]
+    },
+    {
+      "entity_key": "count_if",
+      "display_name": "std::count_if",
+      "canonical_url": "/cpp/algorithm/count/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/count/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/count/",
+          "title": "std::count, std::count_if",
+          "source_path": "count.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::count_if"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/count/",
+          "title": "std::ranges::count, std::ranges::count_if",
+          "source_path": "ranges/count.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::count_if"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::count_if",
+        "std::ranges::count_if"
+      ]
+    },
+    {
+      "entity_key": "ends_with",
+      "display_name": "std::ranges::ends_with",
+      "canonical_url": "/cpp/algorithm/ranges/ends_with/",
+      "related_urls": [],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/ends_with/",
+          "title": "std::ranges::ends_with",
+          "source_path": "ranges/ends_with.md",
+          "since": "C++23",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::ends_with"
+          ]
+        }
+      ],
+      "since": "C++23",
+      "full_names": [
+        "std::ranges::ends_with"
+      ]
+    },
+    {
+      "entity_key": "equal_range",
+      "display_name": "std::equal_range",
+      "canonical_url": "/cpp/algorithm/equal_range/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/equal_range/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/equal_range/",
+          "title": "std::equal_range",
+          "source_path": "equal_range.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::equal_range"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/equal_range/",
+          "title": "std::ranges::equal_range",
+          "source_path": "ranges/equal_range.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::equal_range"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::equal_range",
+        "std::ranges::equal_range"
+      ]
+    },
+    {
+      "entity_key": "find",
+      "display_name": "std::find",
+      "canonical_url": "/cpp/algorithm/find/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/find/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/find/",
+          "title": "std::find, std::find_if, std::find_if_not",
+          "source_path": "find.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::find"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/find/",
+          "title": "std::ranges::find, std::ranges::find_if, std::ranges::find_if_not",
+          "source_path": "ranges/find.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::find"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::find",
+        "std::ranges::find"
+      ]
+    },
+    {
+      "entity_key": "find_end",
+      "display_name": "std::find_end",
+      "canonical_url": "/cpp/algorithm/find_end/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/find_end/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/find_end/",
+          "title": "std::find_end",
+          "source_path": "find_end.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::find_end"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/find_end/",
+          "title": "std::ranges::find_end",
+          "source_path": "ranges/find_end.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::find_end"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::find_end",
+        "std::ranges::find_end"
+      ]
+    },
+    {
+      "entity_key": "find_first_of",
+      "display_name": "std::find_first_of",
+      "canonical_url": "/cpp/algorithm/find_first_of/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/find_first_of/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/find_first_of/",
+          "title": "std::find_first_of",
+          "source_path": "find_first_of.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::find_first_of"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/find_first_of/",
+          "title": "std::ranges::find_first_of",
+          "source_path": "ranges/find_first_of.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::find_first_of"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::find_first_of",
+        "std::ranges::find_first_of"
+      ]
+    },
+    {
+      "entity_key": "find_if",
+      "display_name": "std::find_if",
+      "canonical_url": "/cpp/algorithm/find/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/find/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/find/",
+          "title": "std::find, std::find_if, std::find_if_not",
+          "source_path": "find.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::find_if"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/find/",
+          "title": "std::ranges::find, std::ranges::find_if, std::ranges::find_if_not",
+          "source_path": "ranges/find.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::find_if"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::find_if",
+        "std::ranges::find_if"
+      ]
+    },
+    {
+      "entity_key": "find_if_not",
+      "display_name": "std::find_if_not",
+      "canonical_url": "/cpp/algorithm/find/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/find/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/find/",
+          "title": "std::find, std::find_if, std::find_if_not",
+          "source_path": "find.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::find_if_not"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/find/",
+          "title": "std::ranges::find, std::ranges::find_if, std::ranges::find_if_not",
+          "source_path": "ranges/find.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::find_if_not"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::find_if_not",
+        "std::ranges::find_if_not"
+      ]
+    },
+    {
+      "entity_key": "find_last",
+      "display_name": "std::ranges::find_last",
+      "canonical_url": "/cpp/algorithm/ranges/find_last/",
+      "related_urls": [],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/find_last/",
+          "title": "std::ranges::find_last, std::ranges::find_last_if, std::ranges::find_last_if_not",
+          "source_path": "ranges/find_last.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::find_last"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::ranges::find_last"
+      ]
+    },
+    {
+      "entity_key": "find_last_if",
+      "display_name": "std::ranges::find_last_if",
+      "canonical_url": "/cpp/algorithm/ranges/find_last/",
+      "related_urls": [],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/find_last/",
+          "title": "std::ranges::find_last, std::ranges::find_last_if, std::ranges::find_last_if_not",
+          "source_path": "ranges/find_last.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::find_last_if"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::ranges::find_last_if"
+      ]
+    },
+    {
+      "entity_key": "find_last_if_not",
+      "display_name": "std::ranges::find_last_if_not",
+      "canonical_url": "/cpp/algorithm/ranges/find_last/",
+      "related_urls": [],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/find_last/",
+          "title": "std::ranges::find_last, std::ranges::find_last_if, std::ranges::find_last_if_not",
+          "source_path": "ranges/find_last.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::find_last_if_not"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::ranges::find_last_if_not"
+      ]
+    },
+    {
+      "entity_key": "lower_bound",
+      "display_name": "std::lower_bound",
+      "canonical_url": "/cpp/algorithm/lower_bound/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/lower_bound/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/lower_bound/",
+          "title": "std::lower_bound",
+          "source_path": "lower_bound.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::lower_bound"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/lower_bound/",
+          "title": "std::ranges::lower_bound",
+          "source_path": "ranges/lower_bound.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::lower_bound"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::lower_bound",
+        "std::ranges::lower_bound"
+      ]
+    },
+    {
+      "entity_key": "none_of",
+      "display_name": "std::none_of",
+      "canonical_url": "/cpp/algorithm/all_any_none_of/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/all_any_none_of/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/all_any_none_of/",
+          "title": "std::all_of, std::any_of, std::none_of",
+          "source_path": "all_any_none_of.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::none_of"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/all_any_none_of/",
+          "title": "std::ranges::all_of, std::ranges::any_of, std::ranges::none_of",
+          "source_path": "ranges/all_any_none_of.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::none_of"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::none_of",
+        "std::ranges::none_of"
+      ]
+    },
+    {
+      "entity_key": "search",
+      "display_name": "std::search",
+      "canonical_url": "/cpp/algorithm/search/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/search/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/search/",
+          "title": "std::search",
+          "source_path": "search.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::search"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/search/",
+          "title": "std::ranges::search",
+          "source_path": "ranges/search.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::search"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::search",
+        "std::ranges::search"
+      ]
+    },
+    {
+      "entity_key": "search_n",
+      "display_name": "std::search_n",
+      "canonical_url": "/cpp/algorithm/search_n/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/search_n/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/search_n/",
+          "title": "std::search_n",
+          "source_path": "search_n.md",
+          "since": "C++26",
+          "execution_policy": true,
+          "matched_names": [
+            "std::search_n"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/search_n/",
+          "title": "std::ranges::search_n",
+          "source_path": "ranges/search_n.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::search_n"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::search_n",
+        "std::ranges::search_n"
+      ]
+    },
+    {
+      "entity_key": "starts_with",
+      "display_name": "std::ranges::starts_with",
+      "canonical_url": "/cpp/algorithm/ranges/starts_with/",
+      "related_urls": [],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/starts_with/",
+          "title": "std::ranges::starts_with",
+          "source_path": "ranges/starts_with.md",
+          "since": "C++23",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::starts_with"
+          ]
+        }
+      ],
+      "since": "C++23",
+      "full_names": [
+        "std::ranges::starts_with"
+      ]
+    },
+    {
+      "entity_key": "upper_bound",
+      "display_name": "std::upper_bound",
+      "canonical_url": "/cpp/algorithm/upper_bound/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/upper_bound/"
+      ],
+      "category": "searching",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/upper_bound/",
+          "title": "std::upper_bound",
+          "source_path": "upper_bound.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::upper_bound"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/upper_bound/",
+          "title": "std::ranges::upper_bound",
+          "source_path": "ranges/upper_bound.md",
+          "since": "C++26",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::upper_bound"
+          ]
+        }
+      ],
+      "since": "C++26",
+      "full_names": [
+        "std::upper_bound",
+        "std::ranges::upper_bound"
+      ]
+    },
+    {
+      "entity_key": "includes",
+      "display_name": "std::includes",
+      "canonical_url": "/cpp/algorithm/includes/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/includes/",
+        "/cpp/algorithm/set_union/",
+        "/cpp/algorithm/set_intersection/",
+        "/cpp/algorithm/set_difference/"
+      ],
+      "category": "set_operations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/includes/",
+          "title": "std::includes",
+          "source_path": "includes.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::includes"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/includes/",
+          "title": "std::ranges::includes",
+          "source_path": "ranges/includes.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::includes"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::includes",
+        "std::ranges::includes"
+      ]
+    },
+    {
+      "entity_key": "inplace_merge",
+      "display_name": "std::inplace_merge",
+      "canonical_url": "/cpp/algorithm/inplace_merge/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/inplace_merge/",
+        "/cpp/algorithm/merge/",
+        "/cpp/algorithm/set_union/"
+      ],
+      "category": "set_operations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/inplace_merge/",
+          "title": "std::inplace_merge",
+          "source_path": "inplace_merge.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::inplace_merge"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/inplace_merge/",
+          "title": "std::ranges::inplace_merge",
+          "source_path": "ranges/inplace_merge.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::inplace_merge"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::inplace_merge",
+        "std::ranges::inplace_merge"
+      ]
+    },
+    {
+      "entity_key": "merge",
+      "display_name": "std::merge",
+      "canonical_url": "/cpp/algorithm/merge/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/merge/",
+        "/cpp/algorithm/set_union/",
+        "/cpp/algorithm/inplace_merge/",
+        "/cpp/algorithm/set_intersection/"
+      ],
+      "category": "set_operations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/merge/",
+          "title": "std::merge",
+          "source_path": "merge.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::merge"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/merge/",
+          "title": "std::ranges::merge, std::ranges::merge_result",
+          "source_path": "ranges/merge.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::merge"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::merge",
+        "std::ranges::merge"
+      ]
+    },
+    {
+      "entity_key": "set_difference",
+      "display_name": "std::set_difference",
+      "canonical_url": "/cpp/algorithm/set_difference/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/set_difference/",
+        "/cpp/algorithm/set_union/",
+        "/cpp/algorithm/set_intersection/",
+        "/cpp/algorithm/set_symmetric_difference/",
+        "/cpp/algorithm/includes/"
+      ],
+      "category": "set_operations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/set_difference/",
+          "title": "std::set_difference",
+          "source_path": "set_difference.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::set_difference"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/set_difference/",
+          "title": "std::ranges::set_difference, std::ranges::set_difference_result",
+          "source_path": "ranges/set_difference.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::set_difference"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::set_difference",
+        "std::ranges::set_difference"
+      ]
+    },
+    {
+      "entity_key": "set_intersection",
+      "display_name": "std::set_intersection",
+      "canonical_url": "/cpp/algorithm/set_intersection/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/set_intersection/",
+        "/cpp/algorithm/set_union/",
+        "/cpp/algorithm/set_difference/",
+        "/cpp/algorithm/set_symmetric_difference/",
+        "/cpp/algorithm/includes/"
+      ],
+      "category": "set_operations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/set_intersection/",
+          "title": "std::set_intersection",
+          "source_path": "set_intersection.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::set_intersection"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/set_intersection/",
+          "title": "std::ranges::set_intersection, std::ranges::set_intersection_result",
+          "source_path": "ranges/set_intersection.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::set_intersection"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::set_intersection",
+        "std::ranges::set_intersection"
+      ]
+    },
+    {
+      "entity_key": "set_symmetric_difference",
+      "display_name": "std::set_symmetric_difference",
+      "canonical_url": "/cpp/algorithm/set_symmetric_difference/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/set_symmetric_difference/",
+        "/cpp/algorithm/set_union/",
+        "/cpp/algorithm/set_intersection/",
+        "/cpp/algorithm/set_difference/",
+        "/cpp/algorithm/includes/"
+      ],
+      "category": "set_operations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/set_symmetric_difference/",
+          "title": "std::set_symmetric_difference",
+          "source_path": "set_symmetric_difference.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::set_symmetric_difference"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/set_symmetric_difference/",
+          "title": "std::ranges::set_symmetric_difference, std::ranges::set_symmetric_difference_result",
+          "source_path": "ranges/set_symmetric_difference.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::set_symmetric_difference"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::set_symmetric_difference",
+        "std::ranges::set_symmetric_difference"
+      ]
+    },
+    {
+      "entity_key": "set_union",
+      "display_name": "std::set_union",
+      "canonical_url": "/cpp/algorithm/set_union/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/set_union/",
+        "/cpp/algorithm/set_intersection/",
+        "/cpp/algorithm/set_difference/",
+        "/cpp/algorithm/set_symmetric_difference/",
+        "/cpp/algorithm/includes/",
+        "/cpp/algorithm/merge/"
+      ],
+      "category": "set_operations",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/set_union/",
+          "title": "std::set_union",
+          "source_path": "set_union.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::set_union"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/set_union/",
+          "title": "std::ranges::set_union, std::ranges::set_union_result",
+          "source_path": "ranges/set_union.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::set_union"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::set_union",
+        "std::ranges::set_union"
+      ]
+    },
+    {
+      "entity_key": "is_sorted",
+      "display_name": "std::is_sorted",
+      "canonical_url": "/cpp/algorithm/is_sorted/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/is_sorted/"
+      ],
+      "category": "sorting_ordering",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/is_sorted/",
+          "title": "std::is_sorted",
+          "source_path": "is_sorted.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::is_sorted"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/is_sorted/",
+          "title": "std::ranges::is_sorted",
+          "source_path": "ranges/is_sorted.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::is_sorted"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::is_sorted",
+        "std::ranges::is_sorted"
+      ]
+    },
+    {
+      "entity_key": "is_sorted_until",
+      "display_name": "std::is_sorted_until",
+      "canonical_url": "/cpp/algorithm/is_sorted_until/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/is_sorted_until/"
+      ],
+      "category": "sorting_ordering",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/is_sorted_until/",
+          "title": "std::is_sorted_until",
+          "source_path": "is_sorted_until.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::is_sorted_until"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/is_sorted_until/",
+          "title": "std::ranges::is_sorted_until",
+          "source_path": "ranges/is_sorted_until.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::is_sorted_until"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::is_sorted_until",
+        "std::ranges::is_sorted_until"
+      ]
+    },
+    {
+      "entity_key": "nth_element",
+      "display_name": "std::nth_element",
+      "canonical_url": "/cpp/algorithm/nth_element/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/nth_element/"
+      ],
+      "category": "sorting_ordering",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/nth_element/",
+          "title": "std::nth_element",
+          "source_path": "nth_element.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::nth_element"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/nth_element/",
+          "title": "std::ranges::nth_element",
+          "source_path": "ranges/nth_element.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::nth_element"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::nth_element",
+        "std::ranges::nth_element"
+      ]
+    },
+    {
+      "entity_key": "partial_sort",
+      "display_name": "std::partial_sort",
+      "canonical_url": "/cpp/algorithm/partial_sort/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/partial_sort/"
+      ],
+      "category": "sorting_ordering",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/partial_sort/",
+          "title": "std::partial_sort",
+          "source_path": "partial_sort.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::partial_sort"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/partial_sort/",
+          "title": "std::ranges::partial_sort",
+          "source_path": "ranges/partial_sort.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::partial_sort"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::partial_sort",
+        "std::ranges::partial_sort"
+      ]
+    },
+    {
+      "entity_key": "partial_sort_copy",
+      "display_name": "std::partial_sort_copy",
+      "canonical_url": "/cpp/algorithm/partial_sort_copy/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/partial_sort_copy/"
+      ],
+      "category": "sorting_ordering",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/partial_sort_copy/",
+          "title": "std::partial_sort_copy",
+          "source_path": "partial_sort_copy.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::partial_sort_copy"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/partial_sort_copy/",
+          "title": "std::ranges::partial_sort_copy, std::ranges::partial_sort_copy_result",
+          "source_path": "ranges/partial_sort_copy.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::partial_sort_copy"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::partial_sort_copy",
+        "std::ranges::partial_sort_copy"
+      ]
+    },
+    {
+      "entity_key": "sort",
+      "display_name": "std::sort",
+      "canonical_url": "/cpp/algorithm/sort/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/sort/",
+        "/cpp/algorithm/stable_sort/"
+      ],
+      "category": "sorting_ordering",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/sort/",
+          "title": "std::sort",
+          "source_path": "sort.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::sort"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/sort/",
+          "title": "std::ranges::sort",
+          "source_path": "ranges/sort.md",
+          "since": "C++20",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::sort"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::sort",
+        "std::ranges::sort"
+      ]
+    },
+    {
+      "entity_key": "stable_sort",
+      "display_name": "std::stable_sort",
+      "canonical_url": "/cpp/algorithm/stable_sort/",
+      "related_urls": [
+        "/cpp/algorithm/ranges/stable_sort/",
+        "/cpp/algorithm/sort/"
+      ],
+      "category": "sorting_ordering",
+      "variants": [
+        {
+          "family": "classic",
+          "url": "/cpp/algorithm/stable_sort/",
+          "title": "std::stable_sort",
+          "source_path": "stable_sort.md",
+          "since": "C++17",
+          "execution_policy": true,
+          "matched_names": [
+            "std::stable_sort"
+          ]
+        },
+        {
+          "family": "ranges",
+          "url": "/cpp/algorithm/ranges/stable_sort/",
+          "title": "std::ranges::stable_sort",
+          "source_path": "ranges/stable_sort.md",
+          "since": "",
+          "execution_policy": false,
+          "matched_names": [
+            "std::ranges::stable_sort"
+          ]
+        }
+      ],
+      "since": "C++17",
+      "full_names": [
+        "std::stable_sort",
+        "std::ranges::stable_sort"
+      ]
+    }
+  ]
+}

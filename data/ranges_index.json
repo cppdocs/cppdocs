@@ -1,0 +1,1209 @@
+{
+  "schema_version": 2,
+  "source_root": "content/cpp/ranges",
+  "entity_count": 74,
+  "category_counts": {
+    "access": 8,
+    "combining": 6,
+    "concepts": 12,
+    "filtering_slicing": 12,
+    "generators": 5,
+    "support": 3,
+    "transforming": 8,
+    "utility": 20
+  },
+  "entities": [
+    {
+      "entity_key": "cbegin",
+      "display_name": "cbegin",
+      "canonical_url": "/cpp/ranges/cbegin/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::cbegin"
+      ],
+      "category": "access",
+      "source_slug": "cbegin",
+      "short_name": "cbegin",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "cdata",
+      "display_name": "cdata",
+      "canonical_url": "/cpp/ranges/cdata/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::cdata"
+      ],
+      "category": "access",
+      "source_slug": "cdata",
+      "short_name": "cdata",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "cend",
+      "display_name": "cend",
+      "canonical_url": "/cpp/ranges/cend/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::cend"
+      ],
+      "category": "access",
+      "source_slug": "cend",
+      "short_name": "cend",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "crbegin",
+      "display_name": "crbegin",
+      "canonical_url": "/cpp/ranges/crbegin/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::crbegin"
+      ],
+      "category": "access",
+      "source_slug": "crbegin",
+      "short_name": "crbegin",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "crend",
+      "display_name": "crend",
+      "canonical_url": "/cpp/ranges/crend/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::crend"
+      ],
+      "category": "access",
+      "source_slug": "crend",
+      "short_name": "crend",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "rbegin",
+      "display_name": "rbegin",
+      "canonical_url": "/cpp/ranges/rbegin/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::rbegin"
+      ],
+      "category": "access",
+      "source_slug": "rbegin",
+      "short_name": "rbegin",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "rend",
+      "display_name": "rend",
+      "canonical_url": "/cpp/ranges/rend/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::rend"
+      ],
+      "category": "access",
+      "source_slug": "rend",
+      "short_name": "rend",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "ssize",
+      "display_name": "ssize",
+      "canonical_url": "/cpp/ranges/ssize/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::ssize"
+      ],
+      "category": "access",
+      "source_slug": "ssize",
+      "short_name": "ssize",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "cartesian_product",
+      "display_name": "views::cartesian_product",
+      "canonical_url": "/cpp/ranges/cartesian_product_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::cartesian_product",
+        "std::ranges::cartesian_product_view"
+      ],
+      "category": "combining",
+      "source_slug": "cartesian_product_view",
+      "short_name": "views::cartesian_product",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "concat",
+      "display_name": "views::concat",
+      "canonical_url": "/cpp/ranges/concat_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::concat",
+        "std::ranges::concat_view"
+      ],
+      "category": "combining",
+      "source_slug": "concat_view",
+      "short_name": "views::concat",
+      "since": "C++26"
+    },
+    {
+      "entity_key": "join",
+      "display_name": "views::join",
+      "canonical_url": "/cpp/ranges/join_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/join_with_view/",
+          "title": "join_with_view"
+        },
+        {
+          "url": "/cpp/ranges/split_view/",
+          "title": "split_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::join",
+        "std::ranges::join_view"
+      ],
+      "category": "combining",
+      "source_slug": "join_view",
+      "short_name": "views::join",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "join_with",
+      "display_name": "views::join_with",
+      "canonical_url": "/cpp/ranges/join_with_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/join_view/",
+          "title": "join_view"
+        },
+        {
+          "url": "/cpp/ranges/split_view/",
+          "title": "split_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::join_with",
+        "std::ranges::join_with_view"
+      ],
+      "category": "combining",
+      "source_slug": "join_with_view",
+      "short_name": "views::join_with",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "zip",
+      "display_name": "views::zip",
+      "canonical_url": "/cpp/ranges/zip_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/zip_transform_view/",
+          "title": "zip_transform_view"
+        },
+        {
+          "url": "/cpp/ranges/elements_view/",
+          "title": "elements_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::zip",
+        "std::ranges::zip_view"
+      ],
+      "category": "combining",
+      "source_slug": "zip_view",
+      "short_name": "views::zip",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "zip_transform",
+      "display_name": "views::zip_transform",
+      "canonical_url": "/cpp/ranges/zip_transform_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/zip_view/",
+          "title": "zip_view"
+        },
+        {
+          "url": "/cpp/ranges/transform_view/",
+          "title": "transform_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::zip_transform",
+        "std::ranges::zip_transform_view"
+      ],
+      "category": "combining",
+      "source_slug": "zip_transform_view",
+      "short_name": "views::zip_transform",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "bidirectional_range",
+      "display_name": "bidirectional_range",
+      "canonical_url": "/cpp/ranges/bidirectional_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::bidirectional_range"
+      ],
+      "category": "concepts",
+      "source_slug": "bidirectional_range",
+      "short_name": "bidirectional_range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "borrowed_range",
+      "display_name": "borrowed_range",
+      "canonical_url": "/cpp/ranges/borrowed_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::borrowed_range",
+        "std::ranges::enable_borrowed_range"
+      ],
+      "category": "concepts",
+      "source_slug": "borrowed_range",
+      "short_name": "borrowed_range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "common_range",
+      "display_name": "common_range",
+      "canonical_url": "/cpp/ranges/common_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::common_range"
+      ],
+      "category": "concepts",
+      "source_slug": "common_range",
+      "short_name": "common_range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "constant_range",
+      "display_name": "constant_range",
+      "canonical_url": "/cpp/ranges/constant_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::constant_range"
+      ],
+      "category": "concepts",
+      "source_slug": "constant_range",
+      "short_name": "constant_range",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "contiguous_range",
+      "display_name": "contiguous_range",
+      "canonical_url": "/cpp/ranges/contiguous_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::contiguous_range"
+      ],
+      "category": "concepts",
+      "source_slug": "contiguous_range",
+      "short_name": "contiguous_range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "forward_range",
+      "display_name": "forward_range",
+      "canonical_url": "/cpp/ranges/forward_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::forward_range"
+      ],
+      "category": "concepts",
+      "source_slug": "forward_range",
+      "short_name": "forward_range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "input_range",
+      "display_name": "input_range",
+      "canonical_url": "/cpp/ranges/input_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::input_range"
+      ],
+      "category": "concepts",
+      "source_slug": "input_range",
+      "short_name": "input_range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "random_access_range",
+      "display_name": "random_access_range",
+      "canonical_url": "/cpp/ranges/random_access_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::random_access_range"
+      ],
+      "category": "concepts",
+      "source_slug": "random_access_range",
+      "short_name": "random_access_range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "range",
+      "display_name": "range",
+      "canonical_url": "/cpp/ranges/range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::range"
+      ],
+      "category": "concepts",
+      "source_slug": "range",
+      "short_name": "range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "sized_range",
+      "display_name": "sized_range",
+      "canonical_url": "/cpp/ranges/sized_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::sized_range",
+        "std::ranges::disable_sized_range"
+      ],
+      "category": "concepts",
+      "source_slug": "sized_range",
+      "short_name": "sized_range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "view",
+      "display_name": "view",
+      "canonical_url": "/cpp/ranges/view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::view",
+        "std::ranges::enable_view",
+        "std::ranges::view_base"
+      ],
+      "category": "concepts",
+      "source_slug": "view",
+      "short_name": "view",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "viewable_range",
+      "display_name": "viewable_range",
+      "canonical_url": "/cpp/ranges/viewable_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::viewable_range"
+      ],
+      "category": "concepts",
+      "source_slug": "viewable_range",
+      "short_name": "viewable_range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "adjacent",
+      "display_name": "views::adjacent",
+      "canonical_url": "/cpp/ranges/adjacent_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/slide_view/",
+          "title": "slide_view"
+        },
+        {
+          "url": "/cpp/ranges/adjacent_transform_view/",
+          "title": "adjacent_transform_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::adjacent",
+        "std::ranges::adjacent_view",
+        "std::ranges::views::pairwise"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "adjacent_view",
+      "short_name": "views::adjacent",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "chunk",
+      "display_name": "views::chunk",
+      "canonical_url": "/cpp/ranges/chunk_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/slide_view/",
+          "title": "slide_view"
+        },
+        {
+          "url": "/cpp/ranges/stride_view/",
+          "title": "stride_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::chunk",
+        "std::ranges::chunk_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "chunk_view",
+      "short_name": "views::chunk",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "chunk_by",
+      "display_name": "views::chunk_by",
+      "canonical_url": "/cpp/ranges/chunk_by_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/chunk_view/",
+          "title": "chunk_view"
+        },
+        {
+          "url": "/cpp/ranges/split_view/",
+          "title": "split_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::chunk_by",
+        "std::ranges::chunk_by_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "chunk_by_view",
+      "short_name": "views::chunk_by",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "drop",
+      "display_name": "views::drop",
+      "canonical_url": "/cpp/ranges/drop_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::drop",
+        "std::ranges::drop_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "drop_view",
+      "short_name": "views::drop",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "drop_while",
+      "display_name": "views::drop_while",
+      "canonical_url": "/cpp/ranges/drop_while_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::drop_while",
+        "std::ranges::drop_while_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "drop_while_view",
+      "short_name": "views::drop_while",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "filter",
+      "display_name": "views::filter",
+      "canonical_url": "/cpp/ranges/filter_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::filter",
+        "std::ranges::filter_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "filter_view",
+      "short_name": "views::filter",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "lazy_split",
+      "display_name": "views::lazy_split",
+      "canonical_url": "/cpp/ranges/lazy_split_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/split_view/",
+          "title": "split_view"
+        },
+        {
+          "url": "/cpp/ranges/join_view/",
+          "title": "join_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::lazy_split",
+        "std::ranges::lazy_split_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "lazy_split_view",
+      "short_name": "views::lazy_split",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "slide",
+      "display_name": "views::slide",
+      "canonical_url": "/cpp/ranges/slide_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/chunk_view/",
+          "title": "chunk_view"
+        },
+        {
+          "url": "/cpp/ranges/adjacent_view/",
+          "title": "adjacent_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::slide",
+        "std::ranges::slide_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "slide_view",
+      "short_name": "views::slide",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "split",
+      "display_name": "views::split",
+      "canonical_url": "/cpp/ranges/split_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/lazy_split_view/",
+          "title": "lazy_split_view"
+        },
+        {
+          "url": "/cpp/ranges/join_view/",
+          "title": "join_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::split",
+        "std::ranges::split_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "split_view",
+      "short_name": "views::split",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "stride",
+      "display_name": "views::stride",
+      "canonical_url": "/cpp/ranges/stride_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/chunk_view/",
+          "title": "chunk_view"
+        },
+        {
+          "url": "/cpp/ranges/drop_view/",
+          "title": "drop_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::stride",
+        "std::ranges::stride_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "stride_view",
+      "short_name": "views::stride",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "take",
+      "display_name": "views::take",
+      "canonical_url": "/cpp/ranges/take_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::take",
+        "std::ranges::take_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "take_view",
+      "short_name": "views::take",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "take_while",
+      "display_name": "views::take_while",
+      "canonical_url": "/cpp/ranges/take_while_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::take_while",
+        "std::ranges::take_while_view"
+      ],
+      "category": "filtering_slicing",
+      "source_slug": "take_while_view",
+      "short_name": "views::take_while",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "empty",
+      "display_name": "views::empty",
+      "canonical_url": "/cpp/ranges/empty_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::empty",
+        "std::ranges::empty_view"
+      ],
+      "category": "generators",
+      "source_slug": "empty_view",
+      "short_name": "views::empty",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "iota",
+      "display_name": "views::iota",
+      "canonical_url": "/cpp/ranges/iota_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/repeat_view/",
+          "title": "repeat_view"
+        },
+        {
+          "url": "/cpp/ranges/single_view/",
+          "title": "single_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::iota",
+        "std::ranges::iota_view"
+      ],
+      "category": "generators",
+      "source_slug": "iota_view",
+      "short_name": "views::iota",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "basic_istream",
+      "display_name": "views::istream",
+      "canonical_url": "/cpp/ranges/basic_istream_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::istream",
+        "std::ranges::basic_istream_view",
+        "std::ranges::istream_view",
+        "std::ranges::wistream_view"
+      ],
+      "category": "generators",
+      "source_slug": "basic_istream_view",
+      "short_name": "views::istream",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "repeat",
+      "display_name": "views::repeat",
+      "canonical_url": "/cpp/ranges/repeat_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/iota_view/",
+          "title": "iota_view"
+        },
+        {
+          "url": "/cpp/ranges/single_view/",
+          "title": "single_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::repeat",
+        "std::ranges::repeat_view"
+      ],
+      "category": "generators",
+      "source_slug": "repeat_view",
+      "short_name": "views::repeat",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "single",
+      "display_name": "views::single",
+      "canonical_url": "/cpp/ranges/single_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::single",
+        "std::ranges::single_view"
+      ],
+      "category": "generators",
+      "source_slug": "single_view",
+      "short_name": "views::single",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "copyable_wrapper",
+      "display_name": "Assignable wrapper (C++20)",
+      "canonical_url": "/cpp/ranges/copyable_wrapper/",
+      "related_urls": [],
+      "full_names": [
+        "Assignable wrapper (C++20)"
+      ],
+      "category": "support",
+      "source_slug": "copyable_wrapper",
+      "short_name": "Assignable wrapper (C++20)"
+    },
+    {
+      "entity_key": "non-propagating-cache",
+      "display_name": "Non-propagating cache (C++20)",
+      "canonical_url": "/cpp/ranges/non-propagating-cache/",
+      "related_urls": [],
+      "full_names": [
+        "Non-propagating cache (C++20)"
+      ],
+      "category": "support",
+      "source_slug": "non-propagating-cache",
+      "short_name": "Non-propagating cache (C++20)"
+    },
+    {
+      "entity_key": "elements_of",
+      "display_name": "elements_of",
+      "canonical_url": "/cpp/ranges/elements_of/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::elements_of"
+      ],
+      "category": "support",
+      "source_slug": "elements_of",
+      "short_name": "elements_of",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "adjacent_transform",
+      "display_name": "views::adjacent_transform",
+      "canonical_url": "/cpp/ranges/adjacent_transform_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/adjacent_view/",
+          "title": "adjacent_view"
+        },
+        {
+          "url": "/cpp/ranges/transform_view/",
+          "title": "transform_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::adjacent_transform",
+        "std::ranges::adjacent_transform_view",
+        "std::ranges::views::pairwise_transform"
+      ],
+      "category": "transforming",
+      "source_slug": "adjacent_transform_view",
+      "short_name": "views::adjacent_transform",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "as_const",
+      "display_name": "views::as_const",
+      "canonical_url": "/cpp/ranges/as_const_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::as_const",
+        "std::ranges::as_const_view"
+      ],
+      "category": "transforming",
+      "source_slug": "as_const_view",
+      "short_name": "views::as_const",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "as_rvalue",
+      "display_name": "views::as_rvalue",
+      "canonical_url": "/cpp/ranges/as_rvalue_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::as_rvalue",
+        "std::ranges::as_rvalue_view"
+      ],
+      "category": "transforming",
+      "source_slug": "as_rvalue_view",
+      "short_name": "views::as_rvalue",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "elements",
+      "display_name": "views::elements",
+      "canonical_url": "/cpp/ranges/elements_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/keys_view/",
+          "title": "keys_view"
+        },
+        {
+          "url": "/cpp/ranges/values_view/",
+          "title": "values_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::elements",
+        "std::ranges::elements_view"
+      ],
+      "category": "transforming",
+      "source_slug": "elements_view",
+      "short_name": "views::elements",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "enumerate",
+      "display_name": "views::enumerate",
+      "canonical_url": "/cpp/ranges/enumerate_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/zip_view/",
+          "title": "zip_view"
+        },
+        {
+          "url": "/cpp/ranges/transform_view/",
+          "title": "transform_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::enumerate",
+        "std::ranges::enumerate_view"
+      ],
+      "category": "transforming",
+      "source_slug": "enumerate_view",
+      "short_name": "views::enumerate",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "keys",
+      "display_name": "views::keys",
+      "canonical_url": "/cpp/ranges/keys_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/elements_view/",
+          "title": "elements_view"
+        },
+        {
+          "url": "/cpp/ranges/values_view/",
+          "title": "values_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::keys",
+        "std::ranges::keys_view"
+      ],
+      "category": "transforming",
+      "source_slug": "keys_view",
+      "short_name": "views::keys",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "transform",
+      "display_name": "views::transform",
+      "canonical_url": "/cpp/ranges/transform_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/algorithm/ranges/transform/",
+          "title": "ranges::transform algorithm"
+        },
+        {
+          "url": "/cpp/ranges/zip_transform_view/",
+          "title": "zip_transform_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::transform",
+        "std::ranges::transform_view"
+      ],
+      "category": "transforming",
+      "source_slug": "transform_view",
+      "short_name": "views::transform",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "values",
+      "display_name": "views::values",
+      "canonical_url": "/cpp/ranges/values_view/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/elements_view/",
+          "title": "elements_view"
+        },
+        {
+          "url": "/cpp/ranges/keys_view/",
+          "title": "keys_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::views::values",
+        "std::ranges::values_view"
+      ],
+      "category": "transforming",
+      "source_slug": "values_view",
+      "short_name": "views::values",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "cpo",
+      "display_name": "Customization point object (since C++20)",
+      "canonical_url": "/cpp/ranges/cpo/",
+      "related_urls": [],
+      "full_names": [
+        "Customization point object (since C++20)"
+      ],
+      "category": "utility",
+      "source_slug": "cpo",
+      "short_name": "Customization point object (since C++20)",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "borrowed_iterator_t",
+      "display_name": "borrowed_iterator_t",
+      "canonical_url": "/cpp/ranges/borrowed_iterator_t/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::borrowed_iterator_t",
+        "std::ranges::borrowed_subrange_t"
+      ],
+      "category": "utility",
+      "source_slug": "borrowed_iterator_t",
+      "short_name": "borrowed_iterator_t",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "dangling",
+      "display_name": "dangling",
+      "canonical_url": "/cpp/ranges/dangling/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::dangling"
+      ],
+      "category": "utility",
+      "source_slug": "dangling",
+      "short_name": "dangling",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "from_range",
+      "display_name": "from_range",
+      "canonical_url": "/cpp/ranges/from_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::from_range",
+        "std::from_range_t"
+      ],
+      "category": "utility",
+      "source_slug": "from_range",
+      "short_name": "from_range",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "iterator_t",
+      "display_name": "iterator_t",
+      "canonical_url": "/cpp/ranges/iterator_t/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::iterator_t",
+        "std::ranges::const_iterator_t",
+        "std::ranges::sentinel_t",
+        "std::ranges::const_sentinel_t"
+      ],
+      "category": "utility",
+      "source_slug": "iterator_t",
+      "short_name": "iterator_t",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "output_range",
+      "display_name": "output_range",
+      "canonical_url": "/cpp/ranges/output_range/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::output_range"
+      ],
+      "category": "utility",
+      "source_slug": "output_range",
+      "short_name": "output_range",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "owning",
+      "display_name": "owning_view",
+      "canonical_url": "/cpp/ranges/owning_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::owning_view"
+      ],
+      "category": "utility",
+      "source_slug": "owning_view",
+      "short_name": "owning_view",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "range_adaptor_closure",
+      "display_name": "range_adaptor_closure",
+      "canonical_url": "/cpp/ranges/range_adaptor_closure/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::range_adaptor_closure"
+      ],
+      "category": "utility",
+      "source_slug": "range_adaptor_closure",
+      "short_name": "range_adaptor_closure",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "range_reference_t",
+      "display_name": "range_reference_t",
+      "canonical_url": "/cpp/ranges/range_reference_t/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::range_reference_t",
+        "std::ranges::range_const_reference_t",
+        "std::ranges::range_rvalue_reference_t",
+        "std::ranges::range_common_reference_t"
+      ],
+      "category": "utility",
+      "source_slug": "range_reference_t",
+      "short_name": "range_reference_t",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "range_size_t",
+      "display_name": "range_size_t",
+      "canonical_url": "/cpp/ranges/range_size_t/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::range_size_t",
+        "std::ranges::range_difference_t",
+        "std::ranges::range_value_t"
+      ],
+      "category": "utility",
+      "source_slug": "range_size_t",
+      "short_name": "range_size_t",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "ref",
+      "display_name": "ref_view",
+      "canonical_url": "/cpp/ranges/ref_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::ref_view"
+      ],
+      "category": "utility",
+      "source_slug": "ref_view",
+      "short_name": "ref_view",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "subrange",
+      "display_name": "subrange",
+      "canonical_url": "/cpp/ranges/subrange/",
+      "related_urls": [
+        {
+          "url": "/cpp/ranges/view_interface/",
+          "title": "view_interface"
+        },
+        {
+          "url": "/cpp/ranges/common_view/",
+          "title": "common_view"
+        }
+      ],
+      "full_names": [
+        "std::ranges::subrange"
+      ],
+      "category": "utility",
+      "source_slug": "subrange",
+      "short_name": "subrange",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "subrange_kind",
+      "display_name": "subrange_kind",
+      "canonical_url": "/cpp/ranges/subrange_kind/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::subrange_kind"
+      ],
+      "category": "utility",
+      "source_slug": "subrange_kind",
+      "short_name": "subrange_kind",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "to",
+      "display_name": "to",
+      "canonical_url": "/cpp/ranges/to/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::to"
+      ],
+      "category": "utility",
+      "source_slug": "to",
+      "short_name": "to",
+      "since": "C++23"
+    },
+    {
+      "entity_key": "view_interface",
+      "display_name": "view_interface",
+      "canonical_url": "/cpp/ranges/view_interface/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::view_interface"
+      ],
+      "category": "utility",
+      "source_slug": "view_interface",
+      "short_name": "view_interface",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "all",
+      "display_name": "views::all",
+      "canonical_url": "/cpp/ranges/all_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::all",
+        "std::ranges::views::all_t"
+      ],
+      "category": "utility",
+      "source_slug": "all_view",
+      "short_name": "views::all",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "common",
+      "display_name": "views::common",
+      "canonical_url": "/cpp/ranges/common_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::common",
+        "std::ranges::common_view"
+      ],
+      "category": "utility",
+      "source_slug": "common_view",
+      "short_name": "views::common",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "counted",
+      "display_name": "views::counted",
+      "canonical_url": "/cpp/ranges/counted_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::counted"
+      ],
+      "category": "utility",
+      "source_slug": "counted_view",
+      "short_name": "views::counted",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "view_counted",
+      "display_name": "views::counted",
+      "canonical_url": "/cpp/ranges/view_counted/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::counted"
+      ],
+      "category": "utility",
+      "source_slug": "view_counted",
+      "short_name": "views::counted",
+      "since": "C++20"
+    },
+    {
+      "entity_key": "reverse",
+      "display_name": "views::reverse",
+      "canonical_url": "/cpp/ranges/reverse_view/",
+      "related_urls": [],
+      "full_names": [
+        "std::ranges::views::reverse",
+        "std::ranges::reverse_view"
+      ],
+      "category": "utility",
+      "source_slug": "reverse_view",
+      "short_name": "views::reverse",
+      "since": "C++20"
+    }
+  ]
+}

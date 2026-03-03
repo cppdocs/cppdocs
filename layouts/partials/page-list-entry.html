@@ -1,0 +1,36 @@
+{{- $page := .page | default . -}}
+{{- $globalVariants := .globalVariants | default false -}}
+{{- $variantScope := .variantScope | default "" -}}
+{{- $defaultVariant := .defaultVariant | default "" -}}
+{{- $metaRaw := partial "instantiated-member-meta.json" $page -}}
+
+{{- if $metaRaw -}}
+  {{- $meta := $metaRaw | transform.Unmarshal -}}
+  <div class="page-list-item-main">
+    <div class="page-list-item-heading">
+      <a
+        class="page-list-item-title"
+        href="{{ $page.RelPermalink }}{{ if and $globalVariants $defaultVariant }}?variant={{ $defaultVariant }}{{ end }}"
+        {{- if $globalVariants }}
+          data-variant-link="true"
+          data-variant-scope="{{ $variantScope }}"
+          data-base-href="{{ $page.RelPermalink }}"
+        {{- end -}}
+      >{{ $meta.member }}</a>
+    </div>
+    {{- if not $globalVariants -}}
+      <p class="page-list-item-meta">Template: <code>{{ $meta.family }}&lt;T&gt;</code></p>
+      <ul class="page-list-item-chips">
+        {{- range $meta.specializations -}}
+          <li><code>{{ . }}</code></li>
+        {{- end -}}
+      </ul>
+    {{- end -}}
+  </div>
+{{- else -}}
+  <div class="page-list-item-main">
+    <div class="page-list-item-heading">
+      <a class="page-list-item-title" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+    </div>
+  </div>
+{{- end -}}

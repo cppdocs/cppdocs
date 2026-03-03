@@ -1,0 +1,17 @@
+{{ $scope := .scope | default "" }}
+{{ $kind := .kind | default "overview" }}
+{{ $copy := .copy | default "Showing items available in" }}
+{{ $hint := .hint | default "" }}
+<div
+  class="min-standard-status"
+  data-min-standard-status
+  data-min-standard-scope="{{ $scope }}"
+  data-min-standard-kind="{{ $kind }}"
+  hidden
+>
+  <span class="min-standard-status-label">{{ $copy }}</span>
+  <strong class="min-standard-status-value" data-min-standard-status-value>Any</strong>
+  {{ with $hint }}
+    <span class="min-standard-status-hint">{{ . }}</span>
+  {{ end }}
+</div>

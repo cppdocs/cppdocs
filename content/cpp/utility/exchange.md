@@ -1,0 +1,88 @@
+---
+title: "std::exchange"
+source_path: "cpp/utility/exchange"
+header: "<utility>"
+category: "utility"
+---
+
+Replaces the value of obj with new_value and returns the old value of obj.
+
+## Declarations
+```cpp
+template< class T, class U = T >
+T exchange( T& obj, U&& new_value );
+```
+_(since C++14) (constexpr since C++20)(conditionally noexcept since C++23)_
+
+## Parameters
+- `obj`: object whose value to replace
+- `new_value`: the value to assign to obj
+
+## Return value
+The old value of obj.
+
+## Notes
+std::exchange can be used when implementing [move assignment operators](/cpp/language/move_operator/) and [move constructors](/cpp/language/move_constructor/):
+
+## Example
+```cpp
+#include <iostream>
+#include <iterator>
+#include <utility>
+#include <vector>
+ 
+class stream
+{
+public:
+    using flags_type = int;
+ 
+public:
+    flags_type flags() const { return flags_; }
+ 
+    // Replaces flags_ by newf, and returns the old value.
+    flags_type flags(flags_type newf) { return std::exchange(flags_, newf); }
+ 
+private:
+    flags_type flags_ = 0;
+};
+ 
+void f() { std::cout << "f()"; }
+ 
+int main()
+{
+    stream s;
+ 
+    std::cout << s.flags() << '\n';
+    std::cout << s.flags(12) << '\n';
+    std::cout << s.flags() << "\n\n";
+ 
+    std::vector<int> v;
+ 
+    // Since the second template parameter has a default value, it is possible
+    // to use a braced-init-list as second argument. The expression below
+    // is equivalent to std::exchange(v, std::vector<int>{1, 2, 3, 4});
+ 
+    std::exchange(v, {1, 2, 3, 4});
+ 
+    std::copy(begin(v), end(v), std::ostream_iterator<int>(std::cout, ", "));
+ 
+    std::cout << "\n\n";
+ 
+    void (*fun)();
+ 
+    // The default value of template parameter also makes possible to use a
+    // normal function as second argument. The expression below is equivalent to
+    // std::exchange(fun, static_cast<void(*)()>(f))
+    std::exchange(fun, f);
+    fun();
+ 
+    std::cout << "\n\nFibonacci sequence: ";
+    for (int a{0}, b{1}; a < 100; a = std::exchange(b, a + b))
+        std::cout << a << ", ";
+    std::cout << "...\n";
+}
+```
+
+## See also
+- [swap](/cpp/utility/swap/)
+- [atomic_exchangeatomic_exchange_explicit](/cpp/atomic/atomic_exchange/)

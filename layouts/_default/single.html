@@ -1,0 +1,40 @@
+{{ define "main" }}
+  <article>
+    {{- with .Params.source_path -}}
+      {{ partial "breadcrumb.html" (dict "path" .) }}
+    {{- end }}
+    {{- .Scratch.Delete "hasInstantiatedMemberHeader" -}}
+    <div class="page-heading">
+      {{- $instantiatedHeader := partial "instantiated-member-header.html" . -}}
+      {{- if .Scratch.Get "hasInstantiatedMemberHeader" -}}
+        {{ $instantiatedHeader | safeHTML }}
+      {{- else -}}
+        <h1>{{ .Title }}</h1>
+      {{- end -}}
+      <button
+        class="pin-toggle"
+        type="button"
+        data-pin-url="{{ .RelPermalink }}"
+        data-pin-title="{{ .Title }}"
+        aria-pressed="false"
+      >
+        ☆ Pin
+      </button>
+    </div>
+    {{ if hasPrefix .RelPermalink "/cpp/" }}
+      <div class="min-standard-page-notice" data-min-standard-page-notice hidden>
+        <span class="min-standard-page-notice-label">Min standard notice:</span>
+        <span data-min-standard-page-notice-text></span>
+      </div>
+    {{ end }}
+    {{ if .Params.since }}
+      <div class="section-meta" aria-label="Page metadata">
+        <span class="meta-chip">Since {{ .Params.since }}</span>
+      </div>
+    {{ end }}
+    {{ if .Params.header }}
+      <p><em>Header:</em> {{ .Params.header }}</p>
+    {{ end }}
+    {{ .Content }}
+  </article>
+{{ end }}

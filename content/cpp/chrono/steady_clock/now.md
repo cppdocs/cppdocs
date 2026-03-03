@@ -1,0 +1,49 @@
+---
+title: "std::chrono::steady_clock::now"
+source_path: "cpp/chrono/steady_clock/now"
+category: "chrono"
+since: "C++11"
+---
+
+Returns a time point representing the current point in time.
+
+## Declarations
+```cpp
+static std::chrono::time_point<std::chrono::steady_clock> now() noexcept;
+```
+_(since C++11)_
+
+## Return value
+A time point representing the current time.
+
+## Example
+```cpp
+#include <chrono>
+#include <cstddef>
+#include <iomanip>
+#include <iostream>
+#include <numeric>
+#include <vector>
+ 
+volatile int sink; // prevents optimization
+ 
+void do_some_work(std::size_t size)
+{
+    std::vector<int> v(size, 42);
+    sink = std::accumulate(v.begin(), v.end(), 0); // ensures side effect
+}
+ 
+int main()
+{
+    std::cout << std::fixed << std::setprecision(9) << std::left;
+    for (auto size{1ull}; size < 1000'000'000ull; size *= 100)
+    {
+        const auto start = std::chrono::steady_clock::now();
+        do_some_work(size);
+        const auto end = std::chrono::steady_clock::now();
+        const std::chrono::duration<double> diff = end - start;
+ 
+        std::cout << "diff = " << diff << "; size = " << size << '\n';
+    }
+}
+```

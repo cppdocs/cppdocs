@@ -1,0 +1,86 @@
+---
+title: "std::vector<T,Allocator>::operator="
+source_path: "cpp/container/vector/operator"
+category: "container"
+since: "C++17"
+---
+
+Replaces the contents of the container.
+
+## Declarations
+```cpp
+vector& operator=( const vector& other );
+```
+_(constexpr since C++20)_
+
+```cpp
+vector& operator=( vector&& other );
+```
+_(since C++11) (until C++17)_
+
+```cpp
+vector& operator=( vector&& other ) noexcept(/* see below */);
+```
+_(since C++17)_
+
+```cpp
+vector& operator=( std::initializer_list<value_type> ilist );
+```
+_(since C++11) (constexpr since C++20)_
+
+## Parameters
+- `other`: another container to use as data source
+- `ilist`: initializer list to use as data source
+
+## Return value
+*this
+
+## Notes
+After container move assignment (overload (2)), unless element-wise move assignment is forced by incompatible allocators, references, pointers, and iterators (other than the end iterator) to other remain valid, but refer to elements that are now in *this. The current standard makes this guarantee via the blanket statement in [[container.reqmts]/67](https://eel.is/c++draft/container.reqmts#67), and a more direct guarantee is under consideration via [LWG issue 2321](https://cplusplus.github.io/LWG/issue2321).
+
+## Example
+```cpp
+#include <initializer_list>
+#include <iostream>
+#include <iterator>
+#include <vector>
+ 
+void print(auto const comment, auto const& container)
+{
+    auto size = std::size(container);
+    std::cout << comment << "{ ";
+    for (auto const& element : container)
+        std::cout << element << (--size ? ", " : " ");
+    std::cout << "}\n";
+}
+ 
+int main()
+{
+    std::vector<int> x{1, 2, 3}, y, z;
+    const auto w = {4, 5, 6, 7};
+ 
+    std::cout << "Initially:\n";
+    print("x = ", x);
+    print("y = ", y);
+    print("z = ", z);
+ 
+    std::cout << "Copy assignment copies data from x to y:\n";
+    y = x;
+    print("x = ", x);
+    print("y = ", y);
+ 
+    std::cout << "Move assignment moves data from x to z, modifying both x and z:\n";
+    z = std::move(x);
+    print("x = ", x);
+    print("z = ", z);
+ 
+    std::cout << "Assignment of initializer_list w to z:\n";
+    z = w;
+    print("w = ", w);
+    print("z = ", z);
+}
+```
+
+## See also
+- [(constructor)](/cpp/container/vector/vector/)
+- [assign](/cpp/container/vector/assign/)

@@ -1,0 +1,165 @@
+{{ define "main" }}
+
+{{/* ── Breadcrumb (skipped on home page) ───────────────────────────────── */}}
+{{ if not .IsHome }}
+  {{ $path := strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink) }}
+  {{ partial "breadcrumb.html" (dict "path" $path) }}
+{{ end }}
+
+{{- $globalVariantEnabled := false -}}
+{{- $variantScope := "" -}}
+{{- $defaultVariant := "" -}}
+
+{{ if .IsHome }}
+  <section class="hero">
+    <p class="hero-kicker">Modern C++ Knowledge Base</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="hero-lead">{{ . }}</p>{{ end }}
+    {{ if .Content }}<p>{{ .Content | plainify }}</p>{{ end }}
+  </section>
+
+  <section class="home-block home-block-reference">
+    <h2>Choose reference</h2>
+    <div class="section-grid home-reference-grid">
+      <article class="section-card section-card-nav is-clickable" data-card-href="{{ "/cpp/" | relURL }}" role="link" tabindex="0" onclick="if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; window.location.href='{{ "/cpp/" | relURL }}';" onkeydown="if (event.key !== 'Enter' && event.key !== ' ') return; if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; event.preventDefault(); window.location.href='{{ "/cpp/" | relURL }}';">
+        <p class="card-title"><a href="{{ "/cpp/" | relURL }}">C++ Reference</a></p>
+        <p class="card-desc">Modern C++ language and standard library</p>
+      </article>
+      <article class="section-card section-card-nav is-clickable" data-card-href="{{ "/c/" | relURL }}" role="link" tabindex="0" onclick="if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; window.location.href='{{ "/c/" | relURL }}';" onkeydown="if (event.key !== 'Enter' && event.key !== ' ') return; if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; event.preventDefault(); window.location.href='{{ "/c/" | relURL }}';">
+        <p class="card-title"><a href="{{ "/c/" | relURL }}">C Reference</a></p>
+        <p class="card-desc">C language core and standard library</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="home-block home-block-start">
+    <h2>Browse by section</h2>
+    <div class="section-grid home-section-grid">
+      <article class="section-card is-clickable" data-card-href="{{ "/cpp/algorithm/" | relURL }}" role="link" tabindex="0" onclick="if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; window.location.href='{{ "/cpp/algorithm/" | relURL }}';" onkeydown="if (event.key !== 'Enter' && event.key !== ' ') return; if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; event.preventDefault(); window.location.href='{{ "/cpp/algorithm/" | relURL }}';">
+        <p class="card-title"><a href="{{ "/cpp/algorithm/" | relURL }}">Algorithms</a></p>
+        <p class="card-desc">Sorting, searching, and sequence operations with modern C++ variants.</p>
+        <p class="card-links"><a href="{{ "/cpp/algorithm/sort/" | relURL }}">sort</a> · <a href="{{ "/cpp/algorithm/find/" | relURL }}">find</a> · <a href="{{ "/cpp/algorithm/accumulate/" | relURL }}">accumulate</a></p>
+      </article>
+      <article class="section-card is-clickable" data-card-href="{{ "/cpp/container/" | relURL }}" role="link" tabindex="0" onclick="if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; window.location.href='{{ "/cpp/container/" | relURL }}';" onkeydown="if (event.key !== 'Enter' && event.key !== ' ') return; if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; event.preventDefault(); window.location.href='{{ "/cpp/container/" | relURL }}';">
+        <p class="card-title"><a href="{{ "/cpp/container/" | relURL }}">Containers</a></p>
+        <p class="card-desc">Sequence and associative containers, adaptors, and node handles.</p>
+        <p class="card-links"><a href="{{ "/cpp/container/vector/" | relURL }}">vector</a> · <a href="{{ "/cpp/container/map/" | relURL }}">map</a> · <a href="{{ "/cpp/container/unordered_map/" | relURL }}">unordered_map</a></p>
+      </article>
+      <article class="section-card is-clickable" data-card-href="{{ "/cpp/string/" | relURL }}" role="link" tabindex="0" onclick="if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; window.location.href='{{ "/cpp/string/" | relURL }}';" onkeydown="if (event.key !== 'Enter' && event.key !== ' ') return; if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; event.preventDefault(); window.location.href='{{ "/cpp/string/" | relURL }}';">
+        <p class="card-title"><a href="{{ "/cpp/string/" | relURL }}">Strings</a></p>
+        <p class="card-desc">String classes, string views, and text-related utilities.</p>
+        <p class="card-links"><a href="{{ "/cpp/string/basic_string/" | relURL }}">basic_string</a> · <a href="{{ "/cpp/string/basic_string_view/" | relURL }}">string_view</a> · <a href="{{ "/cpp/string/char_traits/" | relURL }}">char_traits</a></p>
+      </article>
+      <article class="section-card is-clickable" data-card-href="{{ "/cpp/ranges/" | relURL }}" role="link" tabindex="0" onclick="if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; window.location.href='{{ "/cpp/ranges/" | relURL }}';" onkeydown="if (event.key !== 'Enter' && event.key !== ' ') return; if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; event.preventDefault(); window.location.href='{{ "/cpp/ranges/" | relURL }}';">
+        <p class="card-title"><a href="{{ "/cpp/ranges/" | relURL }}">Ranges</a></p>
+        <p class="card-desc">Range adaptors, views, and range-oriented algorithms.</p>
+        <p class="card-links"><a href="{{ "/cpp/ranges/view/" | relURL }}">view</a> · <a href="{{ "/cpp/ranges/filter_view/" | relURL }}">filter_view</a> · <a href="{{ "/cpp/ranges/transform_view/" | relURL }}">transform_view</a></p>
+      </article>
+      <article class="section-card is-clickable" data-card-href="{{ "/cpp/io/" | relURL }}" role="link" tabindex="0" onclick="if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; window.location.href='{{ "/cpp/io/" | relURL }}';" onkeydown="if (event.key !== 'Enter' && event.key !== ' ') return; if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; event.preventDefault(); window.location.href='{{ "/cpp/io/" | relURL }}';">
+        <p class="card-title"><a href="{{ "/cpp/io/" | relURL }}">Input/output</a></p>
+        <p class="card-desc">Streams, formatters, file I/O, and parsing/formatting facilities.</p>
+        <p class="card-links"><a href="{{ "/cpp/io/cout/" | relURL }}">cout</a> · <a href="{{ "/cpp/io/cin/" | relURL }}">cin</a> · <a href="{{ "/cpp/io/c/printf/" | relURL }}">printf</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="home-block home-block-domain">
+    <h2>By domain</h2>
+    <p class="card-desc">Concept-oriented entry points across language and library layers.</p>
+    <div class="domain-tags">
+      <a class="domain-tag" href="{{ "/domains/core-language/" | relURL }}">Core language</a>
+      <a class="domain-tag" href="{{ "/domains/standard-library/" | relURL }}">Standard library</a>
+      <a class="domain-tag" href="{{ "/domains/compile-time/" | relURL }}">Compile-time</a>
+      <a class="domain-tag" href="{{ "/domains/runtime/" | relURL }}">Runtime</a>
+      <a class="domain-tag" href="{{ "/domains/concurrency-model/" | relURL }}">Concurrency model</a>
+      <a class="domain-tag" href="{{ "/domains/memory-model/" | relURL }}">Memory model</a>
+      <a class="domain-tag" href="{{ "/domains/text-processing/" | relURL }}">Text processing</a>
+      <a class="domain-tag" href="{{ "/domains/numeric-computing/" | relURL }}">Numeric computing</a>
+    </div>
+  </section>
+{{ else }}
+  {{- $variantState := newScratch -}}
+  {{- $variantState.Set "enabled" true -}}
+  {{- $variantState.Set "family" "" -}}
+  {{- $variantState.Set "variantsKey" "" -}}
+  {{- $variantState.Set "variants" (slice) -}}
+  {{- $variantState.Set "matched" 0 -}}
+  {{- range .RegularPages.ByTitle -}}
+    {{- $metaRaw := partial "instantiated-member-meta.json" . -}}
+    {{- if not $metaRaw -}}
+      {{- $variantState.Set "enabled" false -}}
+    {{- else -}}
+      {{- $meta := $metaRaw | transform.Unmarshal -}}
+      {{- $variantsKey := delimit $meta.specializations "|" -}}
+      {{- if eq ($variantState.Get "family") "" -}}
+        {{- $variantState.Set "family" $meta.family -}}
+        {{- $variantState.Set "variantsKey" $variantsKey -}}
+        {{- $variantState.Set "variants" $meta.specializations -}}
+      {{- else if or (ne ($variantState.Get "family") $meta.family) (ne ($variantState.Get "variantsKey") $variantsKey) -}}
+        {{- $variantState.Set "enabled" false -}}
+      {{- end -}}
+      {{- $variantState.Add "matched" 1 -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $globalVariantEnabled = and (.RegularPages) ($variantState.Get "enabled") (eq ($variantState.Get "matched") (len .RegularPages)) (gt (len .RegularPages) 1) -}}
+  {{- $variantScope = printf "variant-%s" (replace (strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink)) "/" "-") -}}
+  {{- $variants := $variantState.Get "variants" -}}
+  {{- if and $globalVariantEnabled (gt (len $variants) 0) -}}
+    {{- $defaultVariant = index $variants 0 -}}
+  {{- end -}}
+  <section class="section-hero">
+    <p class="section-kicker">Section</p>
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}<div class="section-intro">{{ .Content }}</div>{{ end }}
+    <div class="section-meta section-chips">
+      <span class="meta-chip">{{ len .RegularPagesRecursive }} pages</span>
+      <span class="meta-chip">{{ len .Sections }} groups</span>
+    </div>
+    {{ if $globalVariantEnabled }}
+      <div class="variant-selector" data-variant-selector="true" data-variant-scope="{{ $variantScope }}" data-variant-storage-key="{{ $variantScope }}" data-default-variant="{{ $defaultVariant }}">
+        <span class="variant-selector-label">Variants:</span>
+        <div class="segmented" role="group" aria-label="Template variant">
+          {{ range $variants }}
+            <button type="button" data-variant-choice="{{ . }}" aria-pressed="false">{{ . }}</button>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </section>
+{{ end }}
+
+{{/* ── Subsection cards ──────────────────────────────────────────────────── */}}
+{{ if and .Sections (not .IsHome) }}
+  <div class="section-grid">
+    {{ range .Sections.ByTitle }}
+      {{ $count := len .RegularPagesRecursive }}
+      {{ $isCppSection := hasPrefix .RelPermalink "/cpp/" }}
+      <div class="section-card is-clickable" data-card-href="{{ .RelPermalink }}" role="link" tabindex="0" onclick="if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; window.location.href='{{ .RelPermalink }}';" onkeydown="if (event.key !== 'Enter' && event.key !== ' ') return; if (event.target.closest('a,button,input,textarea,select,summary,label,details')) return; event.preventDefault(); window.location.href='{{ .RelPermalink }}';"{{ if $isCppSection }} data-min-standard-item data-min-standard-scope="cpp" data-min-standard-path="{{ .RelPermalink }}" data-min-standard-since="{{ with .Params.since }}{{ . }}{{ end }}"{{ end }}>
+        <p class="card-title">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </p>
+        {{ with .Params.description }}
+          <p class="card-desc">{{ . }}</p>
+        {{ end }}
+        <span class="card-count">{{ $count }} {{ if eq $count 1 }}page{{ else }}pages{{ end }}</span>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
+
+{{/* ── Direct pages in this section ─────────────────────────────────────── */}}
+{{ if .RegularPages }}
+  {{ if .Sections }}
+    <div class="section-sub-heading">Pages in this section</div>
+  {{ end }}
+  <ul class="page-list">
+    {{ range .RegularPages.ByTitle }}
+      {{ $isCppPage := hasPrefix .RelPermalink "/cpp/" }}
+      <li class="page-list-item"{{ if $isCppPage }} data-min-standard-item data-min-standard-scope="cpp" data-min-standard-path="{{ .RelPermalink }}" data-min-standard-since="{{ with .Params.since }}{{ . }}{{ end }}"{{ end }}>
+        {{ partial "page-list-entry.html" (dict "page" . "globalVariants" $globalVariantEnabled "variantScope" $variantScope "defaultVariant" $defaultVariant) }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ end }}

@@ -1,0 +1,9 @@
+baseURL = "http://localhost/"
+title = "cppdocs.dev"
+contentDir = "content"
+languageCode = "en-us"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

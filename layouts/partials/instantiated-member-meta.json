@@ -1,0 +1,44 @@
+{{- $title := .Title -}}
+{{- $parts := split $title "," -}}
+{{- if gt (len $parts) 1 -}}
+  {{- $state := newScratch -}}
+  {{- $state.Set "ok" true -}}
+  {{- $state.Set "member" "" -}}
+  {{- $state.Set "family" "" -}}
+  {{- $state.Set "specializations" (slice) -}}
+
+  {{- range $raw := $parts -}}
+    {{- $part := trim $raw " " -}}
+    {{- $segments := split $part "::" -}}
+    {{- if lt (len $segments) 2 -}}
+      {{- $state.Set "ok" false -}}
+    {{- else -}}
+      {{- $member := index $segments (sub (len $segments) 1) -}}
+      {{- $parent := delimit (first (sub (len $segments) 1) $segments) "::" -}}
+      {{- $family := replaceRE `^(.+)<(.+)>$` "$1" $parent -}}
+      {{- $specialization := replaceRE `^(.+)<(.+)>$` "$2" $parent -}}
+      {{- if or (eq $family $parent) (eq $specialization $parent) -}}
+        {{- $state.Set "ok" false -}}
+      {{- else -}}
+        {{- if eq ($state.Get "member") "" -}}
+          {{- $state.Set "member" $member -}}
+        {{- else if ne ($state.Get "member") $member -}}
+          {{- $state.Set "ok" false -}}
+        {{- end -}}
+        {{- if eq ($state.Get "family") "" -}}
+          {{- $state.Set "family" $family -}}
+        {{- else if ne ($state.Get "family") $family -}}
+          {{- $state.Set "ok" false -}}
+        {{- end -}}
+        {{- $state.Add "specializations" $specialization -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $member := $state.Get "member" -}}
+  {{- $family := $state.Get "family" -}}
+  {{- $specializations := uniq ($state.Get "specializations") -}}
+  {{- if and ($state.Get "ok") (ne $member "") (ne $family "") (ge (len $specializations) 2) -}}
+    {{- jsonify (dict "member" $member "family" $family "specializations" $specializations) -}}
+  {{- end -}}
+{{- end -}}

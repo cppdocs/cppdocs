@@ -1,0 +1,547 @@
+{
+  "overrides": {
+    "sort": {
+      "entity_key": "sort",
+      "family_key": "sorting",
+      "canonical_url": "/cpp/algorithm/sort/",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "separate_from": [
+        "stable_sort",
+        "partial_sort",
+        "partial_sort_copy",
+        "nth_element"
+      ],
+      "related_entities": [
+        "stable_sort",
+        "partial_sort",
+        "partial_sort_copy",
+        "nth_element"
+      ],
+      "status": "forced_merge",
+      "notes": "Primary ordering entity. Merge classic and ranges, but keep stability and partial-ordering siblings separate."
+    },
+    "stable_sort": {
+      "entity_key": "stable_sort",
+      "family_key": "sorting",
+      "canonical_url": "/cpp/algorithm/stable_sort/",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "separate_from": [
+        "sort",
+        "partial_sort"
+      ],
+      "related_entities": [
+        "sort",
+        "partial_sort"
+      ],
+      "status": "forced_split",
+      "notes": "Separate entity because stability is a first-order semantic guarantee, not a minor overload detail."
+    },
+    "find": {
+      "entity_key": "find",
+      "family_key": "find_family",
+      "canonical_url": "/cpp/algorithm/find/",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "separate_from": [
+        "find_if",
+        "find_if_not",
+        "find_end",
+        "find_first_of",
+        "find_last"
+      ],
+      "related_entities": [
+        "find_if",
+        "find_if_not",
+        "find_end",
+        "find_first_of",
+        "find_last"
+      ],
+      "status": "forced_merge",
+      "notes": "Classic and ranges variants merge, but the bundled classic page must still unpack into separate locate-style entities."
+    },
+    "for_each": {
+      "entity_key": "for_each",
+      "family_key": "callable_iteration",
+      "canonical_url": "/cpp/algorithm/for_each/",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "for_each_n"
+      ],
+      "supporting_urls": [
+        "/cpp/algorithm/ranges/return_types/in_fun_result/"
+      ],
+      "status": "forced_merge",
+      "notes": "Same core task across classic and ranges. The ranges result object is supporting metadata, not a separate entity."
+    },
+    "accumulate": {
+      "entity_key": "accumulate",
+      "family_key": "numeric_reduction",
+      "canonical_url": "/cpp/algorithm/accumulate/",
+      "merge_classic_ranges": false,
+      "execution_policy_variant": false,
+      "separate_from": [
+        "reduce",
+        "transform_reduce",
+        "inclusive_scan",
+        "exclusive_scan"
+      ],
+      "related_entities": [
+        "reduce",
+        "inner_product",
+        "transform_reduce"
+      ],
+      "status": "forced_split",
+      "notes": "Keep separate from reduce. Similar user goal, but different semantic and parallelization expectations."
+    },
+    "reduce": {
+      "entity_key": "reduce",
+      "family_key": "numeric_reduction",
+      "canonical_url": "/cpp/algorithm/reduce/",
+      "category": "numeric",
+      "merge_classic_ranges": false,
+      "execution_policy_variant": true,
+      "separate_from": [
+        "accumulate",
+        "transform_reduce"
+      ],
+      "related_entities": [
+        "accumulate",
+        "transform_reduce",
+        "inclusive_scan",
+        "exclusive_scan"
+      ],
+      "status": "forced_split",
+      "notes": "Reduction family member with execution-policy relevance. Do not collapse into accumulate."
+    },
+    "make_heap": {
+      "entity_key": "make_heap",
+      "family_key": "heap",
+      "canonical_url": "/cpp/algorithm/make_heap/",
+      "category": "heap",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "separate_from": [
+        "push_heap",
+        "pop_heap",
+        "sort_heap",
+        "is_heap",
+        "is_heap_until"
+      ],
+      "related_entities": [
+        "push_heap",
+        "pop_heap",
+        "sort_heap",
+        "is_heap",
+        "is_heap_until"
+      ],
+      "status": "forced_merge",
+      "notes": "Anchor entity for the heap workflow family. Group together, but keep each heap operation distinct."
+    },
+    "push_heap": {
+      "entity_key": "push_heap",
+      "family_key": "heap",
+      "canonical_url": "/cpp/algorithm/push_heap/",
+      "category": "heap",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "related_entities": [
+        "make_heap",
+        "pop_heap",
+        "sort_heap",
+        "is_heap"
+      ],
+      "status": "forced_merge",
+      "notes": "Heap insertion step; keep explicitly separate from heap construction and extraction."
+    },
+    "pop_heap": {
+      "entity_key": "pop_heap",
+      "family_key": "heap",
+      "canonical_url": "/cpp/algorithm/pop_heap/",
+      "category": "heap",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "related_entities": [
+        "make_heap",
+        "push_heap",
+        "sort_heap",
+        "is_heap"
+      ],
+      "status": "forced_merge",
+      "notes": "Heap extraction step; keep distinct so the hub reflects the heap workflow accurately."
+    },
+    "sort_heap": {
+      "entity_key": "sort_heap",
+      "family_key": "heap",
+      "canonical_url": "/cpp/algorithm/sort_heap/",
+      "category": "heap",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "related_entities": [
+        "make_heap",
+        "push_heap",
+        "pop_heap",
+        "is_heap"
+      ],
+      "status": "forced_merge",
+      "notes": "Heap-to-sorted-range operation; separate from general sorting because it assumes heap precondition."
+    },
+    "is_heap": {
+      "entity_key": "is_heap",
+      "family_key": "heap",
+      "canonical_url": "/cpp/algorithm/is_heap/",
+      "category": "heap",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "related_entities": [
+        "make_heap",
+        "sort_heap",
+        "is_heap_until"
+      ],
+      "status": "forced_merge",
+      "notes": "Heap validation belongs in the heap task group, not in generic searching."
+    },
+    "is_heap_until": {
+      "entity_key": "is_heap_until",
+      "family_key": "heap",
+      "canonical_url": "/cpp/algorithm/is_heap_until/",
+      "category": "heap",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "related_entities": [
+        "is_heap",
+        "make_heap",
+        "sort_heap"
+      ],
+      "status": "forced_merge",
+      "notes": "Heap-boundary query is most understandable next to heap validation and construction."
+    },
+    "set_union": {
+      "entity_key": "set_union",
+      "family_key": "set_algorithms",
+      "canonical_url": "/cpp/algorithm/set_union/",
+      "category": "set_operations",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "separate_from": [
+        "set_intersection",
+        "set_difference",
+        "set_symmetric_difference",
+        "includes"
+      ],
+      "related_entities": [
+        "set_intersection",
+        "set_difference",
+        "set_symmetric_difference",
+        "includes",
+        "merge"
+      ],
+      "status": "forced_merge",
+      "notes": "Umbrella anchor for sorted set algorithms. Merge classic and ranges forms only for the same operation name."
+    },
+    "set_intersection": {
+      "entity_key": "set_intersection",
+      "family_key": "set_algorithms",
+      "canonical_url": "/cpp/algorithm/set_intersection/",
+      "category": "set_operations",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "set_union",
+        "set_difference",
+        "set_symmetric_difference",
+        "includes"
+      ],
+      "status": "forced_merge",
+      "notes": "Sorted-set overlap operation; keep separate but anchored in the same family."
+    },
+    "set_difference": {
+      "entity_key": "set_difference",
+      "family_key": "set_algorithms",
+      "canonical_url": "/cpp/algorithm/set_difference/",
+      "category": "set_operations",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "set_union",
+        "set_intersection",
+        "set_symmetric_difference",
+        "includes"
+      ],
+      "status": "forced_merge",
+      "notes": "Sorted-set subtraction belongs with the other set algorithms, not general modification."
+    },
+    "set_symmetric_difference": {
+      "entity_key": "set_symmetric_difference",
+      "family_key": "set_algorithms",
+      "canonical_url": "/cpp/algorithm/set_symmetric_difference/",
+      "category": "set_operations",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "set_union",
+        "set_intersection",
+        "set_difference",
+        "includes"
+      ],
+      "status": "forced_merge",
+      "notes": "Symmetric-difference semantics are distinct, but the user should discover them within the set-operations cluster."
+    },
+    "includes": {
+      "entity_key": "includes",
+      "family_key": "set_algorithms",
+      "canonical_url": "/cpp/algorithm/includes/",
+      "category": "set_operations",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "related_entities": [
+        "set_union",
+        "set_intersection",
+        "set_difference"
+      ],
+      "status": "forced_merge",
+      "notes": "Sorted-set containment check belongs with set operations, not with generic searching."
+    },
+    "merge": {
+      "entity_key": "merge",
+      "family_key": "set_algorithms",
+      "canonical_url": "/cpp/algorithm/merge/",
+      "category": "set_operations",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "set_union",
+        "inplace_merge",
+        "set_intersection"
+      ],
+      "status": "forced_merge",
+      "notes": "Sorted merge is adjacent to set algorithms and easier to discover there than under generic sequence modification."
+    },
+    "inplace_merge": {
+      "entity_key": "inplace_merge",
+      "family_key": "set_algorithms",
+      "canonical_url": "/cpp/algorithm/inplace_merge/",
+      "category": "set_operations",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "merge",
+        "set_union"
+      ],
+      "status": "forced_merge",
+      "notes": "In-place merge is a sorted merge workflow item and should stay near merge/set operations."
+    },
+    "min": {
+      "entity_key": "min",
+      "family_key": "comparison_min_max",
+      "canonical_url": "/cpp/algorithm/min/",
+      "category": "comparison_min_max",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "related_entities": [
+        "max",
+        "minmax",
+        "min_element"
+      ],
+      "status": "forced_merge",
+      "notes": "Value-level min/max helpers belong in a compact comparison/min-max family."
+    },
+    "max": {
+      "entity_key": "max",
+      "family_key": "comparison_min_max",
+      "canonical_url": "/cpp/algorithm/max/",
+      "category": "comparison_min_max",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "related_entities": [
+        "min",
+        "minmax",
+        "max_element"
+      ],
+      "status": "forced_merge",
+      "notes": "Value-level maximum selection should group with min/minmax rather than generic comparison pages."
+    },
+    "minmax": {
+      "entity_key": "minmax",
+      "family_key": "comparison_min_max",
+      "canonical_url": "/cpp/algorithm/minmax/",
+      "category": "comparison_min_max",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "related_entities": [
+        "min",
+        "max",
+        "minmax_element"
+      ],
+      "status": "forced_merge",
+      "notes": "Paired extrema helper fits the same family as min/max and minmax_element."
+    },
+    "min_element": {
+      "entity_key": "min_element",
+      "family_key": "comparison_min_max",
+      "canonical_url": "/cpp/algorithm/min_element/",
+      "category": "comparison_min_max",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "max_element",
+        "minmax_element",
+        "min"
+      ],
+      "status": "forced_merge",
+      "notes": "Iterator-returning extrema queries belong with min/max rather than under sorting."
+    },
+    "max_element": {
+      "entity_key": "max_element",
+      "family_key": "comparison_min_max",
+      "canonical_url": "/cpp/algorithm/max_element/",
+      "category": "comparison_min_max",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "min_element",
+        "minmax_element",
+        "max"
+      ],
+      "status": "forced_merge",
+      "notes": "Max-element query is part of the same user decision space as min_element and minmax_element."
+    },
+    "minmax_element": {
+      "entity_key": "minmax_element",
+      "family_key": "comparison_min_max",
+      "canonical_url": "/cpp/algorithm/minmax_element/",
+      "category": "comparison_min_max",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "min_element",
+        "max_element",
+        "minmax"
+      ],
+      "status": "forced_merge",
+      "notes": "Combined extrema query is best discovered with the other min/max algorithms."
+    },
+    "equal": {
+      "entity_key": "equal",
+      "family_key": "comparison_min_max",
+      "canonical_url": "/cpp/algorithm/equal/",
+      "category": "comparison_min_max",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "mismatch",
+        "lexicographical_compare"
+      ],
+      "status": "forced_merge",
+      "notes": "Range equality is part of the comparison family, not generic searching."
+    },
+    "mismatch": {
+      "entity_key": "mismatch",
+      "family_key": "comparison_min_max",
+      "canonical_url": "/cpp/algorithm/mismatch/",
+      "category": "comparison_min_max",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "equal",
+        "search",
+        "lexicographical_compare"
+      ],
+      "status": "forced_merge",
+      "notes": "Mismatch is comparison-first behavior and should stay next to equal/lexicographical_compare."
+    },
+    "lexicographical_compare": {
+      "entity_key": "lexicographical_compare",
+      "family_key": "comparison_min_max",
+      "canonical_url": "/cpp/algorithm/lexicographical_compare/",
+      "category": "comparison_min_max",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "related_entities": [
+        "equal",
+        "mismatch",
+        "lexicographical_compare_three_way"
+      ],
+      "status": "forced_merge",
+      "notes": "Sequence ordering comparison belongs in comparison/min-max rather than in sorting itself."
+    },
+    "lexicographical_compare_three_way": {
+      "entity_key": "lexicographical_compare_three_way",
+      "family_key": "comparison_min_max",
+      "canonical_url": "/cpp/algorithm/lexicographical_compare_three_way/",
+      "category": "comparison_min_max",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": false,
+      "related_entities": [
+        "lexicographical_compare",
+        "equal",
+        "mismatch"
+      ],
+      "status": "forced_merge",
+      "notes": "Three-way ordering comparison is a comparison-family item, not a general sorting primitive."
+    },
+    "partition": {
+      "entity_key": "partition",
+      "family_key": "partitioning",
+      "canonical_url": "/cpp/algorithm/partition/",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "separate_from": [
+        "stable_partition",
+        "partition_copy",
+        "partition_point"
+      ],
+      "related_entities": [
+        "stable_partition",
+        "partition_copy",
+        "partition_point"
+      ],
+      "status": "forced_merge",
+      "notes": "Partition family needs an umbrella, but stable/copy/query forms must remain separate entities."
+    },
+    "copy": {
+      "entity_key": "copy",
+      "family_key": "copy_move",
+      "canonical_url": "/cpp/algorithm/copy/",
+      "merge_classic_ranges": true,
+      "execution_policy_variant": true,
+      "separate_from": [
+        "copy_if",
+        "copy_n",
+        "copy_backward",
+        "move",
+        "move_backward"
+      ],
+      "related_entities": [
+        "copy_if",
+        "copy_n",
+        "copy_backward",
+        "move",
+        "move_backward",
+        "swap_ranges"
+      ],
+      "status": "forced_merge",
+      "notes": "Transfer family anchor. Avoid collapsing predicate, directional, and move-semantics differences."
+    },
+    "ranges/return_types/in_fun_result": {
+      "entity_key": "for_each",
+      "family_key": "callable_iteration",
+      "canonical_url": "/cpp/algorithm/for_each/",
+      "merge_classic_ranges": false,
+      "execution_policy_variant": false,
+      "status": "supporting_only",
+      "notes": "Ranges result wrapper for for_each. Support the entity; never render as first-click navigation."
+    },
+    "ranges/return_types/in_in_out_result": {
+      "entity_key": "copy",
+      "family_key": "copy_move",
+      "canonical_url": "/cpp/algorithm/copy/",
+      "merge_classic_ranges": false,
+      "execution_policy_variant": false,
+      "status": "supporting_only",
+      "notes": "Representative copy-like ranges result wrapper. Attach to owning algorithm family rather than exposing as a standalone entity."
+    }
+  }
+}

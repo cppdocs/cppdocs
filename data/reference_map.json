@@ -1,0 +1,3045 @@
+{
+  "schema_version": 1,
+  "max_entries_per_area": 12,
+  "domains": {
+    "cpp": {
+      "source_root": "content/cpp",
+      "area_count": 33,
+      "areas": [
+        {
+          "key": "language",
+          "title": "Language",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "C++ language",
+              "url": "/cpp/language/",
+              "source_path": "cpp/language"
+            },
+            {
+              "title": "Attribute specifier sequence (since C++11)",
+              "url": "/cpp/language/attributes/",
+              "source_path": "cpp/language/attributes",
+              "since": "C++11"
+            },
+            {
+              "title": "Zero-overhead principle",
+              "url": "/cpp/language/Zero-overhead_principle/",
+              "source_path": "cpp/language/Zero-overhead_principle"
+            },
+            {
+              "title": "Abstract class",
+              "url": "/cpp/language/abstract_class/",
+              "source_path": "cpp/language/abstract_class"
+            },
+            {
+              "title": "Access specifiers",
+              "url": "/cpp/language/access/",
+              "source_path": "cpp/language/access"
+            },
+            {
+              "title": "Acronyms",
+              "url": "/cpp/language/acronyms/",
+              "source_path": "cpp/language/acronyms"
+            },
+            {
+              "title": "Argument-dependent lookup",
+              "url": "/cpp/language/adl/",
+              "source_path": "cpp/language/adl"
+            },
+            {
+              "title": "Aggregate initialization",
+              "url": "/cpp/language/aggregate_initialization/",
+              "source_path": "cpp/language/aggregate_initialization"
+            },
+            {
+              "title": "alignas specifier (since C++11)",
+              "url": "/cpp/language/alignas/",
+              "source_path": "cpp/language/alignas",
+              "since": "C++11"
+            },
+            {
+              "title": "alignof operator (since C++11)",
+              "url": "/cpp/language/alignof/",
+              "source_path": "cpp/language/alignof",
+              "since": "C++11"
+            },
+            {
+              "title": "Array declaration",
+              "url": "/cpp/language/array/",
+              "source_path": "cpp/language/array"
+            },
+            {
+              "title": "The as-if rule",
+              "url": "/cpp/language/as_if/",
+              "source_path": "cpp/language/as_if"
+            }
+          ]
+        },
+        {
+          "key": "concepts",
+          "title": "Concepts",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Concepts library",
+              "url": "/cpp/concepts/",
+              "source_path": "cpp/concepts",
+              "since": "C++20"
+            },
+            {
+              "title": "std::assignable_from",
+              "url": "/cpp/concepts/assignable_from/",
+              "source_path": "cpp/concepts/assignable_from",
+              "since": "C++20"
+            },
+            {
+              "title": "boolean-testable",
+              "url": "/cpp/concepts/boolean-testable/",
+              "source_path": "cpp/concepts/boolean-testable"
+            },
+            {
+              "title": "std::common_reference_with",
+              "url": "/cpp/concepts/common_reference_with/",
+              "source_path": "cpp/concepts/common_reference_with",
+              "since": "C++20"
+            },
+            {
+              "title": "std::common_with",
+              "url": "/cpp/concepts/common_with/",
+              "source_path": "cpp/concepts/common_with",
+              "since": "C++20"
+            },
+            {
+              "title": "std::constructible_from",
+              "url": "/cpp/concepts/constructible_from/",
+              "source_path": "cpp/concepts/constructible_from",
+              "since": "C++20"
+            },
+            {
+              "title": "std::convertible_to",
+              "url": "/cpp/concepts/convertible_to/",
+              "source_path": "cpp/concepts/convertible_to",
+              "since": "C++20"
+            },
+            {
+              "title": "std::copy_constructible",
+              "url": "/cpp/concepts/copy_constructible/",
+              "source_path": "cpp/concepts/copy_constructible",
+              "since": "C++20"
+            },
+            {
+              "title": "std::copyable",
+              "url": "/cpp/concepts/copyable/",
+              "source_path": "cpp/concepts/copyable",
+              "since": "C++20"
+            },
+            {
+              "title": "std::default_initializable",
+              "url": "/cpp/concepts/default_initializable/",
+              "source_path": "cpp/concepts/default_initializable",
+              "since": "C++20"
+            },
+            {
+              "title": "std::derived_from",
+              "url": "/cpp/concepts/derived_from/",
+              "source_path": "cpp/concepts/derived_from",
+              "since": "C++20"
+            },
+            {
+              "title": "std::destructible",
+              "url": "/cpp/concepts/destructible/",
+              "source_path": "cpp/concepts/destructible",
+              "since": "C++20"
+            }
+          ]
+        },
+        {
+          "key": "types",
+          "title": "Types",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Type support library",
+              "url": "/cpp/types/",
+              "source_path": "cpp/types"
+            },
+            {
+              "title": "C numeric limits interface",
+              "url": "/cpp/types/climits/",
+              "source_path": "cpp/types/climits"
+            },
+            {
+              "title": "std::numeric_limits",
+              "url": "/cpp/types/numeric_limits/",
+              "source_path": "cpp/types/numeric_limits"
+            },
+            {
+              "title": "std::type_index",
+              "url": "/cpp/types/type_index/",
+              "source_path": "cpp/types/type_index"
+            },
+            {
+              "title": "std::type_info",
+              "url": "/cpp/types/type_info/",
+              "source_path": "cpp/types/type_info"
+            },
+            {
+              "title": "NULL",
+              "url": "/cpp/types/NULL/",
+              "source_path": "cpp/types/NULL"
+            },
+            {
+              "title": "std::add_cv, std::add_const, std::add_volatile",
+              "url": "/cpp/types/add_cv/",
+              "source_path": "cpp/types/add_cv",
+              "since": "C++11"
+            },
+            {
+              "title": "std::add_pointer",
+              "url": "/cpp/types/add_pointer/",
+              "source_path": "cpp/types/add_pointer",
+              "since": "C++11"
+            },
+            {
+              "title": "std::add_lvalue_reference, std::add_rvalue_reference",
+              "url": "/cpp/types/add_reference/",
+              "source_path": "cpp/types/add_reference",
+              "since": "C++11"
+            },
+            {
+              "title": "std::aligned_storage",
+              "url": "/cpp/types/aligned_storage/",
+              "source_path": "cpp/types/aligned_storage"
+            },
+            {
+              "title": "std::aligned_union",
+              "url": "/cpp/types/aligned_union/",
+              "source_path": "cpp/types/aligned_union"
+            },
+            {
+              "title": "std::alignment_of",
+              "url": "/cpp/types/alignment_of/",
+              "source_path": "cpp/types/alignment_of",
+              "since": "C++11"
+            }
+          ]
+        },
+        {
+          "key": "algorithm",
+          "title": "Algorithms",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Algorithms",
+              "url": "/cpp/algorithm/",
+              "source_path": "algorithm/_index"
+            },
+            {
+              "title": "std::sort",
+              "url": "/cpp/algorithm/sort/",
+              "source_path": "cpp/algorithm/sort",
+              "since": "C++17"
+            },
+            {
+              "title": "std::find, std::find_if, std::find_if_not",
+              "url": "/cpp/algorithm/find/",
+              "source_path": "cpp/algorithm/find",
+              "since": "C++26"
+            },
+            {
+              "title": "std::accumulate",
+              "url": "/cpp/algorithm/accumulate/",
+              "source_path": "cpp/algorithm/accumulate"
+            },
+            {
+              "title": "Constrained algorithms (since C++20)",
+              "url": "/cpp/algorithm/ranges/",
+              "source_path": "cpp/algorithm/ranges"
+            },
+            {
+              "title": "std::adjacent_difference",
+              "url": "/cpp/algorithm/adjacent_difference/",
+              "source_path": "cpp/algorithm/adjacent_difference",
+              "since": "C++17"
+            },
+            {
+              "title": "std::adjacent_find",
+              "url": "/cpp/algorithm/adjacent_find/",
+              "source_path": "cpp/algorithm/adjacent_find",
+              "since": "C++17"
+            },
+            {
+              "title": "std::all_of, std::any_of, std::none_of",
+              "url": "/cpp/algorithm/all_any_none_of/",
+              "source_path": "cpp/algorithm/all_any_none_of",
+              "since": "C++17"
+            },
+            {
+              "title": "std::binary_search",
+              "url": "/cpp/algorithm/binary_search/",
+              "source_path": "cpp/algorithm/binary_search",
+              "since": "C++26"
+            },
+            {
+              "title": "std::bsearch",
+              "url": "/cpp/algorithm/bsearch/",
+              "source_path": "cpp/algorithm/bsearch"
+            },
+            {
+              "title": "std::clamp",
+              "url": "/cpp/algorithm/clamp/",
+              "source_path": "cpp/algorithm/clamp",
+              "since": "C++17"
+            },
+            {
+              "title": "std::copy, std::copy_if",
+              "url": "/cpp/algorithm/copy/",
+              "source_path": "cpp/algorithm/copy",
+              "since": "C++17"
+            }
+          ]
+        },
+        {
+          "key": "container",
+          "title": "Containers",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Containers library",
+              "url": "/cpp/container/",
+              "source_path": "cpp/container"
+            },
+            {
+              "title": "std::vector",
+              "url": "/cpp/container/vector/",
+              "source_path": "cpp/container/vector"
+            },
+            {
+              "title": "std::map",
+              "url": "/cpp/container/map/",
+              "source_path": "cpp/container/map"
+            },
+            {
+              "title": "std::unordered_map",
+              "url": "/cpp/container/unordered_map/",
+              "source_path": "cpp/container/unordered_map",
+              "since": "C++11"
+            },
+            {
+              "title": "std::span",
+              "url": "/cpp/container/span/",
+              "source_path": "cpp/container/span",
+              "since": "C++20"
+            },
+            {
+              "title": "std::array",
+              "url": "/cpp/container/array/",
+              "source_path": "cpp/container/array",
+              "since": "C++11"
+            },
+            {
+              "title": "std::deque",
+              "url": "/cpp/container/deque/",
+              "source_path": "cpp/container/deque"
+            },
+            {
+              "title": "std::flat_map",
+              "url": "/cpp/container/flat_map/",
+              "source_path": "cpp/container/flat_map",
+              "since": "C++23"
+            },
+            {
+              "title": "std::flat_multimap",
+              "url": "/cpp/container/flat_multimap/",
+              "source_path": "cpp/container/flat_multimap",
+              "since": "C++23"
+            },
+            {
+              "title": "std::flat_multiset",
+              "url": "/cpp/container/flat_multiset/",
+              "source_path": "cpp/container/flat_multiset",
+              "since": "C++23"
+            },
+            {
+              "title": "std::flat_set",
+              "url": "/cpp/container/flat_set/",
+              "source_path": "cpp/container/flat_set",
+              "since": "C++23"
+            },
+            {
+              "title": "std::forward_list",
+              "url": "/cpp/container/forward_list/",
+              "source_path": "cpp/container/forward_list",
+              "since": "C++11"
+            }
+          ]
+        },
+        {
+          "key": "iterator",
+          "title": "Iterators",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Iterator library",
+              "url": "/cpp/iterator/",
+              "source_path": "cpp/iterator"
+            },
+            {
+              "title": "std::back_insert_iterator",
+              "url": "/cpp/iterator/back_insert_iterator/",
+              "source_path": "cpp/iterator/back_insert_iterator"
+            },
+            {
+              "title": "std::basic_const_iterator",
+              "url": "/cpp/iterator/basic_const_iterator/",
+              "source_path": "cpp/iterator/basic_const_iterator"
+            },
+            {
+              "title": "std::common_iterator",
+              "url": "/cpp/iterator/common_iterator/",
+              "source_path": "cpp/iterator/common_iterator"
+            },
+            {
+              "title": "std::counted_iterator",
+              "url": "/cpp/iterator/counted_iterator/",
+              "source_path": "cpp/iterator/counted_iterator"
+            },
+            {
+              "title": "std::front_insert_iterator",
+              "url": "/cpp/iterator/front_insert_iterator/",
+              "source_path": "cpp/iterator/front_insert_iterator"
+            },
+            {
+              "title": "std::insert_iterator",
+              "url": "/cpp/iterator/insert_iterator/",
+              "source_path": "cpp/iterator/insert_iterator"
+            },
+            {
+              "title": "std::istream_iterator",
+              "url": "/cpp/iterator/istream_iterator/",
+              "source_path": "cpp/iterator/istream_iterator"
+            },
+            {
+              "title": "std::istreambuf_iterator",
+              "url": "/cpp/iterator/istreambuf_iterator/",
+              "source_path": "cpp/iterator/istreambuf_iterator"
+            },
+            {
+              "title": "std::move_iterator",
+              "url": "/cpp/iterator/move_iterator/",
+              "source_path": "cpp/iterator/move_iterator"
+            },
+            {
+              "title": "std::move_sentinel",
+              "url": "/cpp/iterator/move_sentinel/",
+              "source_path": "cpp/iterator/move_sentinel"
+            },
+            {
+              "title": "std::ostream_iterator",
+              "url": "/cpp/iterator/ostream_iterator/",
+              "source_path": "cpp/iterator/ostream_iterator"
+            }
+          ]
+        },
+        {
+          "key": "ranges",
+          "title": "Ranges",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Ranges",
+              "url": "/cpp/ranges/",
+              "source_path": "ranges/_index"
+            },
+            {
+              "title": "std::ranges::views::adjacent_transform, std::ranges::adjacent_transform_view, std::ranges::views::pairwise_transform",
+              "url": "/cpp/ranges/adjacent_transform_view/",
+              "source_path": "cpp/ranges/adjacent_transform_view",
+              "since": "C++23"
+            },
+            {
+              "title": "std::ranges::views::adjacent, std::ranges::adjacent_view, std::ranges::views::pairwise",
+              "url": "/cpp/ranges/adjacent_view/",
+              "source_path": "cpp/ranges/adjacent_view",
+              "since": "C++23"
+            },
+            {
+              "title": "std::ranges::views::istream, std::ranges::basic_istream_view, std::ranges::istream_view, std::ranges::wistream_view",
+              "url": "/cpp/ranges/basic_istream_view/",
+              "source_path": "cpp/ranges/basic_istream_view",
+              "since": "C++20"
+            },
+            {
+              "title": "std::ranges::views::cartesian_product, std::ranges::cartesian_product_view",
+              "url": "/cpp/ranges/cartesian_product_view/",
+              "source_path": "cpp/ranges/cartesian_product_view",
+              "since": "C++23"
+            },
+            {
+              "title": "std::ranges::views::chunk_by, std::ranges::chunk_by_view",
+              "url": "/cpp/ranges/chunk_by_view/",
+              "source_path": "cpp/ranges/chunk_by_view",
+              "since": "C++23"
+            },
+            {
+              "title": "std::ranges::views::chunk, std::ranges::chunk_view",
+              "url": "/cpp/ranges/chunk_view/",
+              "source_path": "cpp/ranges/chunk_view",
+              "since": "C++23"
+            },
+            {
+              "title": "std::ranges::views::common, std::ranges::common_view",
+              "url": "/cpp/ranges/common_view/",
+              "source_path": "cpp/ranges/common_view",
+              "since": "C++20"
+            },
+            {
+              "title": "std::ranges::views::concat, std::ranges::concat_view",
+              "url": "/cpp/ranges/concat_view/",
+              "source_path": "cpp/ranges/concat_view",
+              "since": "C++26"
+            },
+            {
+              "title": "std::ranges::views::drop, std::ranges::drop_view",
+              "url": "/cpp/ranges/drop_view/",
+              "source_path": "cpp/ranges/drop_view",
+              "since": "C++20"
+            },
+            {
+              "title": "std::ranges::views::drop_while, std::ranges::drop_while_view",
+              "url": "/cpp/ranges/drop_while_view/",
+              "source_path": "cpp/ranges/drop_while_view",
+              "since": "C++20"
+            },
+            {
+              "title": "std::ranges::views::elements, std::ranges::elements_view",
+              "url": "/cpp/ranges/elements_view/",
+              "source_path": "cpp/ranges/elements_view",
+              "since": "C++20"
+            }
+          ]
+        },
+        {
+          "key": "string",
+          "title": "Text",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Strings library",
+              "url": "/cpp/string/",
+              "source_path": "cpp/string"
+            },
+            {
+              "title": "std::basic_string",
+              "url": "/cpp/string/basic_string/",
+              "source_path": "cpp/string/basic_string"
+            },
+            {
+              "title": "std::basic_string_view",
+              "url": "/cpp/string/basic_string_view/",
+              "source_path": "cpp/string/basic_string_view",
+              "since": "C++17"
+            },
+            {
+              "title": "Null-terminated byte strings",
+              "url": "/cpp/string/byte/",
+              "source_path": "cpp/string/byte"
+            },
+            {
+              "title": "std::char_traits",
+              "url": "/cpp/string/char_traits/",
+              "source_path": "cpp/string/char_traits"
+            },
+            {
+              "title": "Null-terminated multibyte strings",
+              "url": "/cpp/string/multibyte/",
+              "source_path": "cpp/string/multibyte"
+            },
+            {
+              "title": "Null-terminated wide strings",
+              "url": "/cpp/string/wide/",
+              "source_path": "cpp/string/wide"
+            },
+            {
+              "title": "std::basic_string<CharT,Traits,Allocator>::append",
+              "url": "/cpp/string/basic_string/append/",
+              "source_path": "cpp/string/basic_string/append"
+            },
+            {
+              "title": "std::basic_string<CharT,Traits,Allocator>::append_range",
+              "url": "/cpp/string/basic_string/append_range/",
+              "source_path": "cpp/string/basic_string/append_range",
+              "since": "C++23"
+            },
+            {
+              "title": "std::basic_string<CharT,Traits,Allocator>::assign",
+              "url": "/cpp/string/basic_string/assign/",
+              "source_path": "cpp/string/basic_string/assign"
+            },
+            {
+              "title": "std::basic_string<CharT,Traits,Allocator>::assign_range",
+              "url": "/cpp/string/basic_string/assign_range/",
+              "source_path": "cpp/string/basic_string/assign_range",
+              "since": "C++23"
+            },
+            {
+              "title": "std::basic_string<CharT,Traits,Allocator>::at",
+              "url": "/cpp/string/basic_string/at/",
+              "source_path": "cpp/string/basic_string/at"
+            }
+          ]
+        },
+        {
+          "key": "regex",
+          "title": "Regex",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Regular expressions library",
+              "url": "/cpp/regex/",
+              "source_path": "cpp/regex"
+            },
+            {
+              "title": "std::basic_regex",
+              "url": "/cpp/regex/basic_regex/",
+              "source_path": "cpp/regex/basic_regex",
+              "since": "C++11"
+            },
+            {
+              "title": "std::match_results",
+              "url": "/cpp/regex/match_results/",
+              "source_path": "cpp/regex/match_results",
+              "since": "C++11"
+            },
+            {
+              "title": "std::regex_error",
+              "url": "/cpp/regex/regex_error/",
+              "source_path": "cpp/regex/regex_error",
+              "since": "C++11"
+            },
+            {
+              "title": "std::regex_iterator",
+              "url": "/cpp/regex/regex_iterator/",
+              "source_path": "cpp/regex/regex_iterator",
+              "since": "C++11"
+            },
+            {
+              "title": "std::regex_token_iterator",
+              "url": "/cpp/regex/regex_token_iterator/",
+              "source_path": "cpp/regex/regex_token_iterator",
+              "since": "C++11"
+            },
+            {
+              "title": "std::regex_traits",
+              "url": "/cpp/regex/regex_traits/",
+              "source_path": "cpp/regex/regex_traits",
+              "since": "C++11"
+            },
+            {
+              "title": "std::sub_match",
+              "url": "/cpp/regex/sub_match/",
+              "source_path": "cpp/regex/sub_match",
+              "since": "C++11"
+            },
+            {
+              "title": "Modified ECMAScript regular expression grammar",
+              "url": "/cpp/regex/ecmascript/",
+              "source_path": "cpp/regex/ecmascript"
+            },
+            {
+              "title": "std::regex_constants::error_type",
+              "url": "/cpp/regex/error_type/",
+              "source_path": "cpp/regex/error_type",
+              "since": "C++11"
+            },
+            {
+              "title": "std::regex_constants::match_flag_type",
+              "url": "/cpp/regex/match_flag_type/",
+              "source_path": "cpp/regex/match_flag_type",
+              "since": "C++11"
+            },
+            {
+              "title": "std::regex_match",
+              "url": "/cpp/regex/regex_match/",
+              "source_path": "cpp/regex/regex_match",
+              "since": "C++11"
+            }
+          ]
+        },
+        {
+          "key": "locale",
+          "title": "Localization",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Locale",
+              "url": "/cpp/locale/",
+              "source_path": "locale/_index"
+            },
+            {
+              "title": "std::codecvt",
+              "url": "/cpp/locale/codecvt/",
+              "source_path": "cpp/locale/codecvt"
+            },
+            {
+              "title": "std::collate",
+              "url": "/cpp/locale/collate/",
+              "source_path": "cpp/locale/collate"
+            },
+            {
+              "title": "std::ctype",
+              "url": "/cpp/locale/ctype/",
+              "source_path": "cpp/locale/ctype"
+            },
+            {
+              "title": "std::ctype<char>",
+              "url": "/cpp/locale/ctype_char/",
+              "source_path": "cpp/locale/ctype_char"
+            },
+            {
+              "title": "std::locale",
+              "url": "/cpp/locale/locale/",
+              "source_path": "cpp/locale/locale"
+            },
+            {
+              "title": "std::messages",
+              "url": "/cpp/locale/messages/",
+              "source_path": "cpp/locale/messages"
+            },
+            {
+              "title": "std::money_get",
+              "url": "/cpp/locale/money_get/",
+              "source_path": "cpp/locale/money_get"
+            },
+            {
+              "title": "std::money_put",
+              "url": "/cpp/locale/money_put/",
+              "source_path": "cpp/locale/money_put"
+            },
+            {
+              "title": "std::moneypunct",
+              "url": "/cpp/locale/moneypunct/",
+              "source_path": "cpp/locale/moneypunct"
+            },
+            {
+              "title": "std::num_get",
+              "url": "/cpp/locale/num_get/",
+              "source_path": "cpp/locale/num_get"
+            },
+            {
+              "title": "std::num_put",
+              "url": "/cpp/locale/num_put/",
+              "source_path": "cpp/locale/num_put"
+            }
+          ]
+        },
+        {
+          "key": "io",
+          "title": "IO",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Input/output library",
+              "url": "/cpp/io/",
+              "source_path": "cpp/io"
+            },
+            {
+              "title": "std::basic_filebuf",
+              "url": "/cpp/io/basic_filebuf/",
+              "source_path": "cpp/io/basic_filebuf"
+            },
+            {
+              "title": "std::basic_fstream",
+              "url": "/cpp/io/basic_fstream/",
+              "source_path": "cpp/io/basic_fstream"
+            },
+            {
+              "title": "std::basic_ifstream",
+              "url": "/cpp/io/basic_ifstream/",
+              "source_path": "cpp/io/basic_ifstream"
+            },
+            {
+              "title": "std::basic_ios",
+              "url": "/cpp/io/basic_ios/",
+              "source_path": "cpp/io/basic_ios",
+              "since": "C++11"
+            },
+            {
+              "title": "std::basic_iostream",
+              "url": "/cpp/io/basic_iostream/",
+              "source_path": "cpp/io/basic_iostream"
+            },
+            {
+              "title": "std::basic_ispanstream",
+              "url": "/cpp/io/basic_ispanstream/",
+              "source_path": "cpp/io/basic_ispanstream",
+              "since": "C++23"
+            },
+            {
+              "title": "std::basic_istream",
+              "url": "/cpp/io/basic_istream/",
+              "source_path": "cpp/io/basic_istream"
+            },
+            {
+              "title": "std::basic_istringstream",
+              "url": "/cpp/io/basic_istringstream/",
+              "source_path": "cpp/io/basic_istringstream"
+            },
+            {
+              "title": "std::basic_ofstream",
+              "url": "/cpp/io/basic_ofstream/",
+              "source_path": "cpp/io/basic_ofstream"
+            },
+            {
+              "title": "std::basic_ospanstream",
+              "url": "/cpp/io/basic_ospanstream/",
+              "source_path": "cpp/io/basic_ospanstream",
+              "since": "C++23"
+            },
+            {
+              "title": "std::basic_ostream",
+              "url": "/cpp/io/basic_ostream/",
+              "source_path": "cpp/io/basic_ostream"
+            }
+          ]
+        },
+        {
+          "key": "filesystem",
+          "title": "Filesystem",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Filesystem",
+              "url": "/cpp/filesystem/",
+              "source_path": "cpp/filesystem"
+            },
+            {
+              "title": "std::filesystem::directory_entry",
+              "url": "/cpp/filesystem/directory_entry/",
+              "source_path": "cpp/filesystem/directory_entry"
+            },
+            {
+              "title": "std::filesystem::directory_iterator",
+              "url": "/cpp/filesystem/directory_iterator/",
+              "source_path": "cpp/filesystem/directory_iterator"
+            },
+            {
+              "title": "std::filesystem::file_status",
+              "url": "/cpp/filesystem/file_status/",
+              "source_path": "cpp/filesystem/file_status"
+            },
+            {
+              "title": "std::filesystem::filesystem_error",
+              "url": "/cpp/filesystem/filesystem_error/",
+              "source_path": "cpp/filesystem/filesystem_error"
+            },
+            {
+              "title": "std::filesystem::path",
+              "url": "/cpp/filesystem/path/",
+              "source_path": "cpp/filesystem/path"
+            },
+            {
+              "title": "std::filesystem::recursive_directory_iterator",
+              "url": "/cpp/filesystem/recursive_directory_iterator/",
+              "source_path": "cpp/filesystem/recursive_directory_iterator"
+            },
+            {
+              "title": "std::filesystem::absolute",
+              "url": "/cpp/filesystem/absolute/",
+              "source_path": "cpp/filesystem/absolute",
+              "since": "C++17"
+            },
+            {
+              "title": "std::filesystem::canonical, std::filesystem::weakly_canonical",
+              "url": "/cpp/filesystem/canonical/",
+              "source_path": "cpp/filesystem/canonical",
+              "since": "C++17"
+            },
+            {
+              "title": "std::filesystem::copy",
+              "url": "/cpp/filesystem/copy/",
+              "source_path": "cpp/filesystem/copy",
+              "since": "C++17"
+            },
+            {
+              "title": "std::filesystem::copy_file",
+              "url": "/cpp/filesystem/copy_file/",
+              "source_path": "cpp/filesystem/copy_file",
+              "since": "C++17"
+            },
+            {
+              "title": "std::filesystem::copy_options",
+              "url": "/cpp/filesystem/copy_options/",
+              "source_path": "cpp/filesystem/copy_options",
+              "since": "C++17"
+            }
+          ]
+        },
+        {
+          "key": "memory",
+          "title": "Memory",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Memory management library",
+              "url": "/cpp/memory/",
+              "source_path": "cpp/memory"
+            },
+            {
+              "title": "std::allocator",
+              "url": "/cpp/memory/allocator/",
+              "source_path": "cpp/memory/allocator"
+            },
+            {
+              "title": "std::allocator_traits",
+              "url": "/cpp/memory/allocator_traits/",
+              "source_path": "cpp/memory/allocator_traits"
+            },
+            {
+              "title": "std::auto_ptr",
+              "url": "/cpp/memory/auto_ptr/",
+              "source_path": "cpp/memory/auto_ptr"
+            },
+            {
+              "title": "C memory management library",
+              "url": "/cpp/memory/c/",
+              "source_path": "cpp/memory/c"
+            },
+            {
+              "title": "std::enable_shared_from_this",
+              "url": "/cpp/memory/enable_shared_from_this/",
+              "source_path": "cpp/memory/enable_shared_from_this"
+            },
+            {
+              "title": "Garbage collection support",
+              "url": "/cpp/memory/gc/",
+              "source_path": "memory/gc/_index"
+            },
+            {
+              "title": "std::inout_ptr_t",
+              "url": "/cpp/memory/inout_ptr_t/",
+              "source_path": "cpp/memory/inout_ptr_t"
+            },
+            {
+              "title": "std::pmr::memory_resource",
+              "url": "/cpp/memory/memory_resource/",
+              "source_path": "cpp/memory/memory_resource"
+            },
+            {
+              "title": "std::pmr::monotonic_buffer_resource",
+              "url": "/cpp/memory/monotonic_buffer_resource/",
+              "source_path": "cpp/memory/monotonic_buffer_resource"
+            },
+            {
+              "title": "Low level memory management",
+              "url": "/cpp/memory/new/",
+              "source_path": "cpp/memory/new"
+            },
+            {
+              "title": "std::out_ptr_t",
+              "url": "/cpp/memory/out_ptr_t/",
+              "source_path": "cpp/memory/out_ptr_t"
+            }
+          ]
+        },
+        {
+          "key": "atomic",
+          "title": "Atomics",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Concurrency support library",
+              "url": "/cpp/atomic/",
+              "source_path": "cpp/atomic",
+              "since": "C++11"
+            },
+            {
+              "title": "std::atomic",
+              "url": "/cpp/atomic/atomic/",
+              "source_path": "cpp/atomic/atomic"
+            },
+            {
+              "title": "std::atomic_flag",
+              "url": "/cpp/atomic/atomic_flag/",
+              "source_path": "cpp/atomic/atomic_flag"
+            },
+            {
+              "title": "std::atomic_ref",
+              "url": "/cpp/atomic/atomic_ref/",
+              "source_path": "cpp/atomic/atomic_ref"
+            },
+            {
+              "title": "ATOMIC_FLAG_INIT",
+              "url": "/cpp/atomic/ATOMIC_FLAG_INIT/",
+              "source_path": "cpp/atomic/ATOMIC_FLAG_INIT",
+              "since": "C++11"
+            },
+            {
+              "title": "ATOMIC_VAR_INIT",
+              "url": "/cpp/atomic/ATOMIC_VAR_INIT/",
+              "source_path": "cpp/atomic/ATOMIC_VAR_INIT"
+            },
+            {
+              "title": "std::atomic_compare_exchange_weak, std::atomic_compare_exchange_strong, std::atomic_compare_exchange_weak_explicit, std::atomic_compare_exchange_strong_explicit",
+              "url": "/cpp/atomic/atomic_compare_exchange/",
+              "source_path": "cpp/atomic/atomic_compare_exchange",
+              "since": "C++11"
+            },
+            {
+              "title": "std::atomic_exchange, std::atomic_exchange_explicit",
+              "url": "/cpp/atomic/atomic_exchange/",
+              "source_path": "cpp/atomic/atomic_exchange",
+              "since": "C++11"
+            },
+            {
+              "title": "std::atomic_fetch_add, std::atomic_fetch_add_explicit",
+              "url": "/cpp/atomic/atomic_fetch_add/",
+              "source_path": "cpp/atomic/atomic_fetch_add",
+              "since": "C++11"
+            },
+            {
+              "title": "std::atomic_fetch_and, std::atomic_fetch_and_explicit",
+              "url": "/cpp/atomic/atomic_fetch_and/",
+              "source_path": "cpp/atomic/atomic_fetch_and",
+              "since": "C++11"
+            },
+            {
+              "title": "std::atomic_fetch_max, std::atomic_fetch_max_explicit",
+              "url": "/cpp/atomic/atomic_fetch_max/",
+              "source_path": "cpp/atomic/atomic_fetch_max",
+              "since": "C++26"
+            },
+            {
+              "title": "std::atomic_fetch_min, std::atomic_fetch_min_explicit",
+              "url": "/cpp/atomic/atomic_fetch_min/",
+              "source_path": "cpp/atomic/atomic_fetch_min",
+              "since": "C++26"
+            }
+          ]
+        },
+        {
+          "key": "thread",
+          "title": "Concurrency",
+          "entry_count": 10,
+          "entries": [
+            {
+              "title": "Thread support library",
+              "url": "/cpp/thread/",
+              "source_path": "cpp/thread"
+            },
+            {
+              "title": "std::mutex",
+              "url": "/cpp/thread/mutex/",
+              "source_path": "cpp/thread/mutex",
+              "since": "C++11"
+            },
+            {
+              "title": "std::condition_variable",
+              "url": "/cpp/thread/condition_variable/",
+              "source_path": "cpp/thread/condition_variable",
+              "since": "C++11"
+            },
+            {
+              "title": "std::future",
+              "url": "/cpp/thread/future/",
+              "source_path": "cpp/thread/future",
+              "since": "C++11"
+            },
+            {
+              "title": "std::barrier",
+              "url": "/cpp/thread/barrier/",
+              "source_path": "cpp/thread/barrier",
+              "since": "C++20"
+            },
+            {
+              "title": "std::condition_variable_any",
+              "url": "/cpp/thread/condition_variable_any/",
+              "source_path": "cpp/thread/condition_variable_any",
+              "since": "C++11"
+            },
+            {
+              "title": "std::counting_semaphore, std::binary_semaphore",
+              "url": "/cpp/thread/counting_semaphore/",
+              "source_path": "cpp/thread/counting_semaphore",
+              "since": "C++20"
+            },
+            {
+              "title": "std::future_errc",
+              "url": "/cpp/thread/future_errc/",
+              "source_path": "cpp/thread/future_errc",
+              "since": "C++11"
+            },
+            {
+              "title": "std::future_error",
+              "url": "/cpp/thread/future_error/",
+              "source_path": "cpp/thread/future_error",
+              "since": "C++11"
+            },
+            {
+              "title": "std::jthread",
+              "url": "/cpp/thread/jthread/",
+              "source_path": "cpp/thread/jthread",
+              "since": "C++20"
+            }
+          ]
+        },
+        {
+          "key": "chrono",
+          "title": "Chrono",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Chrono",
+              "url": "/cpp/chrono/",
+              "source_path": "cpp/chrono"
+            },
+            {
+              "title": "C Date and time utilities",
+              "url": "/cpp/chrono/c/",
+              "source_path": "cpp/chrono/c"
+            },
+            {
+              "title": "std::chrono::day",
+              "url": "/cpp/chrono/day/",
+              "source_path": "cpp/chrono/day"
+            },
+            {
+              "title": "std::chrono::duration",
+              "url": "/cpp/chrono/duration/",
+              "source_path": "cpp/chrono/duration"
+            },
+            {
+              "title": "std::chrono::duration_values",
+              "url": "/cpp/chrono/duration_values/",
+              "source_path": "cpp/chrono/duration_values"
+            },
+            {
+              "title": "std::chrono::file_clock",
+              "url": "/cpp/chrono/file_clock/",
+              "source_path": "cpp/chrono/file_clock"
+            },
+            {
+              "title": "std::chrono::gps_clock",
+              "url": "/cpp/chrono/gps_clock/",
+              "source_path": "cpp/chrono/gps_clock"
+            },
+            {
+              "title": "std::chrono::hh_mm_ss",
+              "url": "/cpp/chrono/hh_mm_ss/",
+              "source_path": "cpp/chrono/hh_mm_ss"
+            },
+            {
+              "title": "std::chrono::high_resolution_clock",
+              "url": "/cpp/chrono/high_resolution_clock/",
+              "source_path": "cpp/chrono/high_resolution_clock"
+            },
+            {
+              "title": "std::chrono::leap_second",
+              "url": "/cpp/chrono/leap_second/",
+              "source_path": "cpp/chrono/leap_second"
+            },
+            {
+              "title": "std::chrono::local_info",
+              "url": "/cpp/chrono/local_info/",
+              "source_path": "cpp/chrono/local_info"
+            },
+            {
+              "title": "std::chrono::local_t",
+              "url": "/cpp/chrono/local_t/",
+              "source_path": "cpp/chrono/local_t"
+            }
+          ]
+        },
+        {
+          "key": "numeric",
+          "title": "Numeric",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Numerics library",
+              "url": "/cpp/numeric/",
+              "source_path": "cpp/numeric"
+            },
+            {
+              "title": "std::complex",
+              "url": "/cpp/numeric/complex/",
+              "source_path": "cpp/numeric/complex"
+            },
+            {
+              "title": "Floating-point environment (since C++11)",
+              "url": "/cpp/numeric/fenv/",
+              "source_path": "cpp/numeric/fenv"
+            },
+            {
+              "title": "Common mathematical functions",
+              "url": "/cpp/numeric/math/",
+              "source_path": "cpp/numeric/math"
+            },
+            {
+              "title": "Pseudo-random number generation",
+              "url": "/cpp/numeric/random/",
+              "source_path": "cpp/numeric/random"
+            },
+            {
+              "title": "Compile-time rational arithmetic (since C++11)",
+              "url": "/cpp/numeric/ratio/",
+              "source_path": "cpp/numeric/ratio"
+            },
+            {
+              "title": "Data-parallel types (SIMD) (since C++26)",
+              "url": "/cpp/numeric/simd/",
+              "source_path": "cpp/numeric/simd"
+            },
+            {
+              "title": "Mathematical special functions (since C++17)",
+              "url": "/cpp/numeric/special_functions/",
+              "source_path": "cpp/numeric/special_functions"
+            },
+            {
+              "title": "std::valarray",
+              "url": "/cpp/numeric/valarray/",
+              "source_path": "cpp/numeric/valarray"
+            },
+            {
+              "title": "std::add_sat",
+              "url": "/cpp/numeric/add_sat/",
+              "source_path": "cpp/numeric/add_sat",
+              "since": "C++26"
+            },
+            {
+              "title": "std::bit_cast",
+              "url": "/cpp/numeric/bit_cast/",
+              "source_path": "cpp/numeric/bit_cast",
+              "since": "C++20"
+            },
+            {
+              "title": "std::bit_ceil",
+              "url": "/cpp/numeric/bit_ceil/",
+              "source_path": "cpp/numeric/bit_ceil",
+              "since": "C++20"
+            }
+          ]
+        },
+        {
+          "key": "utility",
+          "title": "Utility",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Utilities",
+              "url": "/cpp/utility/",
+              "source_path": "utility/_index"
+            },
+            {
+              "title": "std::any",
+              "url": "/cpp/utility/any/",
+              "source_path": "cpp/utility/any"
+            },
+            {
+              "title": "std::basic_stacktrace",
+              "url": "/cpp/utility/basic_stacktrace/",
+              "source_path": "cpp/utility/basic_stacktrace"
+            },
+            {
+              "title": "std::bitset",
+              "url": "/cpp/utility/bitset/",
+              "source_path": "cpp/utility/bitset"
+            },
+            {
+              "title": "Comparison",
+              "url": "/cpp/utility/compare/",
+              "source_path": "utility/compare/_index"
+            },
+            {
+              "title": "std::expected",
+              "url": "/cpp/utility/expected/",
+              "source_path": "cpp/utility/expected"
+            },
+            {
+              "title": "Formatting library (since C++20)",
+              "url": "/cpp/utility/format/",
+              "source_path": "cpp/utility/format"
+            },
+            {
+              "title": "Function objects",
+              "url": "/cpp/utility/functional/",
+              "source_path": "cpp/utility/functional"
+            },
+            {
+              "title": "std::copyable_function",
+              "url": "/cpp/utility/functional/copyable_function/",
+              "source_path": "cpp/utility/functional/copyable_function"
+            },
+            {
+              "title": "std::function",
+              "url": "/cpp/utility/functional/function/",
+              "source_path": "cpp/utility/functional/function"
+            },
+            {
+              "title": "std::function_ref",
+              "url": "/cpp/utility/functional/function_ref/",
+              "source_path": "cpp/utility/functional/function_ref"
+            },
+            {
+              "title": "std::move_only_function",
+              "url": "/cpp/utility/functional/move_only_function/",
+              "source_path": "cpp/utility/functional/move_only_function"
+            }
+          ]
+        },
+        {
+          "key": "compiler_support",
+          "title": "Compiler Support",
+          "entry_count": 8,
+          "entries": [
+            {
+              "title": "Compiler Support",
+              "url": "/cpp/compiler_support/",
+              "source_path": "compiler_support/_index"
+            },
+            {
+              "title": "Compiler support for C++11",
+              "url": "/cpp/compiler_support/11/",
+              "source_path": "cpp/compiler_support/11"
+            },
+            {
+              "title": "Compiler support for C++14",
+              "url": "/cpp/compiler_support/14/",
+              "source_path": "cpp/compiler_support/14"
+            },
+            {
+              "title": "Compiler support for C++17",
+              "url": "/cpp/compiler_support/17/",
+              "source_path": "cpp/compiler_support/17"
+            },
+            {
+              "title": "Compiler support for C++20",
+              "url": "/cpp/compiler_support/20/",
+              "source_path": "cpp/compiler_support/20"
+            },
+            {
+              "title": "Compiler support for C++23",
+              "url": "/cpp/compiler_support/23/",
+              "source_path": "cpp/compiler_support/23"
+            },
+            {
+              "title": "Compiler support for C++26",
+              "url": "/cpp/compiler_support/26/",
+              "source_path": "cpp/compiler_support/26"
+            },
+            {
+              "title": "cpp/compiler support/vendors",
+              "url": "/cpp/compiler_support/vendors/",
+              "source_path": "cpp/compiler_support/vendors"
+            }
+          ]
+        },
+        {
+          "key": "coroutine",
+          "title": "Coroutine",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Coroutine support library",
+              "url": "/cpp/coroutine/",
+              "source_path": "cpp/coroutine"
+            },
+            {
+              "title": "std::coroutine_handle, std::noop_coroutine_handle",
+              "url": "/cpp/coroutine/coroutine_handle/",
+              "source_path": "cpp/coroutine/coroutine_handle",
+              "since": "C++20"
+            },
+            {
+              "title": "std::generator",
+              "url": "/cpp/coroutine/generator/",
+              "source_path": "cpp/coroutine/generator",
+              "since": "C++23"
+            },
+            {
+              "title": "std::coroutine_traits",
+              "url": "/cpp/coroutine/coroutine_traits/",
+              "source_path": "cpp/coroutine/coroutine_traits",
+              "since": "C++20"
+            },
+            {
+              "title": "std::noop_coroutine",
+              "url": "/cpp/coroutine/noop_coroutine/",
+              "source_path": "cpp/coroutine/noop_coroutine",
+              "since": "C++20"
+            },
+            {
+              "title": "std::noop_coroutine_promise",
+              "url": "/cpp/coroutine/noop_coroutine_promise/",
+              "source_path": "cpp/coroutine/noop_coroutine_promise",
+              "since": "C++20"
+            },
+            {
+              "title": "std::suspend_always",
+              "url": "/cpp/coroutine/suspend_always/",
+              "source_path": "cpp/coroutine/suspend_always",
+              "since": "C++20"
+            },
+            {
+              "title": "std::suspend_never",
+              "url": "/cpp/coroutine/suspend_never/",
+              "source_path": "cpp/coroutine/suspend_never",
+              "since": "C++20"
+            },
+            {
+              "title": "std::coroutine_handle<Promise>::address",
+              "url": "/cpp/coroutine/coroutine_handle/address/",
+              "source_path": "cpp/coroutine/coroutine_handle/address",
+              "since": "C++20"
+            },
+            {
+              "title": "std::coroutine_handle<Promise>::coroutine_handle",
+              "url": "/cpp/coroutine/coroutine_handle/coroutine_handle/",
+              "source_path": "cpp/coroutine/coroutine_handle/coroutine_handle",
+              "since": "C++20"
+            },
+            {
+              "title": "std::coroutine_handle<Promise>::destroy",
+              "url": "/cpp/coroutine/coroutine_handle/destroy/",
+              "source_path": "cpp/coroutine/coroutine_handle/destroy",
+              "since": "C++20"
+            },
+            {
+              "title": "std::coroutine_handle<Promise>::done",
+              "url": "/cpp/coroutine/coroutine_handle/done/",
+              "source_path": "cpp/coroutine/coroutine_handle/done",
+              "since": "C++20"
+            }
+          ]
+        },
+        {
+          "key": "error",
+          "title": "Error",
+          "entry_count": 10,
+          "entries": [
+            {
+              "title": "Diagnostics library",
+              "url": "/cpp/error/",
+              "source_path": "cpp/error"
+            },
+            {
+              "title": "std::exception",
+              "url": "/cpp/error/exception/",
+              "source_path": "cpp/error/exception"
+            },
+            {
+              "title": "std::error_code",
+              "url": "/cpp/error/error_code/",
+              "source_path": "cpp/error/error_code"
+            },
+            {
+              "title": "std::error_condition",
+              "url": "/cpp/error/error_condition/",
+              "source_path": "cpp/error/error_condition"
+            },
+            {
+              "title": "std::bad_exception",
+              "url": "/cpp/error/bad_exception/",
+              "source_path": "cpp/error/bad_exception"
+            },
+            {
+              "title": "std::errc",
+              "url": "/cpp/error/errc/",
+              "source_path": "cpp/error/errc"
+            },
+            {
+              "title": "std::error_category",
+              "url": "/cpp/error/error_category/",
+              "source_path": "cpp/error/error_category"
+            },
+            {
+              "title": "std::nested_exception",
+              "url": "/cpp/error/nested_exception/",
+              "source_path": "cpp/error/nested_exception"
+            },
+            {
+              "title": "std::system_error",
+              "url": "/cpp/error/system_error/",
+              "source_path": "cpp/error/system_error"
+            },
+            {
+              "title": "assert",
+              "url": "/cpp/error/assert/",
+              "source_path": "cpp/error/assert",
+              "since": "C++26"
+            }
+          ]
+        },
+        {
+          "key": "execution",
+          "title": "Execution",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Execution library",
+              "url": "/cpp/execution/",
+              "source_path": "cpp/execution"
+            },
+            {
+              "title": "std::execution::ensure_started",
+              "url": "/cpp/execution/ensure_started/",
+              "source_path": "cpp/execution/ensure_started",
+              "since": "C++26"
+            },
+            {
+              "title": "std::execution::into_variant",
+              "url": "/cpp/execution/into_variant/",
+              "source_path": "cpp/execution/into_variant",
+              "since": "C++26"
+            },
+            {
+              "title": "std::execution::just",
+              "url": "/cpp/execution/just/",
+              "source_path": "cpp/execution/just",
+              "since": "C++26"
+            },
+            {
+              "title": "std::execution::just_error",
+              "url": "/cpp/execution/just_error/",
+              "source_path": "cpp/execution/just_error",
+              "since": "C++26"
+            },
+            {
+              "title": "std::execution::just_stopped",
+              "url": "/cpp/execution/just_stopped/",
+              "source_path": "cpp/execution/just_stopped",
+              "since": "C++26"
+            },
+            {
+              "title": "std::execution::let_error",
+              "url": "/cpp/execution/let_error/",
+              "source_path": "cpp/execution/let_error",
+              "since": "C++26"
+            },
+            {
+              "title": "std::execution::let_stopped",
+              "url": "/cpp/execution/let_stopped/",
+              "source_path": "cpp/execution/let_stopped",
+              "since": "C++26"
+            },
+            {
+              "title": "std::execution::let_value",
+              "url": "/cpp/execution/let_value/",
+              "source_path": "cpp/execution/let_value",
+              "since": "C++26"
+            },
+            {
+              "title": "std::execution::on",
+              "url": "/cpp/execution/on/",
+              "source_path": "cpp/execution/on",
+              "since": "C++26"
+            },
+            {
+              "title": "std::execution::read_env",
+              "url": "/cpp/execution/read_env/",
+              "source_path": "cpp/execution/read_env",
+              "since": "C++26"
+            },
+            {
+              "title": "std::execution::schedule, std::execution::schedule_result_t",
+              "url": "/cpp/execution/schedule/",
+              "source_path": "cpp/execution/schedule",
+              "since": "C++26"
+            }
+          ]
+        },
+        {
+          "key": "experimental",
+          "title": "Experimental",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Experimental C++ Features",
+              "url": "/cpp/experimental/",
+              "source_path": "cpp/experimental"
+            },
+            {
+              "title": "std::experimental::any",
+              "url": "/cpp/experimental/any/",
+              "source_path": "cpp/experimental/any"
+            },
+            {
+              "title": "std::experimental::atomic_shared_ptr",
+              "url": "/cpp/experimental/atomic_shared_ptr/",
+              "source_path": "cpp/experimental/atomic_shared_ptr"
+            },
+            {
+              "title": "std::experimental::atomic_weak_ptr",
+              "url": "/cpp/experimental/atomic_weak_ptr/",
+              "source_path": "cpp/experimental/atomic_weak_ptr"
+            },
+            {
+              "title": "std::experimental::barrier",
+              "url": "/cpp/experimental/barrier/",
+              "source_path": "cpp/experimental/barrier"
+            },
+            {
+              "title": "std::experimental::basic_string",
+              "url": "/cpp/experimental/basic_string/",
+              "source_path": "cpp/experimental/basic_string"
+            },
+            {
+              "title": "std::experimental::basic_string_view",
+              "url": "/cpp/experimental/basic_string_view/",
+              "source_path": "cpp/experimental/basic_string_view"
+            },
+            {
+              "title": "Extensions for concurrency",
+              "url": "/cpp/experimental/concurrency/",
+              "source_path": "cpp/experimental/concurrency"
+            },
+            {
+              "title": "std::experimental::deque",
+              "url": "/cpp/experimental/deque/",
+              "source_path": "cpp/experimental/deque"
+            },
+            {
+              "title": "std::experimental::flex_barrier",
+              "url": "/cpp/experimental/flex_barrier/",
+              "source_path": "cpp/experimental/flex_barrier"
+            },
+            {
+              "title": "std::experimental::forward_list",
+              "url": "/cpp/experimental/forward_list/",
+              "source_path": "cpp/experimental/forward_list"
+            },
+            {
+              "title": "Filesystem library",
+              "url": "/cpp/experimental/fs/",
+              "source_path": "cpp/experimental/fs"
+            }
+          ]
+        },
+        {
+          "key": "header",
+          "title": "Header",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Standard Library Headers",
+              "url": "/cpp/header/",
+              "source_path": "header/_index"
+            },
+            {
+              "title": "Standard library header <algorithm>",
+              "url": "/cpp/header/algorithm/",
+              "source_path": "cpp/header/algorithm"
+            },
+            {
+              "title": "Standard library header <any> (C++17)",
+              "url": "/cpp/header/any/",
+              "source_path": "cpp/header/any"
+            },
+            {
+              "title": "Standard library header <array> (C++11)",
+              "url": "/cpp/header/array/",
+              "source_path": "cpp/header/array"
+            },
+            {
+              "title": "Standard library header <atomic> (C++11)",
+              "url": "/cpp/header/atomic/",
+              "source_path": "cpp/header/atomic"
+            },
+            {
+              "title": "Standard library header <barrier> (C++20)",
+              "url": "/cpp/header/barrier/",
+              "source_path": "cpp/header/barrier"
+            },
+            {
+              "title": "Standard library header <bit> (C++20)",
+              "url": "/cpp/header/bit/",
+              "source_path": "cpp/header/bit"
+            },
+            {
+              "title": "Standard library header <bitset>",
+              "url": "/cpp/header/bitset/",
+              "source_path": "cpp/header/bitset"
+            },
+            {
+              "title": "Standard library header <cassert>",
+              "url": "/cpp/header/cassert/",
+              "source_path": "cpp/header/cassert"
+            },
+            {
+              "title": "Standard library header <ccomplex> (C++11)(until C++20), <complex.h> (C++11)",
+              "url": "/cpp/header/ccomplex/",
+              "source_path": "cpp/header/ccomplex"
+            },
+            {
+              "title": "Standard library header <cctype>",
+              "url": "/cpp/header/cctype/",
+              "source_path": "cpp/header/cctype"
+            },
+            {
+              "title": "Standard library header <cerrno>",
+              "url": "/cpp/header/cerrno/",
+              "source_path": "cpp/header/cerrno"
+            }
+          ]
+        },
+        {
+          "key": "identifier_with_special_meaning",
+          "title": "Identifier With Special Meaning",
+          "entry_count": 4,
+          "entries": [
+            {
+              "title": "C++ identifier with special meaning: final (since C++11)",
+              "url": "/cpp/identifier_with_special_meaning/final/",
+              "source_path": "cpp/identifier_with_special_meaning/final",
+              "since": "C++11"
+            },
+            {
+              "title": "C++ identifier with special meaning: import (since C++20)",
+              "url": "/cpp/identifier_with_special_meaning/import/",
+              "source_path": "cpp/identifier_with_special_meaning/import",
+              "since": "C++20"
+            },
+            {
+              "title": "C++ identifier with special meaning: module (since C++20)",
+              "url": "/cpp/identifier_with_special_meaning/module/",
+              "source_path": "cpp/identifier_with_special_meaning/module",
+              "since": "C++20"
+            },
+            {
+              "title": "C++ identifier with special meaning: override (since C++11)",
+              "url": "/cpp/identifier_with_special_meaning/override/",
+              "source_path": "cpp/identifier_with_special_meaning/override",
+              "since": "C++11"
+            }
+          ]
+        },
+        {
+          "key": "keyword",
+          "title": "Keyword",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "C++ keyword: alignas (since C++11)",
+              "url": "/cpp/keyword/alignas/",
+              "source_path": "cpp/keyword/alignas",
+              "since": "C++11"
+            },
+            {
+              "title": "C++ keyword: alignof (since C++11)",
+              "url": "/cpp/keyword/alignof/",
+              "source_path": "cpp/keyword/alignof",
+              "since": "C++11"
+            },
+            {
+              "title": "C++ keyword: and",
+              "url": "/cpp/keyword/and/",
+              "source_path": "cpp/keyword/and"
+            },
+            {
+              "title": "C++ keyword: and_eq",
+              "url": "/cpp/keyword/and_eq/",
+              "source_path": "cpp/keyword/and_eq"
+            },
+            {
+              "title": "C++ keyword: asm",
+              "url": "/cpp/keyword/asm/",
+              "source_path": "cpp/keyword/asm"
+            },
+            {
+              "title": "C++ keyword: atomic_cancel (TM TS)",
+              "url": "/cpp/keyword/atomic_cancel/",
+              "source_path": "cpp/keyword/atomic_cancel"
+            },
+            {
+              "title": "C++ keyword: atomic_commit (TM TS)",
+              "url": "/cpp/keyword/atomic_commit/",
+              "source_path": "cpp/keyword/atomic_commit"
+            },
+            {
+              "title": "C++ keyword: atomic_noexcept (TM TS)",
+              "url": "/cpp/keyword/atomic_noexcept/",
+              "source_path": "cpp/keyword/atomic_noexcept"
+            },
+            {
+              "title": "C++ keyword: auto",
+              "url": "/cpp/keyword/auto/",
+              "source_path": "cpp/keyword/auto"
+            },
+            {
+              "title": "C++ keyword: bitand",
+              "url": "/cpp/keyword/bitand/",
+              "source_path": "cpp/keyword/bitand"
+            },
+            {
+              "title": "C++ keyword: bitor",
+              "url": "/cpp/keyword/bitor/",
+              "source_path": "cpp/keyword/bitor"
+            },
+            {
+              "title": "C++ keyword: bool",
+              "url": "/cpp/keyword/bool/",
+              "source_path": "cpp/keyword/bool"
+            }
+          ]
+        },
+        {
+          "key": "keywords",
+          "title": "Keywords",
+          "entry_count": 3,
+          "entries": [
+            {
+              "title": "C++ keyword: if",
+              "url": "/cpp/keywords/if/",
+              "source_path": "cpp/keywords/if"
+            },
+            {
+              "title": "C++ keyword: static",
+              "url": "/cpp/keywords/static/",
+              "source_path": "cpp/keywords/static"
+            },
+            {
+              "title": "C++ keyword: typename",
+              "url": "/cpp/keywords/typename/",
+              "source_path": "cpp/keywords/typename"
+            }
+          ]
+        },
+        {
+          "key": "links",
+          "title": "Links",
+          "entry_count": 1,
+          "entries": [
+            {
+              "title": "A list of open-source C++ libraries",
+              "url": "/cpp/links/libs/",
+              "source_path": "cpp/links/libs"
+            }
+          ]
+        },
+        {
+          "key": "named_req",
+          "title": "Named Req",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Named requirements",
+              "url": "/cpp/named_req/",
+              "source_path": "named_req/_index"
+            },
+            {
+              "title": "C++ named requirements: AccessorPolicy (since C++23)",
+              "url": "/cpp/named_req/AccessorPolicy/",
+              "source_path": "cpp/named_req/AccessorPolicy",
+              "since": "C++23"
+            },
+            {
+              "title": "C++ named requirements: Allocator",
+              "url": "/cpp/named_req/Allocator/",
+              "source_path": "cpp/named_req/Allocator"
+            },
+            {
+              "title": "C++ named requirements: AllocatorAwareContainer (since C++11)",
+              "url": "/cpp/named_req/AllocatorAwareContainer/",
+              "source_path": "cpp/named_req/AllocatorAwareContainer",
+              "since": "C++11"
+            },
+            {
+              "title": "C++ named requirements: AssociativeContainer",
+              "url": "/cpp/named_req/AssociativeContainer/",
+              "source_path": "cpp/named_req/AssociativeContainer"
+            },
+            {
+              "title": "C++ named requirements: BasicFormatter (since C++20)",
+              "url": "/cpp/named_req/BasicFormatter/",
+              "source_path": "cpp/named_req/BasicFormatter",
+              "since": "C++20"
+            },
+            {
+              "title": "C++ named requirements: BasicLockable (since C++11)",
+              "url": "/cpp/named_req/BasicLockable/",
+              "source_path": "cpp/named_req/BasicLockable",
+              "since": "C++11"
+            },
+            {
+              "title": "C++ named requirements: LegacyBidirectionalIterator",
+              "url": "/cpp/named_req/BidirectionalIterator/",
+              "source_path": "cpp/named_req/BidirectionalIterator"
+            },
+            {
+              "title": "C++ named requirements: BinaryPredicate",
+              "url": "/cpp/named_req/BinaryPredicate/",
+              "source_path": "cpp/named_req/BinaryPredicate"
+            },
+            {
+              "title": "C++ named requirements: BinaryTypeTrait (since C++11)",
+              "url": "/cpp/named_req/BinaryTypeTrait/",
+              "source_path": "cpp/named_req/BinaryTypeTrait",
+              "since": "C++11"
+            },
+            {
+              "title": "C++ named requirements: BitmaskType",
+              "url": "/cpp/named_req/BitmaskType/",
+              "source_path": "cpp/named_req/BitmaskType"
+            },
+            {
+              "title": "C++ named requirements: BooleanTestable",
+              "url": "/cpp/named_req/BooleanTestable/",
+              "source_path": "cpp/named_req/BooleanTestable"
+            }
+          ]
+        },
+        {
+          "key": "preprocessor",
+          "title": "Preprocessor",
+          "entry_count": 7,
+          "entries": [
+            {
+              "title": "Preprocessor",
+              "url": "/cpp/preprocessor/",
+              "source_path": "preprocessor/_index"
+            },
+            {
+              "title": "Conditional inclusion",
+              "url": "/cpp/preprocessor/conditional/",
+              "source_path": "cpp/preprocessor/conditional"
+            },
+            {
+              "title": "Diagnostic directives",
+              "url": "/cpp/preprocessor/error/",
+              "source_path": "cpp/preprocessor/error"
+            },
+            {
+              "title": "Implementation defined behavior control",
+              "url": "/cpp/preprocessor/impl/",
+              "source_path": "cpp/preprocessor/impl"
+            },
+            {
+              "title": "Source file inclusion",
+              "url": "/cpp/preprocessor/include/",
+              "source_path": "cpp/preprocessor/include"
+            },
+            {
+              "title": "Filename and line information",
+              "url": "/cpp/preprocessor/line/",
+              "source_path": "cpp/preprocessor/line"
+            },
+            {
+              "title": "Replacing text macros",
+              "url": "/cpp/preprocessor/replace/",
+              "source_path": "cpp/preprocessor/replace"
+            }
+          ]
+        },
+        {
+          "key": "standard_library",
+          "title": "Standard Library",
+          "entry_count": 3,
+          "entries": [
+            {
+              "title": "Standard Library",
+              "url": "/cpp/standard_library/",
+              "source_path": "cpp/standard_library"
+            },
+            {
+              "title": "decay-copy",
+              "url": "/cpp/standard_library/decay-copy/",
+              "source_path": "cpp/standard_library/decay-copy"
+            },
+            {
+              "title": "synth-three-way, synth-three-way-result",
+              "url": "/cpp/standard_library/synth-three-way/",
+              "source_path": "cpp/standard_library/synth-three-way"
+            }
+          ]
+        },
+        {
+          "key": "symbol_index",
+          "title": "Symbol Index",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "std::chrono Symbol Index",
+              "url": "/cpp/symbol_index/chrono/",
+              "source_path": "cpp/symbol_index/chrono"
+            },
+            {
+              "title": "std::literals::chrono_literals Symbol Index",
+              "url": "/cpp/symbol_index/chrono_literals/",
+              "source_path": "cpp/symbol_index/chrono_literals"
+            },
+            {
+              "title": "std::literals::complex_literals Symbol Index",
+              "url": "/cpp/symbol_index/complex_literals/",
+              "source_path": "cpp/symbol_index/complex_literals"
+            },
+            {
+              "title": "std::execution Symbol Index",
+              "url": "/cpp/symbol_index/execution/",
+              "source_path": "cpp/symbol_index/execution"
+            },
+            {
+              "title": "Exposition-only Symbol Index",
+              "url": "/cpp/symbol_index/expos/",
+              "source_path": "cpp/symbol_index/expos"
+            },
+            {
+              "title": "std::filesystem Symbol Index",
+              "url": "/cpp/symbol_index/filesystem/",
+              "source_path": "cpp/symbol_index/filesystem"
+            },
+            {
+              "title": "std::linalg Symbol Index",
+              "url": "/cpp/symbol_index/linalg/",
+              "source_path": "cpp/symbol_index/linalg"
+            },
+            {
+              "title": "std::literals Symbol Index",
+              "url": "/cpp/symbol_index/literals/",
+              "source_path": "cpp/symbol_index/literals"
+            },
+            {
+              "title": "Macro Symbol Index",
+              "url": "/cpp/symbol_index/macro/",
+              "source_path": "cpp/symbol_index/macro"
+            },
+            {
+              "title": "std::numbers Symbol Index",
+              "url": "/cpp/symbol_index/numbers/",
+              "source_path": "cpp/symbol_index/numbers"
+            },
+            {
+              "title": "std::placeholders Symbol Index",
+              "url": "/cpp/symbol_index/placeholders/",
+              "source_path": "cpp/symbol_index/placeholders"
+            },
+            {
+              "title": "std::pmr Symbol Index",
+              "url": "/cpp/symbol_index/pmr/",
+              "source_path": "cpp/symbol_index/pmr"
+            }
+          ]
+        },
+        {
+          "key": "text",
+          "title": "Text",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "Text processing library",
+              "url": "/cpp/text/",
+              "source_path": "cpp/text",
+              "since": "C++26"
+            },
+            {
+              "title": "std::text_encoding",
+              "url": "/cpp/text/text_encoding/",
+              "source_path": "cpp/text/text_encoding",
+              "since": "C++26"
+            },
+            {
+              "title": "std::text_encoding::aliases",
+              "url": "/cpp/text/text_encoding/aliases/",
+              "source_path": "cpp/text/text_encoding/aliases",
+              "since": "C++26"
+            },
+            {
+              "title": "std::text_encoding::aliases_view",
+              "url": "/cpp/text/text_encoding/aliases_view/",
+              "source_path": "cpp/text/text_encoding/aliases_view",
+              "since": "C++26"
+            },
+            {
+              "title": "std::text_encoding::comp-name",
+              "url": "/cpp/text/text_encoding/comp-name/",
+              "source_path": "cpp/text/text_encoding/comp-name"
+            },
+            {
+              "title": "std::text_encoding::environment",
+              "url": "/cpp/text/text_encoding/environment/",
+              "source_path": "cpp/text/text_encoding/environment",
+              "since": "C++26"
+            },
+            {
+              "title": "std::text_encoding::environment_is",
+              "url": "/cpp/text/text_encoding/environment_is/",
+              "source_path": "cpp/text/text_encoding/environment_is",
+              "since": "C++26"
+            },
+            {
+              "title": "std::text_encoding::id",
+              "url": "/cpp/text/text_encoding/id/",
+              "source_path": "cpp/text/text_encoding/id",
+              "since": "C++26"
+            },
+            {
+              "title": "std::text_encoding::literal",
+              "url": "/cpp/text/text_encoding/literal/",
+              "source_path": "cpp/text/text_encoding/literal",
+              "since": "C++26"
+            },
+            {
+              "title": "std::text_encoding::mib",
+              "url": "/cpp/text/text_encoding/mib/",
+              "source_path": "cpp/text/text_encoding/mib",
+              "since": "C++26"
+            },
+            {
+              "title": "std::text_encoding::name",
+              "url": "/cpp/text/text_encoding/name/",
+              "source_path": "cpp/text/text_encoding/name",
+              "since": "C++26"
+            },
+            {
+              "title": "std::hash<std::text_encoding>",
+              "url": "/cpp/text/text_encoding/hash/",
+              "source_path": "cpp/text/text_encoding/hash",
+              "since": "C++26"
+            }
+          ]
+        }
+      ]
+    },
+    "c": {
+      "source_root": "content/c",
+      "area_count": 20,
+      "areas": [
+        {
+          "key": "language",
+          "title": "Language",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "C Language",
+              "url": "/c/language/",
+              "source_path": "c/language"
+            },
+            {
+              "title": "_Alignas (since C11)(deprecated in C23), alignas (since C23)",
+              "url": "/c/language/_Alignas/",
+              "source_path": "c/language/_Alignas"
+            },
+            {
+              "title": "_Alignof (since C11)(deprecated in C23), alignof (since C23) operator",
+              "url": "/c/language/_Alignof/",
+              "source_path": "c/language/_Alignof"
+            },
+            {
+              "title": "_Noreturn function specifier (since C11)(deprecated in C23)",
+              "url": "/c/language/_Noreturn/",
+              "source_path": "c/language/_Noreturn"
+            },
+            {
+              "title": "Static assertion (since C11)",
+              "url": "/c/language/_Static_assert/",
+              "source_path": "c/language/_Static_assert"
+            },
+            {
+              "title": "_Alignas (since C11)(deprecated in C23), alignas (since C23)",
+              "url": "/c/language/alignas/",
+              "source_path": "c/language/alignas"
+            },
+            {
+              "title": "_Alignof (since C11)(deprecated in C23), alignof (since C23) operator",
+              "url": "/c/language/alignof/",
+              "source_path": "c/language/alignof"
+            },
+            {
+              "title": "Analyzability",
+              "url": "/c/language/analyzability/",
+              "source_path": "c/language/analyzability"
+            },
+            {
+              "title": "Arithmetic types",
+              "url": "/c/language/arithmetic_types/",
+              "source_path": "c/language/arithmetic_types"
+            },
+            {
+              "title": "Array declaration",
+              "url": "/c/language/array/",
+              "source_path": "c/language/array"
+            },
+            {
+              "title": "Array initialization",
+              "url": "/c/language/array_initialization/",
+              "source_path": "c/language/array_initialization"
+            },
+            {
+              "title": "As-if rule",
+              "url": "/c/language/as_if/",
+              "source_path": "c/language/as_if"
+            }
+          ]
+        },
+        {
+          "key": "keyword",
+          "title": "Keywords",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "C Keywords",
+              "url": "/c/keyword/",
+              "source_path": "keyword/_index"
+            },
+            {
+              "title": "C keywords: _Alignas (since C11)(deprecated in C23)",
+              "url": "/c/keyword/_Alignas/",
+              "source_path": "c/keyword/_Alignas"
+            },
+            {
+              "title": "C keywords: _Alignof (since C11)(deprecated in C23)",
+              "url": "/c/keyword/_Alignof/",
+              "source_path": "c/keyword/_Alignof"
+            },
+            {
+              "title": "C keywords: _Atomic (since C11)",
+              "url": "/c/keyword/_Atomic/",
+              "source_path": "c/keyword/_Atomic"
+            },
+            {
+              "title": "C keywords: _Bool (since C99)(deprecated in C23)",
+              "url": "/c/keyword/_Bool/",
+              "source_path": "c/keyword/_Bool"
+            },
+            {
+              "title": "C keywords: _Complex (since C99)",
+              "url": "/c/keyword/_Complex/",
+              "source_path": "c/keyword/_Complex"
+            },
+            {
+              "title": "C keywords: _Decimal128 (since C23)",
+              "url": "/c/keyword/_Decimal128/",
+              "source_path": "c/keyword/_Decimal128"
+            },
+            {
+              "title": "C keywords: _Decimal32 (since C23)",
+              "url": "/c/keyword/_Decimal32/",
+              "source_path": "c/keyword/_Decimal32"
+            },
+            {
+              "title": "C keywords: _Decimal64 (since C23)",
+              "url": "/c/keyword/_Decimal64/",
+              "source_path": "c/keyword/_Decimal64"
+            },
+            {
+              "title": "C keywords: _Generic (since C11)",
+              "url": "/c/keyword/_Generic/",
+              "source_path": "c/keyword/_Generic"
+            },
+            {
+              "title": "C keywords: _Imaginary (since C99)",
+              "url": "/c/keyword/_Imaginary/",
+              "source_path": "c/keyword/_Imaginary"
+            },
+            {
+              "title": "C keywords: _Noreturn (since C11)(deprecated in C23)",
+              "url": "/c/keyword/_Noreturn/",
+              "source_path": "c/keyword/_Noreturn"
+            }
+          ]
+        },
+        {
+          "key": "preprocessor",
+          "title": "Preprocessor",
+          "entry_count": 8,
+          "entries": [
+            {
+              "title": "C Preprocessor",
+              "url": "/c/preprocessor/",
+              "source_path": "preprocessor/_index"
+            },
+            {
+              "title": "Conditional inclusion",
+              "url": "/c/preprocessor/conditional/",
+              "source_path": "c/preprocessor/conditional"
+            },
+            {
+              "title": "Binary resource inclusion (since C23)",
+              "url": "/c/preprocessor/embed/",
+              "source_path": "c/preprocessor/embed"
+            },
+            {
+              "title": "Diagnostic directives",
+              "url": "/c/preprocessor/error/",
+              "source_path": "c/preprocessor/error"
+            },
+            {
+              "title": "Implementation defined behavior control",
+              "url": "/c/preprocessor/impl/",
+              "source_path": "c/preprocessor/impl"
+            },
+            {
+              "title": "Source file inclusion",
+              "url": "/c/preprocessor/include/",
+              "source_path": "c/preprocessor/include"
+            },
+            {
+              "title": "Filename and line information",
+              "url": "/c/preprocessor/line/",
+              "source_path": "c/preprocessor/line"
+            },
+            {
+              "title": "Replacing text macros",
+              "url": "/c/preprocessor/replace/",
+              "source_path": "c/preprocessor/replace"
+            }
+          ]
+        },
+        {
+          "key": "types",
+          "title": "Types",
+          "entry_count": 11,
+          "entries": [
+            {
+              "title": "C Types",
+              "url": "/c/types/",
+              "source_path": "types/_index"
+            },
+            {
+              "title": "limits",
+              "url": "/c/types/limits/",
+              "source_path": "types/limits/_index"
+            },
+            {
+              "title": "NULL",
+              "url": "/c/types/NULL/",
+              "source_path": "c/types/NULL"
+            },
+            {
+              "title": "Fixed width integer types (since C99)",
+              "url": "/c/types/integer/",
+              "source_path": "c/types/integer"
+            },
+            {
+              "title": "max_align_t",
+              "url": "/c/types/max_align_t/",
+              "source_path": "c/types/max_align_t"
+            },
+            {
+              "title": "nullptr_t",
+              "url": "/c/types/nullptr_t/",
+              "source_path": "c/types/nullptr_t"
+            },
+            {
+              "title": "offsetof",
+              "url": "/c/types/offsetof/",
+              "source_path": "c/types/offsetof"
+            },
+            {
+              "title": "ptrdiff_t",
+              "url": "/c/types/ptrdiff_t/",
+              "source_path": "c/types/ptrdiff_t"
+            },
+            {
+              "title": "size_t",
+              "url": "/c/types/size_t/",
+              "source_path": "c/types/size_t"
+            },
+            {
+              "title": "FLT_EVAL_METHOD",
+              "url": "/c/types/limits/FLT_EVAL_METHOD/",
+              "source_path": "c/types/limits/FLT_EVAL_METHOD"
+            },
+            {
+              "title": "FLT_ROUNDS",
+              "url": "/c/types/limits/FLT_ROUNDS/",
+              "source_path": "c/types/limits/FLT_ROUNDS"
+            }
+          ]
+        },
+        {
+          "key": "string",
+          "title": "String",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "C strings and text handling",
+              "url": "/c/string/",
+              "source_path": "c/string"
+            },
+            {
+              "title": "Null-terminated byte strings",
+              "url": "/c/string/byte/",
+              "source_path": "c/string/byte"
+            },
+            {
+              "title": "Null-terminated multibyte strings",
+              "url": "/c/string/multibyte/",
+              "source_path": "c/string/multibyte"
+            },
+            {
+              "title": "Null-terminated wide strings",
+              "url": "/c/string/wide/",
+              "source_path": "c/string/wide"
+            },
+            {
+              "title": "atof",
+              "url": "/c/string/byte/atof/",
+              "source_path": "c/string/byte/atof"
+            },
+            {
+              "title": "atoi, atol, atoll",
+              "url": "/c/string/byte/atoi/",
+              "source_path": "c/string/byte/atoi"
+            },
+            {
+              "title": "isalnum",
+              "url": "/c/string/byte/isalnum/",
+              "source_path": "c/string/byte/isalnum"
+            },
+            {
+              "title": "isalpha",
+              "url": "/c/string/byte/isalpha/",
+              "source_path": "c/string/byte/isalpha"
+            },
+            {
+              "title": "isblank",
+              "url": "/c/string/byte/isblank/",
+              "source_path": "c/string/byte/isblank"
+            },
+            {
+              "title": "iscntrl",
+              "url": "/c/string/byte/iscntrl/",
+              "source_path": "c/string/byte/iscntrl"
+            },
+            {
+              "title": "isdigit",
+              "url": "/c/string/byte/isdigit/",
+              "source_path": "c/string/byte/isdigit"
+            },
+            {
+              "title": "isgraph",
+              "url": "/c/string/byte/isgraph/",
+              "source_path": "c/string/byte/isgraph"
+            }
+          ]
+        },
+        {
+          "key": "io",
+          "title": "IO",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "C I/O",
+              "url": "/c/io/",
+              "source_path": "c/io"
+            },
+            {
+              "title": "FILE",
+              "url": "/c/io/FILE/",
+              "source_path": "c/io/FILE"
+            },
+            {
+              "title": "clearerr",
+              "url": "/c/io/clearerr/",
+              "source_path": "c/io/clearerr"
+            },
+            {
+              "title": "fclose",
+              "url": "/c/io/fclose/",
+              "source_path": "c/io/fclose"
+            },
+            {
+              "title": "feof",
+              "url": "/c/io/feof/",
+              "source_path": "c/io/feof"
+            },
+            {
+              "title": "ferror",
+              "url": "/c/io/ferror/",
+              "source_path": "c/io/ferror"
+            },
+            {
+              "title": "fflush",
+              "url": "/c/io/fflush/",
+              "source_path": "c/io/fflush"
+            },
+            {
+              "title": "fgetc, getc",
+              "url": "/c/io/fgetc/",
+              "source_path": "c/io/fgetc"
+            },
+            {
+              "title": "fgetpos",
+              "url": "/c/io/fgetpos/",
+              "source_path": "c/io/fgetpos"
+            },
+            {
+              "title": "fgets",
+              "url": "/c/io/fgets/",
+              "source_path": "c/io/fgets"
+            },
+            {
+              "title": "fgetwc, getwc",
+              "url": "/c/io/fgetwc/",
+              "source_path": "c/io/fgetwc"
+            },
+            {
+              "title": "fgetws",
+              "url": "/c/io/fgetws/",
+              "source_path": "c/io/fgetws"
+            }
+          ]
+        },
+        {
+          "key": "numeric",
+          "title": "Numeric",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "C Numeric",
+              "url": "/c/numeric/",
+              "source_path": "c/numeric"
+            },
+            {
+              "title": "C Bit Manipulation",
+              "url": "/c/numeric/bit/",
+              "source_path": "numeric/bit/_index"
+            },
+            {
+              "title": "C Complex",
+              "url": "/c/numeric/complex/",
+              "source_path": "numeric/complex/_index"
+            },
+            {
+              "title": "C Floating-point Environment",
+              "url": "/c/numeric/fenv/",
+              "source_path": "numeric/fenv/_index"
+            },
+            {
+              "title": "C Math",
+              "url": "/c/numeric/math/",
+              "source_path": "numeric/math/_index"
+            },
+            {
+              "title": "C Pseudo-random Number Generation",
+              "url": "/c/numeric/random/",
+              "source_path": "numeric/random/_index"
+            },
+            {
+              "title": "Bit manipulation (since C23)",
+              "url": "/c/numeric/bit_manip/",
+              "source_path": "c/numeric/bit_manip"
+            },
+            {
+              "title": "ckd_add",
+              "url": "/c/numeric/ckd_add/",
+              "source_path": "c/numeric/ckd_add"
+            },
+            {
+              "title": "ckd_mul",
+              "url": "/c/numeric/ckd_mul/",
+              "source_path": "c/numeric/ckd_mul"
+            },
+            {
+              "title": "ckd_sub",
+              "url": "/c/numeric/ckd_sub/",
+              "source_path": "c/numeric/ckd_sub"
+            },
+            {
+              "title": "__STDC_ENDIAN_LITTLE__, __STDC_ENDIAN_BIG__, __STDC_ENDIAN_NATIVE__",
+              "url": "/c/numeric/endian/",
+              "source_path": "c/numeric/endian"
+            },
+            {
+              "title": "Type-generic math",
+              "url": "/c/numeric/tgmath/",
+              "source_path": "c/numeric/tgmath"
+            }
+          ]
+        },
+        {
+          "key": "thread",
+          "title": "Thread",
+          "entry_count": 10,
+          "entries": [
+            {
+              "title": "C Thread",
+              "url": "/c/thread/",
+              "source_path": "thread/_index"
+            },
+            {
+              "title": "ONCE_FLAG_INIT",
+              "url": "/c/thread/ONCE_FLAG_INIT/",
+              "source_path": "thread/ONCE_FLAG_INIT"
+            },
+            {
+              "title": "TSS_DTOR_ITERATIONS",
+              "url": "/c/thread/TSS_DTOR_ITERATIONS/",
+              "source_path": "c/thread/TSS_DTOR_ITERATIONS"
+            },
+            {
+              "title": "call_once, once_flag, ONCE_FLAG_INIT",
+              "url": "/c/thread/call_once/",
+              "source_path": "c/thread/call_once"
+            },
+            {
+              "title": "cnd_broadcast",
+              "url": "/c/thread/cnd_broadcast/",
+              "source_path": "thread/cnd_broadcast"
+            },
+            {
+              "title": "cnd_destroy",
+              "url": "/c/thread/cnd_destroy/",
+              "source_path": "thread/cnd_destroy"
+            },
+            {
+              "title": "cnd_init",
+              "url": "/c/thread/cnd_init/",
+              "source_path": "thread/cnd_init"
+            },
+            {
+              "title": "cnd_signal",
+              "url": "/c/thread/cnd_signal/",
+              "source_path": "thread/cnd_signal"
+            },
+            {
+              "title": "cnd_timedwait",
+              "url": "/c/thread/cnd_timedwait/",
+              "source_path": "c/thread/cnd_timedwait"
+            },
+            {
+              "title": "cnd_wait",
+              "url": "/c/thread/cnd_wait/",
+              "source_path": "thread/cnd_wait"
+            }
+          ]
+        },
+        {
+          "key": "locale",
+          "title": "Localization",
+          "entry_count": 5,
+          "entries": [
+            {
+              "title": "C Locale",
+              "url": "/c/locale/",
+              "source_path": "locale/_index"
+            },
+            {
+              "title": "LC_ALL, LC_COLLATE, LC_CTYPE, LC_MONETARY, LC_NUMERIC, LC_TIME",
+              "url": "/c/locale/LC_categories/",
+              "source_path": "c/locale/LC_categories"
+            },
+            {
+              "title": "lconv",
+              "url": "/c/locale/lconv/",
+              "source_path": "c/locale/lconv"
+            },
+            {
+              "title": "localeconv",
+              "url": "/c/locale/localeconv/",
+              "source_path": "c/locale/localeconv"
+            },
+            {
+              "title": "setlocale",
+              "url": "/c/locale/setlocale/",
+              "source_path": "c/locale/setlocale"
+            }
+          ]
+        },
+        {
+          "key": "error",
+          "title": "Error handling",
+          "entry_count": 5,
+          "entries": [
+            {
+              "title": "C Error",
+              "url": "/c/error/",
+              "source_path": "error/_index"
+            },
+            {
+              "title": "assert",
+              "url": "/c/error/assert/",
+              "source_path": "error/assert"
+            },
+            {
+              "title": "errno",
+              "url": "/c/error/errno/",
+              "source_path": "error/errno"
+            },
+            {
+              "title": "errno_macros",
+              "url": "/c/error/errno_macros/",
+              "source_path": "error/errno_macros"
+            },
+            {
+              "title": "set_constraint_handler_s",
+              "url": "/c/error/set_constraint_handler_s/",
+              "source_path": "error/set_constraint_handler_s"
+            }
+          ]
+        },
+        {
+          "key": "memory",
+          "title": "Memory",
+          "entry_count": 6,
+          "entries": [
+            {
+              "title": "C Memory",
+              "url": "/c/memory/",
+              "source_path": "memory/_index"
+            },
+            {
+              "title": "aligned_alloc",
+              "url": "/c/memory/aligned_alloc/",
+              "source_path": "memory/aligned_alloc"
+            },
+            {
+              "title": "calloc",
+              "url": "/c/memory/calloc/",
+              "source_path": "memory/calloc"
+            },
+            {
+              "title": "free",
+              "url": "/c/memory/free/",
+              "source_path": "memory/free"
+            },
+            {
+              "title": "malloc",
+              "url": "/c/memory/malloc/",
+              "source_path": "memory/malloc"
+            },
+            {
+              "title": "realloc",
+              "url": "/c/memory/realloc/",
+              "source_path": "memory/realloc"
+            }
+          ]
+        },
+        {
+          "key": "program",
+          "title": "Program utilities",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "C Program",
+              "url": "/c/program/",
+              "source_path": "program/_index"
+            },
+            {
+              "title": "EXIT_status",
+              "url": "/c/program/EXIT_status/",
+              "source_path": "program/EXIT_status"
+            },
+            {
+              "title": "SIG_ERR",
+              "url": "/c/program/SIG_ERR/",
+              "source_path": "program/SIG_ERR"
+            },
+            {
+              "title": "SIG_strategies",
+              "url": "/c/program/SIG_strategies/",
+              "source_path": "program/SIG_strategies"
+            },
+            {
+              "title": "SIG_types",
+              "url": "/c/program/SIG_types/",
+              "source_path": "program/SIG_types"
+            },
+            {
+              "title": "_Exit",
+              "url": "/c/program/_Exit/",
+              "source_path": "program/_Exit"
+            },
+            {
+              "title": "abort",
+              "url": "/c/program/abort/",
+              "source_path": "program/abort"
+            },
+            {
+              "title": "at_quick_exit",
+              "url": "/c/program/at_quick_exit/",
+              "source_path": "program/at_quick_exit"
+            },
+            {
+              "title": "atexit",
+              "url": "/c/program/atexit/",
+              "source_path": "program/atexit"
+            },
+            {
+              "title": "exit",
+              "url": "/c/program/exit/",
+              "source_path": "program/exit"
+            },
+            {
+              "title": "getenv",
+              "url": "/c/program/getenv/",
+              "source_path": "program/getenv"
+            },
+            {
+              "title": "jmp_buf",
+              "url": "/c/program/jmp_buf/",
+              "source_path": "program/jmp_buf"
+            }
+          ]
+        },
+        {
+          "key": "chrono",
+          "title": "Time",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "C Chrono",
+              "url": "/c/chrono/",
+              "source_path": "chrono/_index"
+            },
+            {
+              "title": "CLOCKS_PER_SEC",
+              "url": "/c/chrono/CLOCKS_PER_SEC/",
+              "source_path": "chrono/CLOCKS_PER_SEC"
+            },
+            {
+              "title": "asctime",
+              "url": "/c/chrono/asctime/",
+              "source_path": "chrono/asctime"
+            },
+            {
+              "title": "clock",
+              "url": "/c/chrono/clock/",
+              "source_path": "chrono/clock"
+            },
+            {
+              "title": "clock_t",
+              "url": "/c/chrono/clock_t/",
+              "source_path": "chrono/clock_t"
+            },
+            {
+              "title": "ctime",
+              "url": "/c/chrono/ctime/",
+              "source_path": "chrono/ctime"
+            },
+            {
+              "title": "difftime",
+              "url": "/c/chrono/difftime/",
+              "source_path": "chrono/difftime"
+            },
+            {
+              "title": "gmtime",
+              "url": "/c/chrono/gmtime/",
+              "source_path": "chrono/gmtime"
+            },
+            {
+              "title": "localtime",
+              "url": "/c/chrono/localtime/",
+              "source_path": "chrono/localtime"
+            },
+            {
+              "title": "mktime",
+              "url": "/c/chrono/mktime/",
+              "source_path": "chrono/mktime"
+            },
+            {
+              "title": "strftime",
+              "url": "/c/chrono/strftime/",
+              "source_path": "chrono/strftime"
+            },
+            {
+              "title": "time",
+              "url": "/c/chrono/time/",
+              "source_path": "chrono/time"
+            }
+          ]
+        },
+        {
+          "key": "algorithm",
+          "title": "Algorithm",
+          "entry_count": 3,
+          "entries": [
+            {
+              "title": "C Algorithm",
+              "url": "/c/algorithm/",
+              "source_path": "algorithm/_index"
+            },
+            {
+              "title": "bsearch",
+              "url": "/c/algorithm/bsearch/",
+              "source_path": "algorithm/bsearch"
+            },
+            {
+              "title": "qsort",
+              "url": "/c/algorithm/qsort/",
+              "source_path": "algorithm/qsort"
+            }
+          ]
+        },
+        {
+          "key": "atomic",
+          "title": "Atomic",
+          "entry_count": 12,
+          "entries": [
+            {
+              "title": "C Atomic",
+              "url": "/c/atomic/",
+              "source_path": "atomic/_index"
+            },
+            {
+              "title": "ATOMIC_FLAG_INIT",
+              "url": "/c/atomic/ATOMIC_FLAG_INIT/",
+              "source_path": "atomic/ATOMIC_FLAG_INIT"
+            },
+            {
+              "title": "ATOMIC_LOCK_FREE_consts",
+              "url": "/c/atomic/ATOMIC_LOCK_FREE_consts/",
+              "source_path": "atomic/ATOMIC_LOCK_FREE_consts"
+            },
+            {
+              "title": "ATOMIC_VAR_INIT",
+              "url": "/c/atomic/ATOMIC_VAR_INIT/",
+              "source_path": "atomic/ATOMIC_VAR_INIT"
+            },
+            {
+              "title": "atomic_compare_exchange",
+              "url": "/c/atomic/atomic_compare_exchange/",
+              "source_path": "atomic/atomic_compare_exchange"
+            },
+            {
+              "title": "atomic_exchange",
+              "url": "/c/atomic/atomic_exchange/",
+              "source_path": "atomic/atomic_exchange"
+            },
+            {
+              "title": "atomic_fetch_add",
+              "url": "/c/atomic/atomic_fetch_add/",
+              "source_path": "atomic/atomic_fetch_add"
+            },
+            {
+              "title": "atomic_fetch_and",
+              "url": "/c/atomic/atomic_fetch_and/",
+              "source_path": "atomic/atomic_fetch_and"
+            },
+            {
+              "title": "atomic_fetch_or",
+              "url": "/c/atomic/atomic_fetch_or/",
+              "source_path": "atomic/atomic_fetch_or"
+            },
+            {
+              "title": "atomic_fetch_sub",
+              "url": "/c/atomic/atomic_fetch_sub/",
+              "source_path": "atomic/atomic_fetch_sub"
+            },
+            {
+              "title": "atomic_fetch_xor",
+              "url": "/c/atomic/atomic_fetch_xor/",
+              "source_path": "atomic/atomic_fetch_xor"
+            },
+            {
+              "title": "atomic_flag",
+              "url": "/c/atomic/atomic_flag/",
+              "source_path": "atomic/atomic_flag"
+            }
+          ]
+        },
+        {
+          "key": "experimental",
+          "title": "Experimental",
+          "entry_count": 5,
+          "entries": [
+            {
+              "title": "C Experimental",
+              "url": "/c/experimental/",
+              "source_path": "experimental/_index"
+            },
+            {
+              "title": "C Experimental Dynamic",
+              "url": "/c/experimental/dynamic/",
+              "source_path": "experimental/dynamic/_index"
+            },
+            {
+              "title": "getline",
+              "url": "/c/experimental/dynamic/getline/",
+              "source_path": "experimental/dynamic/getline"
+            },
+            {
+              "title": "strdup",
+              "url": "/c/experimental/dynamic/strdup/",
+              "source_path": "experimental/dynamic/strdup"
+            },
+            {
+              "title": "strndup",
+              "url": "/c/experimental/dynamic/strndup/",
+              "source_path": "experimental/dynamic/strndup"
+            }
+          ]
+        },
+        {
+          "key": "header",
+          "title": "Header",
+          "entry_count": 1,
+          "entries": [
+            {
+              "title": "C Header",
+              "url": "/c/header/",
+              "source_path": "header/_index"
+            }
+          ]
+        },
+        {
+          "key": "index",
+          "title": "Index",
+          "entry_count": 1,
+          "entries": [
+            {
+              "title": "C Index",
+              "url": "/c/index/",
+              "source_path": "index/_index"
+            }
+          ]
+        },
+        {
+          "key": "links",
+          "title": "Links",
+          "entry_count": 2,
+          "entries": [
+            {
+              "title": "C Links",
+              "url": "/c/links/",
+              "source_path": "links/_index"
+            },
+            {
+              "title": "C Libraries",
+              "url": "/c/links/libs/",
+              "source_path": "links/libs/_index"
+            }
+          ]
+        },
+        {
+          "key": "variadic",
+          "title": "Variadic",
+          "entry_count": 6,
+          "entries": [
+            {
+              "title": "C Variadic",
+              "url": "/c/variadic/",
+              "source_path": "variadic/_index"
+            },
+            {
+              "title": "va_arg",
+              "url": "/c/variadic/va_arg/",
+              "source_path": "variadic/va_arg"
+            },
+            {
+              "title": "va_copy",
+              "url": "/c/variadic/va_copy/",
+              "source_path": "variadic/va_copy"
+            },
+            {
+              "title": "va_end",
+              "url": "/c/variadic/va_end/",
+              "source_path": "variadic/va_end"
+            },
+            {
+              "title": "va_list",
+              "url": "/c/variadic/va_list/",
+              "source_path": "variadic/va_list"
+            },
+            {
+              "title": "va_start",
+              "url": "/c/variadic/va_start/",
+              "source_path": "variadic/va_start"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
