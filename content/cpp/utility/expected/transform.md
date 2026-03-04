@@ -8,9 +8,7 @@ since: "C++23"
 If *this represents an expected value, invokes f and returns a std::expected object that contains an expected value, which is initialized with its result (or value-initialized if the result type is void). Otherwise, returns a std::expected object that contains an unexpected value, which is initialized with the unexpected value of *this.
 
 ## Declarations
-```cpp
-Primary template
-```
+### Primary template
 
 ```cpp
 template< class F >
@@ -36,9 +34,7 @@ constexpr auto transform( F&& f ) const&&;
 ```
 _(since C++23)_
 
-```cpp
-void partial specialization
-```
+### `void` partial specialization
 
 ```cpp
 template< class F >
@@ -68,10 +64,7 @@ _(since C++23)_
 - `f`: a suitable function or Callable object whose call signature returns a non-reference type
 
 ## Return value
-Given expression expr as:
-
-## Example
-This section is incompleteReason: no example
+Returns an `expected` object whose success branch contains the result of invoking `f` on the contained value, or a value-initialized success state if the result type is `void`. If `*this` contains an unexpected value, the returned object propagates that unexpected value instead.
 
 ## Defect reports
 | DR | Applied to | Behavior as published | Correct behavior |

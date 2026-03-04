@@ -16,8 +16,6 @@ struct common_type<TTuple, UTuple>;
 ```
 _(since C++23)_
 
-## Example
-This section is incompleteReason: no example
 
 ## See also
 - [common_type](/cpp/types/common_type/)

@@ -5,12 +5,10 @@ category: "utility"
 since: "C++23"
 ---
 
-If *this contains an expected value, returns a reference to the contained value. Returns nothing for void partial specialization.
+If `*this` contains an expected value, returns a reference to the contained value. For the `void` partial specialization, the function returns normally when the object contains an expected value.
 
 ## Declarations
-```cpp
-Primary template
-```
+### Primary template
 
 ```cpp
 constexpr T& value() &;
@@ -32,9 +30,7 @@ constexpr const T&& value() const&&;
 ```
 _(since C++23)_
 
-```cpp
-void partial specialization
-```
+### `void` partial specialization
 
 ```cpp
 constexpr void value() const&;
@@ -46,9 +42,6 @@ constexpr void value() &&;
 ```
 _(since C++23)_
 
-## Example
-This section is incompleteReason: no example
-
 ## Defect reports
 | DR | Applied to | Behavior as published | Correct behavior |
 | --- | --- | --- | --- |
@@ -56,6 +49,6 @@ This section is incompleteReason: no example
 
 ## See also
 - [value_or](/cpp/utility/expected/value_or/)
-- [operator->operator*](/cpp/utility/expected/operator/)
+- [operator->, operator*](/cpp/utility/expected/operator/)
 - [error](/cpp/utility/expected/error/)
 - [bad_expected_access](/cpp/utility/expected/bad_expected_access/)

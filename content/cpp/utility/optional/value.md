@@ -63,5 +63,5 @@ int main()
 
 ## See also
 - [value_or](/cpp/utility/optional/value_or/)
-- [operator->operator*](/cpp/utility/optional/operator/)
+- [operator->, operator*](/cpp/utility/optional/operator/)
 - [bad_optional_access](/cpp/utility/optional/bad_optional_access/)

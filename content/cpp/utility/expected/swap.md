@@ -8,18 +8,14 @@ since: "C++23"
 Swaps the contents with those of other.
 
 ## Declarations
-```cpp
-Primary template
-```
+### Primary template
 
 ```cpp
 constexpr void swap( expected& other ) noexcept(/* see below */);
 ```
 _(since C++23)_
 
-```cpp
-void partial specialization
-```
+### `void` partial specialization
 
 ```cpp
 constexpr void swap( expected& other ) noexcept(/* see below */);

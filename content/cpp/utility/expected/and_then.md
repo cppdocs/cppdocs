@@ -8,9 +8,7 @@ since: "C++23"
 If *this represents an expected value, invokes f and returns its result. Otherwise, returns a std::expected object that contains an unexpected value, which is initialized with the unexpected value of *this.
 
 ## Declarations
-```cpp
-Main template
-```
+### Main template
 
 ```cpp
 template< class F >
@@ -36,9 +34,7 @@ constexpr auto and_then( F&& f ) const&&;
 ```
 _(since C++23)_
 
-```cpp
-void partial specialization
-```
+### `void` partial specialization
 
 ```cpp
 template< class F >
@@ -68,17 +64,9 @@ _(since C++23)_
 - `f`: a suitable function or Callable object that returns a std::expected
 
 ## Notes
-Feature-test macro
-Value
-Std
-Feature
-__cpp_lib_expected
-202211L
-(C++23)
-Monadic functions for std::expected
-
-## Example
-This section is incompleteReason: no example
+| Feature-test macro | Value | Std | Feature |
+| --- | --- | --- | --- |
+| `__cpp_lib_expected` | `202211L` | C++23 | Monadic functions for `std::expected` |
 
 ## Defect reports
 | DR | Applied to | Behavior as published | Correct behavior |
@@ -87,5 +75,5 @@ This section is incompleteReason: no example
 | LWG 3973 | C++23 | the expected value was obtained by **this[2] | changed to val |
 
 ## See also
-- [unexpectunexpect_t](/cpp/utility/expected/unexpect_t/)
+- [unexpect, unexpect_t](/cpp/utility/expected/unexpect_t/)
 - [transform](/cpp/utility/expected/transform/)

@@ -8,9 +8,7 @@ since: "C++23"
 Assigns a new value to an existing expected object.
 
 ## Declarations
-```cpp
-Primary template
-```
+### Primary template
 
 ```cpp
 constexpr expected& operator=( const expected& other );
@@ -41,9 +39,7 @@ constexpr expected& operator=( std::unexpected<G>&& e );
 ```
 _(since C++23)_
 
-```cpp
-void partial specialization
-```
+### `void` partial specialization
 
 ```cpp
 constexpr expected& operator=( const expected& other );
@@ -68,9 +64,7 @@ constexpr expected& operator=( std::unexpected<G>&& e );
 ```
 _(since C++23)_
 
-```cpp
-Helper function template
-```
+### Helper function template
 
 ```cpp
 template< class T, class U, class... Args >
@@ -86,13 +80,10 @@ _(since C++23) (exposition only*)_
 - `oldval`: the contained value to be destroyed
 - `args`: the arguments used as initializers of newval
 
-## Example
-This section is incompleteReason: no example
-
 ## Defect reports
 | DR | Applied to | Behavior as published | Correct behavior |
 | --- | --- | --- | --- |
-| LWG 4025 | C++23 | overload (7) was defined as deleted if E is notmove constructible or not move assignable | it does not participate inoverload resolution in this case |
+| LWG 4025 | C++23 | overload (7) was defined as deleted if `E` is not move-constructible or not move-assignable | it does not participate in overload resolution in this case |
 
 ## See also
 - [emplace](/cpp/utility/expected/emplace/)

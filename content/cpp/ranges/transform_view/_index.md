@@ -3,10 +3,12 @@ title: "std::ranges::views::transform, std::ranges::transform_view"
 source_path: "cpp/ranges/transform_view"
 header: "<ranges>"
 category: "ranges"
-since: "C++23"
+since: "C++20"
 ---
 
-1) A range adaptor that represents [view](/cpp/ranges/view/) of an underlying sequence after applying a transformation function to each element.
+`std::ranges::transform_view` is the concrete [view](/cpp/ranges/view/) type that applies a function to each element on demand.
+
+`std::ranges::views::transform` is the range adaptor object used in pipelines and direct adaptor calls to produce a `transform_view`.
 
 ## Declarations
 ```cpp
@@ -40,10 +42,7 @@ inline constexpr /*unspecified*/ transform = /*unspecified*/;
 ```
 _(since C++20)_
 
-```cpp
-Call signature
-```
-
+## Adaptor call signatures
 ```cpp
 template< ranges::viewable_range R, class F >
 requires /* see below */
@@ -96,5 +95,32 @@ int main()
 }
 ```
 
+## Semantic model
+`transform_view` is lazy: applying the transformation function happens when elements are accessed through the view, not when the view is created.
+
+The adaptor stores a view of the underlying range and a callable object. A pipeline such as `r | std::views::transform(f)` is equivalent in intent to constructing a `transform_view` over `views::all(r)` with `f`.
+
+`transform_view` does not cache transformed values. Accessing the same position multiple times may invoke the transformation callable multiple times.
+
+## Traversal and iterator notes
+`transform_view` models [input_range](/cpp/ranges/input_range/) and can model [forward_range](/cpp/ranges/forward_range/), [bidirectional_range](/cpp/ranges/bidirectional_range/), [random_access_range](/cpp/ranges/random_access_range/), and [common_range](/cpp/ranges/common_range/) when the underlying view supports them.
+
+It can model sized-range behavior (for example, `size()`) when the underlying range is sized.
+
+It is not a contiguous range because dereferencing produces transformed values through the callable rather than exposing underlying storage directly.
+
+## Reference map
+| Area | Key entries |
+| --- | --- |
+| View type and adaptor object | [`std::ranges::transform_view`](/cpp/ranges/transform_view/), [`std::ranges::views::transform`](/cpp/ranges/transform_view/) |
+| Main member surface | [transform_view::transform_view](/cpp/ranges/transform_view/transform_view/), [begin](/cpp/ranges/transform_view/begin/), [end](/cpp/ranges/transform_view/end/), [size](/cpp/ranges/transform_view/size/), [base](/cpp/ranges/transform_view/base/) |
+| Nested iterator/sentinel surface | [transform_view::iterator](/cpp/ranges/transform_view/iterator/), [iterator::operator*](/cpp/ranges/transform_view/iterator/operator%2A/), [iterator::iter_move](/cpp/ranges/transform_view/iterator/iter_move/), [transform_view::sentinel](/cpp/ranges/transform_view/sentinel/) |
+| Related entries | [deduction guides](/cpp/ranges/transform_view/deduction_guides/), [range adaptor closure](/cpp/ranges/range_adaptor_closure/), [ranges::transform algorithm](/cpp/algorithm/ranges/transform/) |
+
+## Notes
+`transform_view` changed from requiring a copy-constructible function object to a move-constructible one in C++23. The page includes both declaration forms to show that boundary.
+
 ## See also
 - [ranges::transform](/cpp/algorithm/ranges/transform/)
+- [ranges::filter_view, views::filter](/cpp/ranges/filter_view/)
+- [view](/cpp/ranges/view/)

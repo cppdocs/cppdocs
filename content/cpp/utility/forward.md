@@ -3,10 +3,10 @@ title: "std::forward"
 source_path: "cpp/utility/forward"
 header: "<utility>"
 category: "utility"
-since: "C++14"
+since: "C++11"
 ---
 
-1) Forwards lvalues as either lvalues or as rvalues, depending on T.
+Performs conditional cast-based forwarding of `t`, preserving the value category encoded by `T`.
 
 ## Declarations
 ```cpp
@@ -39,8 +39,17 @@ _(since C++14)_
 ## Return value
 static_cast<T&&>(t)
 
+## Complexity
+Constant.
+
 ## Notes
-See [template argument deduction](/cpp/language/template_argument_deduction/) for the special rules behind forwarding references (T&& used as a function parameter) and [forwarding references](/cpp/language/reference/#Forwarding_references) for other detail.
+This utility is primarily used with forwarding references in function templates. With a deduced `T`, `std::forward<T>(t)` preserves whether the original argument was an lvalue or an rvalue.
+
+Overload (1) accepts an lvalue argument and can forward it as either lvalue or rvalue depending on `T`.
+
+Overload (2) accepts an rvalue argument; instantiating it with an lvalue reference type `T` is ill-formed. This prevents accidentally forwarding an rvalue as an lvalue.
+
+See [template argument deduction](/cpp/language/template_argument_deduction/) and [forwarding references](/cpp/language/reference/#Forwarding_references/) for the deduction rules behind this behavior.
 
 ## Example
 ```cpp

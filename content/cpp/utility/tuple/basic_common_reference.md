@@ -17,8 +17,6 @@ struct basic_common_reference<TTuple, UTuple, TQual, UQual>;
 ```
 _(since C++23)_
 
-## Example
-This section is incompleteReason: no example
 
 ## See also
 - [common_referencebasic_common_reference](/cpp/types/common_reference/)

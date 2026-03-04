@@ -3,10 +3,9 @@ title: "std::find, std::find_if, std::find_if_not"
 source_path: "cpp/algorithm/find"
 header: "<algorithm>"
 category: "algorithm"
-since: "C++26"
 ---
 
-Returns an iterator to the first element in the range [first,last) that satisfies specific criteria (or last if there is no such iterator).
+Finds the first element in a range that matches a value or satisfies a predicate.
 
 ## Declarations
 ```cpp
@@ -16,8 +15,7 @@ InputIt find( InputIt first, InputIt last, const T& value );
 _(constexpr since C++20) (until C++26)_
 
 ```cpp
-template< class InputIt, class T = typename std::iterator_traits
-<InputIt>::value_type >
+template< class InputIt, class T = typename std::iterator_traits<InputIt>::value_type >
 constexpr InputIt find( InputIt first, InputIt last, const T& value );
 ```
 _(since C++26)_
@@ -30,9 +28,8 @@ ForwardIt first, ForwardIt last, const T& value );
 _(since C++17) (until C++26)_
 
 ```cpp
-template< class ExecutionPolicy,
-class ForwardIt, class T = typename std::iterator_traits
-<ForwardIt>::value_type >
+template< class ExecutionPolicy, class ForwardIt,
+          class T = typename std::iterator_traits<ForwardIt>::value_type >
 ForwardIt find( ExecutionPolicy&& policy,
 ForwardIt first, ForwardIt last, const T& value );
 ```
@@ -68,14 +65,41 @@ _(since C++17)_
 - `first, last`: the range of elements to examine
 - `value`: value to compare the elements to
 - `policy`: the execution policy to use
-- `p`: unary predicate which returns true for the required element. The expression p(v) must be convertible to bool for every argument v of type (possibly const) VT, where VT is the value type of InputIt, regardless of value category, and must not modify v. Thus, a parameter type of VT&is not allowed, nor is VT unless for VT a move is equivalent to a copy(since C++11).
-- `q`: unary predicate which returns false for the required element. The expression q(v) must be convertible to bool for every argument v of type (possibly const) VT, where VT is the value type of InputIt, regardless of value category, and must not modify v. Thus, a parameter type of VT&is not allowed, nor is VT unless for VT a move is equivalent to a copy(since C++11).
+- `p`: unary predicate used by `find_if`; it must be callable with elements from the input range, return a value convertible to `bool`, and must not modify the examined element
+- `q`: unary predicate used by `find_if_not`; it must be callable with elements from the input range, return a value convertible to `bool`, and must not modify the examined element
+
+Type requirements:
+- `InputIt` must satisfy [LegacyInputIterator](/cpp/named_req/InputIterator/).
+- `ForwardIt` must satisfy [LegacyForwardIterator](/cpp/named_req/ForwardIterator/).
+- `UnaryPred` must satisfy [Predicate](/cpp/named_req/Predicate/).
 
 ## Return value
-The first iterator it in the [range](/cpp/iterator/#Ranges) [first,last) satisfying the following condition or last if there is no such iterator:
+Returns the first iterator `it` in `[first, last)` satisfying the corresponding condition, or `last` if no element satisfies it:
+- `find`: `*it == value`
+- `find_if`: `p(*it)` is `true`
+- `find_if_not`: `q(*it)` is `false`
+
+## Complexity
+Let `N = std::distance(first, last)`.
+- `find`: at most `N` comparisons with `value` using `operator==`
+- `find_if`: at most `N` predicate applications of `p`
+- `find_if_not`: at most `N` predicate applications of `q`
+
+## Exceptions
+For overloads taking an execution policy:
+- if a function invoked as part of the algorithm throws and the policy is one of the standard execution policies, `std::terminate` is called
+- for other execution-policy types, behavior is implementation-defined
+- if allocation fails, `std::bad_alloc` may be thrown
 
 ## Notes
 If C++11 is not available, an equivalent to std::find_if_not is to use std::find_if with the negated predicate.
+
+These algorithms perform a linear search.
+
+### Feature-test macro
+| Macro | Value | Std | Feature |
+| --- | --- | --- | --- |
+| `__cpp_lib_algorithm_default_value_type` | `202403` | C++26 | list-initialization for algorithms (`find` overloads) |
 
 ## Example
 ```cpp
@@ -138,7 +162,7 @@ int main()
 ## Defect reports
 | DR | Applied to | Behavior as published | Correct behavior |
 | --- | --- | --- | --- |
-| LWG 283 | C++98 | T was required to be EqualityComparable, butthe value type of InputIt might not be T | removed the requirement |
+| LWG 283 | C++98 | `T` was required to be `EqualityComparable`, but the value type of `InputIt` might not be `T` | requirement removed |
 
 ## See also
 - [adjacent_find](/cpp/algorithm/adjacent_find/)
@@ -146,4 +170,4 @@ int main()
 - [find_first_of](/cpp/algorithm/find_first_of/)
 - [mismatch](/cpp/algorithm/mismatch/)
 - [search](/cpp/algorithm/search/)
-- [ranges::findranges::find_ifranges::find_if_not](/cpp/algorithm/ranges/find/)
+- [ranges::find, ranges::find_if, ranges::find_if_not](/cpp/algorithm/ranges/find/)

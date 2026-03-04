@@ -3,9 +3,12 @@ title: "std::accumulate"
 source_path: "cpp/algorithm/accumulate"
 header: "<numeric>"
 category: "algorithm"
+since: "C++98"
 ---
 
-Computes the sum of the given value init and the elements in the range [first,last).
+`std::accumulate` accumulates elements in `[first, last)` as a left fold, starting from `init`.
+
+The first overload updates the accumulator with `operator+`. The second overload updates it with a user-provided binary operation.
 
 ## Declarations
 ```cpp
@@ -21,17 +24,38 @@ T accumulate( InputIt first, InputIt last, T init, BinaryOp op );
 _(constexpr since C++20)_
 
 ## Parameters
-- `first, last`: the range of elements to sum
-- `init`: initial value of the sum
-- `op`: binary operation function object that will be applied. The signature of the function should be equivalent to the following: Ret fun(const Type1 &a, const Type2 &b); The signature does not need to have const &. The type Type1 must be such that an object of type T can be implicitly converted to Type1. The type Type2 must be such that an object of type InputIt can be dereferenced and then implicitly converted to Type2. The type Ret must be such that an object of type T can be assigned a value of type Ret.
+- `first, last`: the input range
+- `init`: initial accumulator value
+- `op`: binary operation object used by overload (2). It must be callable with the current accumulator and an input element, and its result must be assignable to `T`.
+
+`op` must not invalidate iterators or subranges in `[first, last)`, and must not modify elements in that range.
+
+## Type requirements
+- `InputIt` must meet the requirements of LegacyInputIterator.
+- `T` must be CopyConstructible and CopyAssignable.
+
+## Semantics
+Let `acc` be the accumulator initialized from `init`.
+
+- Overload (1): for each iterator `i` in `[first,last)`, performs `acc = std::move(acc) + *i` (since C++20; before C++20, `acc + *i`).
+- Overload (2): for each iterator `i` in `[first,last)`, performs `acc = op(std::move(acc), *i)` (since C++20; before C++20, `op(acc, *i)`).
 
 ## Return value
-acc after all modifications.
+Final value of the accumulator after processing all elements.
+
+## Complexity
+Let `N = std::distance(first, last)`.
+
+- Overload (1): exactly `N` applications of `operator+`
+- Overload (2): exactly `N` applications of `op`
+
+## Exceptions
+Any exception thrown by `operator+`, `op`, iterator operations, or assignments to the accumulator is propagated.
 
 ## Notes
-std::accumulate performs a left [fold](https://en.wikipedia.org/wiki/Fold_(higher-order_function)). In order to perform a right fold, one must reverse the order of the arguments to the binary operator, and use reverse iterators.
+`std::accumulate` performs a left [fold](https://en.wikipedia.org/wiki/Fold_(higher-order_function)). To emulate a right fold, use reverse iterators and a matching operation order.
 
-If left to type inference, op operates on values of the same type as init which can result in unwanted casting of the iterator elements. For example, std::accumulate(v.begin(), v.end(), 0) likely does not give the result one wishes for when v is of type [std::vector](/cpp/container/vector/)<double>.
+Type deduction for `init` matters. For example, `std::accumulate(v.begin(), v.end(), 0)` with `v` of type [`std::vector<double>`](/cpp/container/vector/) performs integer accumulation and truncates intermediate results.
 
 ## Example
 ```cpp

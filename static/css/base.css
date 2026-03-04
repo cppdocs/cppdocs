@@ -265,6 +265,12 @@ pre code {
   color: var(--text-secondary);
 }
 
+.hero-contribute {
+  margin-top: 1.25rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
 html[data-theme="light"] {
   --bg-base: #f7f8fa;
   --bg-surface: #ffffff;

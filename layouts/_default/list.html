@@ -15,7 +15,7 @@
     <p class="hero-kicker">cppdocs.dev</p>
     <h1>{{ .Title }}</h1>
     {{ with .Params.description }}<p class="hero-lead">{{ . }}</p>{{ end }}
-    {{ if .Content }}<p>{{ .Content | plainify }}</p>{{ end }}
+    {{ if .Content }}<div class="hero-contribute">{{ .Content }}</div>{{ end }}
   </section>
 
   <section class="home-block home-block-reference">

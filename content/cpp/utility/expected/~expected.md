@@ -5,13 +5,10 @@ category: "utility"
 since: "C++23"
 ---
 
-Destroys the contained value:
+Destroys the contained value, if any, or the contained unexpected value.
 
 ## Declarations
 ```cpp
 constexpr ~expected();
 ```
 _(since C++23)_
-
-## Example
-This section is incompleteReason: no example

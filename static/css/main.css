@@ -1741,7 +1741,9 @@ html[data-theme="light"] .build-info {
 }
 
 /* ── Footer ────────────────────────────────────────────────────────────── */
-footer { margin: 3rem 0 2rem; border-top: 1px solid var(--border-muted); padding-top: 1rem; }
+footer { margin: 3rem 0 2rem; border-top: 1px solid var(--border-muted); padding-top: 1rem; display: flex; align-items: center; justify-content: space-between; }
+.footer-github { color: var(--text-muted); display: inline-flex; align-items: center; text-decoration: none; transition: color 0.15s ease; }
+.footer-github:hover { color: var(--text-secondary); }
 .build-info {
   font-size: 0.82rem;
   color: var(--text-muted);

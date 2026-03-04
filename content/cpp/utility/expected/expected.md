@@ -8,9 +8,7 @@ since: "C++23"
 Constructs a new expected object.
 
 ## Declarations
-```cpp
-Main template
-```
+### Main template
 
 ```cpp
 constexpr expected();
@@ -87,9 +85,7 @@ std::initializer_list<U> il, Args&&... args );
 ```
 _(since C++23)_
 
-```cpp
-void partial specialization
-```
+### `void` partial specialization
 
 ```cpp
 constexpr expected();
@@ -162,10 +158,7 @@ _(since C++23)_
 - `args`: arguments with which to initialize the contained value
 - `il`: initializer list with which to initialize the contained value
 
-## Example
-This section is incompleteReason: no example
-
 ## See also
 - [unexpected](/cpp/utility/expected/unexpected/)
-- [in_placein_place_typein_place_indexin_place_tin_place_type_tin_place_index_t](/cpp/utility/in_place/)
-- [unexpectunexpect_t](/cpp/utility/expected/unexpect_t/)
+- [in_place and related tags](/cpp/utility/in_place/)
+- [unexpect, unexpect_t](/cpp/utility/expected/unexpect_t/)

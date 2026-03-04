@@ -18,8 +18,6 @@ struct basic_common_reference<std::pair<T1, T2>, std::pair<U1, U2>, TQual, UQual
 ```
 _(since C++23)_
 
-## Example
-This section is incompleteReason: no example
 
 ## See also
 - [common_referencebasic_common_reference](/cpp/types/common_reference/)

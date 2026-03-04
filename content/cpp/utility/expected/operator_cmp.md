@@ -8,9 +8,7 @@ since: "C++23"
 Performs comparison operations on std::expected objects.
 
 ## Declarations
-```cpp
-Primary template
-```
+### Primary template
 
 ```cpp
 template< class T2, class E2 >
@@ -33,9 +31,7 @@ friend constexpr bool operator==( const expected& lhs, const T2& val );
 ```
 _(since C++23)_
 
-```cpp
-void partial specialization
-```
+### `void` partial specialization
 
 ```cpp
 template< class T2, class E2 >

@@ -3,10 +3,12 @@ title: "std::sort"
 source_path: "cpp/algorithm/sort"
 header: "<algorithm>"
 category: "algorithm"
-since: "C++17"
+since: "C++98"
 ---
 
-Sorts the elements in the range [first,last) in non-descending order. The order of equal elements is not guaranteed to be preserved.
+Sorts the elements in `[first, last)` into non-descending order.
+
+`std::sort` is not stable: equivalent elements may be reordered. Use [std::stable_sort](/cpp/algorithm/stable_sort/) when preserving relative order of equal elements matters.
 
 ## Declarations
 ```cpp
@@ -17,8 +19,7 @@ _(constexpr since C++20)_
 
 ```cpp
 template< class ExecutionPolicy, class RandomIt >
-void sort( ExecutionPolicy&& policy,
-RandomIt first, RandomIt last );
+void sort( ExecutionPolicy&& policy, RandomIt first, RandomIt last );
 ```
 _(since C++17)_
 
@@ -30,22 +31,9 @@ _(constexpr since C++20)_
 
 ```cpp
 template< class ExecutionPolicy, class RandomIt, class Compare >
-void sort( ExecutionPolicy&& policy,
-RandomIt first, RandomIt last, Compare comp );
+void sort( ExecutionPolicy&& policy, RandomIt first, RandomIt last, Compare comp );
 ```
 _(since C++17)_
-
-## Parameters
-- `first, last`: the range of elements to sort
-- `policy`: the execution policy to use
-- `comp`: comparison function object (i.e. an object that satisfies the requirements of Compare) which returns true if the first argument is less than (i.e. is ordered before) the second. The signature of the comparison function should be equivalent to the following: bool cmp(const Type1& a, const Type2& b); While the signature does not need to have const&, the function must not modify the objects passed to it and must be able to accept all values of type (possibly const) Type1 and Type2 regardless of value category (thus, Type1& is not allowed, nor is Type1 unless for Type1 a move is equivalent to a copy(since C++11)). The types Type1 and Type2 must be such that an object of type RandomIt can be dereferenced and then implicitly converted to both of them.
-
-## Notes
-Before [LWG713](https://cplusplus.github.io/LWG/issue713), the complexity requirement allowed sort() to be implemented using only [Quicksort](https://en.wikipedia.org/wiki/Quicksort), which may need \(\scriptsize O(N^2)\)O(N2) comparisons in the worst case.
-
-[Introsort](https://en.wikipedia.org/wiki/Introsort) can handle all cases with \(\scriptsize O(N \cdot \log(N))\)O(N·log(N)) comparisons (without incurring additional overhead in the average case), and thus is usually used for implementing sort().
-
-libc++ has not implemented the corrected time complexity requirement [until LLVM 14](https://reviews.llvm.org/D113413).
 
 ## Example
 ```cpp
@@ -53,48 +41,57 @@ libc++ has not implemented the corrected time complexity requirement [until LLVM
 #include <array>
 #include <functional>
 #include <iostream>
-#include <string_view>
- 
+
 int main()
 {
-    std::array<int, 10> s{5, 7, 4, 2, 8, 6, 1, 9, 0, 3};
- 
-    auto print = [&s](std::string_view const rem)
-    {
-        for (auto a : s)
-            std::cout << a << ' ';
-        std::cout << ": " << rem << '\n';
-    };
- 
-    std::sort(s.begin(), s.end());
-    print("sorted with the default operator<");
- 
-    std::sort(s.begin(), s.end(), std::greater<int>());
-    print("sorted with the standard library compare function object");
- 
-    struct
-    {
-        bool operator()(int a, int b) const { return a < b; }
-    }
-    customLess;
- 
-    std::sort(s.begin(), s.end(), customLess);
-    print("sorted with a custom function object");
- 
-    std::sort(s.begin(), s.end(), [](int a, int b)
-                                  {
-                                      return a > b;
-                                  });
-    print("sorted with a lambda expression");
+    std::array<int, 8> v{5, 1, 8, 3, 3, 7, 2, 4};
+
+    std::sort(v.begin(), v.end());
+    for (int x : v)
+        std::cout << x << ' ';
+    std::cout << '\n';
+
+    std::sort(v.begin(), v.end(), std::greater<int>{});
+    for (int x : v)
+        std::cout << x << ' ';
+    std::cout << '\n';
 }
 ```
+
+## Semantics
+- Sorts in ascending order with `operator<` overloads (1,2), or with `comp` overloads (3,4).
+- Requires random-access iterators.
+- The comparison relation must model strict weak ordering.
+- Equal elements are not guaranteed to keep their original relative order.
+
+## Parameters
+- `first, last`: range to sort (`[first, last)`).
+- `policy`: execution policy for parallel/vectorized execution overloads.
+- `comp`: callable returning whether the first argument should appear before the second.
+
+## Complexity
+| Overloads | Comparator applications |
+| --- | --- |
+| (1), (3) | `O(N log N)` comparisons (worst case) |
+| (2), (4) | `O(N log N)` comparator applications |
+
+Where `N = std::distance(first, last)`.
+
+## Exceptions
+For overloads taking an execution policy:
+- if a function invoked as part of the algorithm throws and the policy is one of the standard execution policies, `std::terminate` is called
+- for other execution-policy types, behavior is implementation-defined
+- if allocation fails, `std::bad_alloc` may be thrown
+
+## Notes
+Typical implementations use introsort to satisfy worst-case `O(N log N)` while preserving good average performance.
+
+## See also
+- [std::stable_sort](/cpp/algorithm/stable_sort/): stable ordering of equivalent elements
+- [std::partial_sort](/cpp/algorithm/partial_sort/): fully sorts only a prefix
+- [std::ranges::sort](/cpp/algorithm/ranges/sort/): ranges-based counterpart
 
 ## Defect reports
 | DR | Applied to | Behavior as published | Correct behavior |
 | --- | --- | --- | --- |
-| LWG 713 | C++98 | the \(\scriptsize O(N \cdot \log(N))\)O(N·log(N)) time complexity was only required on the average | it is required for the worst case |
-
-## See also
-- [partial_sort](/cpp/algorithm/partial_sort/)
-- [stable_sort](/cpp/algorithm/stable_sort/)
-- [ranges::sort](/cpp/algorithm/ranges/sort/)
+| LWG 713 | C++98 | `O(N log N)` was only required on average | required in the worst case |

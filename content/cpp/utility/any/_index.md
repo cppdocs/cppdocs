@@ -4,7 +4,15 @@ source_path: "cpp/utility/any"
 header: "<any>"
 ---
 
-The class any describes a type-safe container for single values of any [copy constructible](/cpp/types/is_copy_constructible/) type.
+The class `std::any` is a type-erased container for one value of any copy-constructible type.
+
+## Semantics
+- An `any` object either contains one value of some concrete type or is empty.
+- The concrete type is hidden behind the interface and recovered dynamically with [any_cast](/cpp/utility/any/any_cast/) or inspected with [type](/cpp/utility/any/type/).
+- Unlike [std::variant](/cpp/utility/variant/), the set of allowed payload types is not fixed at compile time.
+- Unlike [std::optional](/cpp/utility/optional/), `any` does not model presence or absence of one known value type; it models runtime-selected type erasure.
+
+If the caller already knows the finite set of alternatives, `variant` is usually clearer. `any` is the escape hatch for interfaces that truly need "some value, type known later".
 
 ## Declarations
 ```cpp
@@ -12,63 +20,49 @@ class any;
 ```
 _(since C++17)_
 
-## Notes
-Feature-test macro
-Value
-Std
-Feature
-__cpp_lib_any
-201606L
-(C++17)
-std::any
-
 ## Example
 ```cpp
 #include <any>
 #include <iostream>
+#include <string>
  
 int main()
 {
-    std::cout << std::boolalpha;
+    std::any value = std::string{"hello"};
  
-    // any type
-    std::any a = 1;
-    std::cout << a.type().name() << ": " << std::any_cast<int>(a) << '\n';
-    a = 3.14;
-    std::cout << a.type().name() << ": " << std::any_cast<double>(a) << '\n';
-    a = true;
-    std::cout << a.type().name() << ": " << std::any_cast<bool>(a) << '\n';
+    if (const auto* text = std::any_cast<std::string>(&value))
+        std::cout << *text << '\n';
  
-    // bad cast
-    try
-    {
-        a = 1;
-        std::cout << std::any_cast<float>(a) << '\n';
-    }
-    catch (const std::bad_any_cast& e)
-    {
-        std::cout << e.what() << '\n';
-    }
+    value = 42;
  
-    // has value
-    a = 2;
-    if (a.has_value())
-        std::cout << a.type().name() << ": " << std::any_cast<int>(a) << '\n';
- 
-    // reset
-    a.reset();
-    if (!a.has_value())
-        std::cout << "no value\n";
- 
-    // pointer to contained data
-    a = 3;
-    int* i = std::any_cast<int>(&a);
-    std::cout << *i << '\n';
+    if (const auto* n = std::any_cast<int>(&value))
+        std::cout << *n << '\n';
 }
 ```
 
+This is the core usage pattern: store a value without exposing its concrete type at the boundary, then probe or recover the type at the point that actually knows what to expect.
+
+## Operational notes
+- [has_value](/cpp/utility/any/has_value/) reports whether the object currently stores a value.
+- [reset](/cpp/utility/any/reset/) clears the object back to the empty state.
+- Checked extraction with `std::any_cast<T>(obj)` throws [bad_any_cast](/cpp/utility/any/bad_any_cast/) on type mismatch.
+- Pointer-form `std::any_cast<T>(&obj)` returns `nullptr` on mismatch and is often the most practical probing API.
+- Implementations are encouraged to avoid dynamic allocation for small objects when that can be done safely, but that is an optimization detail rather than part of the semantic contract.
+
+## Reference map
+| Area | Key entries |
+| --- | --- |
+| Construction and lifetime | [any::any](/cpp/utility/any/any/), [any::~any](/cpp/utility/any/~any/), [any::operator=](/cpp/utility/any/operator=/), [emplace](/cpp/utility/any/emplace/), [reset](/cpp/utility/any/reset/), [swap](/cpp/utility/any/swap/) |
+| Observation and extraction | [has_value](/cpp/utility/any/has_value/), [type](/cpp/utility/any/type/), [any_cast](/cpp/utility/any/any_cast/) |
+| Helpers | [make_any](/cpp/utility/any/make_any/), [`std::swap(std::any)`](/cpp/utility/any/swap2/), [bad_any_cast](/cpp/utility/any/bad_any_cast/) |
+
+## Notes
+| Feature-test macro | Value | Standard | Meaning |
+| --- | --- | --- | --- |
+| `__cpp_lib_any` | `201606L` | C++17 | `std::any` |
+
 ## See also
-- [function](/cpp/utility/functional/function/)
-- [move_only_function](/cpp/utility/functional/move_only_function/)
-- [variant](/cpp/utility/variant/)
-- [optional](/cpp/utility/optional/)
+- [std::variant](/cpp/utility/variant/)
+- [std::optional](/cpp/utility/optional/)
+- [std::expected](/cpp/utility/expected/)
+- [std::function](/cpp/utility/functional/function/)

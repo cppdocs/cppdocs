@@ -143,7 +143,7 @@ int main()
 | --- | --- | --- | --- |
 | LWG 2901 | C++17 | allocator-aware constructors provided butvariant can't properly support allocators | constructors removed |
 | P0739R0 | C++17 | converting constructor template interactspoorly with class template argument deduction | constraint added |
-| LWG 3024 | C++17 | copy constructor doesn't participate inoverload resolution if any member type is not copyable | defined as deleted instead |
+| LWG 3024 | C++17 | copy constructor doesn't participate in overload resolution if any member type is not copyable | defined as deleted instead |
 | P0602R4 | C++17 | copy/move constructors may not betrivial even if underlying constructors are trivial | required to propagate triviality |
 | P0608R3 | C++17 | converting constructor blindly assemblesan overload set, leading to unintended conversions | narrowing and boolean conversions not considered |
 | P1957R2 | C++17 | converting constructor for bool did not allowimplicit conversion | Pointer to bool conversion is narrowing andconverting constructor has noexception for bool |

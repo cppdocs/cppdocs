@@ -8,9 +8,7 @@ since: "C++23"
 If *this contains an unexpected value, invokes f with the unexpected value of *this as the argument and returns its result. Otherwise, returns a std::expected object that represents an expected value.
 
 ## Declarations
-```cpp
-Primary template
-```
+### Primary template
 
 ```cpp
 template< class F >
@@ -36,9 +34,7 @@ constexpr auto or_else( F&& f ) const&&;
 ```
 _(since C++23)_
 
-```cpp
-void partial specialization
-```
+### `void` partial specialization
 
 ```cpp
 template< class F >
@@ -76,9 +72,6 @@ __cpp_lib_expected
 202211L
 (C++23)
 Monadic functions for std::expected
-
-## Example
-This section is incompleteReason: no example
 
 ## Defect reports
 | DR | Applied to | Behavior as published | Correct behavior |

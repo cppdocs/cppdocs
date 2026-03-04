@@ -8,9 +8,7 @@ since: "C++23"
 Constructs an expected value in-place. After the call, [has_value()](/cpp/utility/expected/operator_bool/) returns true.
 
 ## Declarations
-```cpp
-Primary template
-```
+### Primary template
 
 ```cpp
 template< class... Args >
@@ -24,9 +22,7 @@ constexpr T& emplace( std::initializer_list<U> il, Args&&... args ) noexcept;
 ```
 _(since C++23)_
 
-```cpp
-void partial specialization
-```
+### `void` partial specialization
 
 ```cpp
 constexpr void emplace() noexcept;
@@ -39,9 +35,6 @@ _(since C++23)_
 
 ## Notes
 If the construction of T is potentially-throwing, [operator=](/cpp/utility/expected/operator/) can be used instead.
-
-## Example
-This section is incompleteReason: no example
 
 ## See also
 - [operator=](/cpp/utility/expected/operator/)

@@ -28,11 +28,8 @@ constexpr E&& error() && noexcept;
 ```
 _(since C++23)_
 
-## Example
-This section is incompleteReason: no example
-
 ## See also
 - [error_or](/cpp/utility/expected/error_or/)
-- [operator->operator*](/cpp/utility/expected/operator/)
+- [operator->, operator*](/cpp/utility/expected/operator/)
 - [value](/cpp/utility/expected/value/)
-- [operator boolhas_value](/cpp/utility/expected/operator_bool/)
+- [operator bool, has_value](/cpp/utility/expected/operator_bool/)

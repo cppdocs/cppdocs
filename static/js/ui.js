@@ -854,7 +854,7 @@
     const mode = load(KEYS_KEY, "default");
     highlightSegment("data-keys-choice", mode);
 
-    const ligatures = load(LIGA_KEY, "on");
+    const ligatures = load(LIGA_KEY, "off");
     applyLigatures(ligatures);
 
     const minStandard = load(MIN_STANDARD_KEY, "any");

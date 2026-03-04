@@ -6,7 +6,9 @@ category: "ranges"
 since: "C++20"
 ---
 
-1) A range adaptor that represents [view](/cpp/ranges/view/) of an underlying sequence without the elements that fail to satisfy a predicate.
+`std::ranges::filter_view` is the concrete [view](/cpp/ranges/view/) type that exposes only elements satisfying a predicate.
+
+`std::ranges::views::filter` is the range adaptor object used in pipelines and direct adaptor calls to produce a `filter_view`.
 
 ## Declarations
 ```cpp
@@ -25,10 +27,7 @@ inline constexpr /* unspecified */ filter = /* unspecified */;
 ```
 _(since C++20)_
 
-```cpp
-Call signature
-```
-
+## Adaptor call signatures
 ```cpp
 template< ranges::viewable_range R, class Pred >
 requires /* see below */
@@ -41,10 +40,6 @@ template< class Pred >
 constexpr /* range adaptor closure */ filter( Pred&& pred );
 ```
 _(since C++20)_
-
-## Parameters
-- `base`: range to filter
-- `pred`: predicate to filter out elements
 
 ## Example
 ```cpp
@@ -64,13 +59,35 @@ int main()
 }
 ```
 
+## Semantic model
+`filter_view` performs lazy filtering: elements are tested against the predicate as iteration advances, and failing elements are skipped.
+
+The adaptor stores a view of the underlying range plus a predicate object. A pipeline such as `r | std::views::filter(pred)` is equivalent in intent to constructing a `filter_view` over `views::all(r)` with `pred`.
+
+The predicate is part of the view object's state. Mutating external state captured by the predicate affects later iterations through the same view.
+
+## Traversal and iterator notes
+`filter_view` always models [input_range](/cpp/ranges/input_range/). It models [forward_range](/cpp/ranges/forward_range/), [bidirectional_range](/cpp/ranges/bidirectional_range/), and [common_range](/cpp/ranges/common_range/) when the underlying view models those concepts.
+
+It does not provide random-access traversal because advancing requires predicate checks and possible skipping.
+
+For forward underlying ranges, implementations may cache the first matching position to make repeated `begin()` calls efficient.
+
+## Reference map
+| Area | Key entries |
+| --- | --- |
+| View type and adaptor object | [`std::ranges::filter_view`](/cpp/ranges/filter_view/), [`std::ranges::views::filter`](/cpp/ranges/filter_view/) |
+| Iterator surface | [filter_view::iterator](/cpp/ranges/filter_view/iterator/), [filter_view::sentinel](/cpp/ranges/filter_view/sentinel/) |
+| Related ranges machinery | [range adaptor closure](/cpp/ranges/range_adaptor_closure/), [viewable_range](/cpp/ranges/viewable_range/), [view_interface](/cpp/ranges/view_interface/) |
+| Adjacent views | [take_while_view / views::take_while](/cpp/ranges/take_while_view/), [transform_view / views::transform](/cpp/ranges/transform_view/) |
+
 ## Defect reports
 | DR | Applied to | Behavior as published | Correct behavior |
 | --- | --- | --- | --- |
 | LWG 3714(P2711R1) | C++20 | the multi-parameter constructor was not explicit | made explicit |
-| P2325R3 | C++20 | if Pred is not default_initializable, the default constructorconstructs a filter_view which does not contain a Pred | the filter_view is alsonot default_initializable |
+| P2325R3 | C++20 | if `Pred` is not `default_initializable`, the default constructor produced a `filter_view` that did not contain a `Pred` | `filter_view` is also not default-initializable in that case |
 
 ## See also
-- [ranges::take_while_viewviews::take_while](/cpp/ranges/take_while_view/)
-- [view](/cpp/ranges/view/)
+- [ranges::take_while_view, views::take_while](/cpp/ranges/take_while_view/)
+- [ranges::transform_view, views::transform](/cpp/ranges/transform_view/)
 - [view](/cpp/ranges/view/)

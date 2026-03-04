@@ -7,6 +7,11 @@ since: "C++26"
 
 Applies the visitor vis (a [Callable](/cpp/named_req/callable/) that can be called with any combination of types from the variant) to the variant held by self.
 
+Given `V` as `decltype(std::forward_like<Self>(std::declval<variant>()))`, these overloads are equivalent to forwarding to the non-member [std::visit](/cpp/utility/variant/visit2/) overload set:
+
+1. `return std::visit(std::forward<Visitor>(vis), (V) self);`
+2. `return std::visit<R>(std::forward<Visitor>(vis), (V) self);`
+
 ## Declarations
 ```cpp
 template< class Self, class Visitor >
@@ -24,19 +29,21 @@ _(since C++26)_
 - `vis`: a Callable that accepts every possible alternative from the variant
 - `self`: variant to pass to the visitor
 
+## Return value
+1. The result of the corresponding `std::visit` invocation.
+2. Nothing if `R` is cv-qualified `void`; otherwise, the result of the corresponding `std::visit<R>` invocation.
+
+## Exceptions
+Only throws if the underlying call to [std::visit](/cpp/utility/variant/visit2/) throws.
+
 ## Notes
-Feature-test macro
-Value
-Std
-Feature
-__cpp_lib_variant
-202306L
-(C++26)
-member visit
+| Feature-test macro | Value | Std | Feature |
+| --- | --- | --- | --- |
+| `__cpp_lib_variant` | `202306L` | C++26 | member `visit` |
 
 ## Example
 ```cpp
-#include <print>
+#include <iostream>
 #include <string>
 #include <string_view>
 #include <variant>
@@ -55,9 +62,9 @@ int main()
 {
     const auto visitor = overloads
     {
-        [](int i){ std::print("int = {}\n", i); },
-        [](std::string_view s){ std::println("string = “{}”", s); },
-        [](const Base&){ std::println("base"); }
+        [](int i){ std::cout << "int = " << i << '\n'; },
+        [](std::string_view s){ std::cout << "string = \"" << s << "\"\n"; },
+        [](const Base&){ std::cout << "base\n"; }
     };
  
     const var_t var1 = 42, var2 = "abc", var3 = Derived();

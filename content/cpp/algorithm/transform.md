@@ -3,10 +3,16 @@ title: "std::transform"
 source_path: "cpp/algorithm/transform"
 header: "<algorithm>"
 category: "algorithm"
-since: "C++17"
+since: "C++98"
 ---
 
-std::transform applies the given function to the elements of the given input range(s), and stores the result in an output range starting from d_first.
+`std::transform` applies a unary or binary operation to input elements and writes the produced values to an output range beginning at `d_first`.
+
+The unary overload transforms one input range. The binary overload combines elements from two input ranges element-by-element.
+
+`std::transform` writes exactly `std::distance(first1, last1)` results through the output iterator.
+
+Whether this overwrites existing elements or appends new ones depends on the behavior of the output iterator.
 
 ## Declarations
 ```cpp
@@ -45,18 +51,38 @@ ForwardIt3 d_first, BinaryOp binary_op );
 _(since C++17)_
 
 ## Parameters
-- `first1, last1`: the first range of elements to transform
-- `first2`: the beginning of the second range of elements to transform
-- `d_first`: the beginning of the destination range, may be equal to first1 or first2
-- `policy`: the execution policy to use
-- `unary_op`: unary operation function object that will be applied. The signature of the function should be equivalent to the following: Ret fun(const Type &a); The signature does not need to have const &. The type Type must be such that an object of type InputIt can be dereferenced and then implicitly converted to Type. The type Ret must be such that an object of type OutputIt can be dereferenced and assigned a value of type Ret.
-- `binary_op`: binary operation function object that will be applied. The signature of the function should be equivalent to the following: Ret fun(const Type1 &a, const Type2 &b); The signature does not need to have const &. The types Type1 and Type2 must be such that objects of types InputIt1 and InputIt2 can be dereferenced and then implicitly converted to Type1 and Type2 respectively. The type Ret must be such that an object of type OutputIt can be dereferenced and assigned a value of type Ret.
+- `first1, last1`: the first input range to transform
+- `first2`: the beginning of the second input range for the binary overloads
+- `d_first`: the beginning of the destination range; it may be equal to `first1` or `first2`
+- `policy`: the [execution policy](/cpp/algorithm/execution_policy_tag_t/) to use
+- `unary_op`: unary operation object applied to each element from `[first1, last1)`. It must be callable with an argument obtained by dereferencing `InputIt`, and its result must be writable through `OutputIt`.
+- `binary_op`: binary operation object applied to corresponding elements from the two input ranges. It must be callable with arguments obtained by dereferencing `InputIt1` and `InputIt2`, and its result must be writable through `OutputIt`
+
+If `unary_op` or `binary_op` invalidates an iterator or modifies an element in any of the input or output ranges involved, the behavior is undefined.
+
+For the unary overloads, the destination range must be able to hold at least `std::distance(first1, last1)` elements.
+
+For the binary overloads, the second input range must contain at least `std::distance(first1, last1)` elements.
 
 ## Return value
-Output iterator to the element that follows the last element transformed.
+Iterator to the element past the last element written to the destination range.
+
+## Complexity
+Let `N = std::distance(first1, last1)`.
+
+- Unary overloads: exactly `N` applications of `unary_op`
+- Binary overloads: exactly `N` applications of `binary_op`
+
+## Exceptions
+The overloads with a template parameter named `ExecutionPolicy` report errors as follows:
+
+- If execution of a function invoked as part of the algorithm throws an exception and `ExecutionPolicy` is one of the standard policies, [`std::terminate`](/cpp/error/terminate/) is called
+- If the algorithm fails to allocate memory, [`std::bad_alloc`](/cpp/memory/new/bad_alloc/) is thrown
 
 ## Notes
-std::transform does not guarantee in-order application of unary_op or binary_op. To apply a function to a sequence in-order or to apply a function that modifies the elements of a sequence, use [std::for_each](/cpp/algorithm/for_each/).
+`std::transform` does not guarantee in-order application of `unary_op` or `binary_op`. To process a sequence strictly in order, or to apply an operation for its side effects on the visited elements, use [std::for_each](/cpp/algorithm/for_each/).
+
+In-place transformation is supported when the destination begins at the same position as one of the input ranges. More general overlapping of source and destination ranges is not supported unless it follows directly from that allowed case.
 
 ## Example
 ```cpp

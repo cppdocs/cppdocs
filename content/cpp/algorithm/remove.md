@@ -3,7 +3,7 @@ title: "std::remove, std::remove_if"
 source_path: "cpp/algorithm/remove"
 header: "<algorithm>"
 category: "algorithm"
-since: "C++26"
+since: "C++98"
 ---
 
 Removes all elements satisfying specific criteria from the range [first,last) and returns a past-the-end iterator for the new end of the range.
@@ -56,15 +56,30 @@ _(since C++17)_
 - `first, last`: the range of elements to process
 - `value`: the value of elements to remove
 - `policy`: the execution policy to use
-- `p`: unary predicate which returns true if the element should be removed. The expression p(v) must be convertible to bool for every argument v of type (possibly const) VT, where VT is the value type of ForwardIt, regardless of value category, and must not modify v. Thus, a parameter type of VT&is not allowed, nor is VT unless for VT a move is equivalent to a copy(since C++11).
+- `p`: unary predicate used by `remove_if`; for each `v` of type (possibly const) `VT` where `VT` is the value type of `ForwardIt`, `p(v)` must be valid, convertible to `bool`, and must not modify `v`
+
+Type requirements:
+- `ForwardIt` must satisfy [LegacyForwardIterator](/cpp/named_req/ForwardIterator/).
+- `UnaryPred` must satisfy [Predicate](/cpp/named_req/Predicate/).
 
 ## Return value
 Past-the-end iterator for the new range of values (if this is not end, then it points to an unspecified value, and so do iterators to any values between this iterator and end).
 
+## Complexity
+Let `N = std::distance(first, last)`.
+- `remove`: exactly `N` comparisons with `value`
+- `remove_if`: exactly `N` predicate applications
+
+## Exceptions
+For overloads taking an execution policy:
+- if a function invoked as part of the algorithm throws and the policy is one of the standard execution policies, `std::terminate` is called
+- for other execution-policy types, behavior is implementation-defined
+- if allocation fails, `std::bad_alloc` may be thrown
+
 ## Notes
 A call to remove is typically followed by a call to a container's erase member function to actually remove elements from the container. These two invocations together constitute a so-called [Erase-remove idiom](https://en.wikipedia.org/wiki/Erase-remove_idiom).
 
-The same effect can also be achieved by the following non-member functions:
+The same effect can also be achieved by the non-member helpers [std::erase](/cpp/container/vector/erase2/) and [std::erase_if](/cpp/container/vector/erase2/) (with overloads for standard containers).
 
 The similarly-named container [member functions](/cpp/container/#Member_function_table) [list::remove](/cpp/container/list/remove/), [list::remove_if](/cpp/container/list/remove/), [forward_list::remove](/cpp/container/forward_list/remove/), and [forward_list::remove_if](/cpp/container/forward_list/remove/) erase the removed elements.
 
@@ -73,6 +88,11 @@ These algorithms cannot be used with associative containers such as [std::set](/
 The standard library also defines an overload of [std::remove](/cpp/io/c/remove/) in [<cstdio>](/cpp/header/cstdio/), which takes a const char* and is used to delete files.
 
 Because std::remove takes value by reference, it can have unexpected behavior if it is a reference to an element of the range [first,last).
+
+### Feature-test macro
+| Macro | Value | Std | Feature |
+| --- | --- | --- | --- |
+| `__cpp_lib_algorithm_default_value_type` | `202403` | C++26 | list-initialization for algorithms (`remove` overloads) |
 
 ## Example
 ```cpp
@@ -122,9 +142,9 @@ int main()
 ## Defect reports
 | DR | Applied to | Behavior as published | Correct behavior |
 | --- | --- | --- | --- |
-| LWG 283 | C++98 | T was required to be EqualityComparable, butthe value type of ForwardIt is not always T | required the value type of ForwardItto be CopyAssignable instead |
+| LWG 283 | C++98 | `T` was required to be `EqualityComparable`, but the value type of `ForwardIt` is not always `T` | required the value type of `ForwardIt` to be `CopyAssignable` instead |
 
 ## See also
-- [remove_copyremove_copy_if](/cpp/algorithm/remove_copy/)
+- [remove_copy, remove_copy_if](/cpp/algorithm/remove_copy/)
 - [unique](/cpp/algorithm/unique/)
-- [ranges::removeranges::remove_if](/cpp/algorithm/ranges/remove/)
+- [ranges::remove, ranges::remove_if](/cpp/algorithm/ranges/remove/)

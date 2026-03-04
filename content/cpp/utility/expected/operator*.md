@@ -8,9 +8,7 @@ since: "C++23"
 Accesses the expected value contained in *this.
 
 ## Declarations
-```cpp
-Primary template
-```
+### Primary template
 
 ```cpp
 constexpr const T* operator->() const noexcept;
@@ -42,9 +40,7 @@ constexpr T&& operator*() && noexcept;
 ```
 _(since C++23)_
 
-```cpp
-void partial specialization
-```
+### `void` partial specialization
 
 ```cpp
 constexpr void operator*() const noexcept;
@@ -91,5 +87,5 @@ int main()
 ## See also
 - [value](/cpp/utility/expected/value/)
 - [value_or](/cpp/utility/expected/value_or/)
-- [operator boolhas_value](/cpp/utility/expected/operator_bool/)
+- [operator bool, has_value](/cpp/utility/expected/operator_bool/)
 - [error](/cpp/utility/expected/error/)

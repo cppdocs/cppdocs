@@ -6,7 +6,7 @@ category: "utility"
 since: "C++17"
 ---
 
-Applies the visitor v (a [Callable](/cpp/named_req/callable/) that can be called with any combination of types from Variants) to the Variants values.
+`std::visit` invokes a [Callable](/cpp/named_req/callable/) visitor with the currently active alternative or alternatives of one or more `std::variant` objects.
 
 ## Declarations
 ```cpp
@@ -49,12 +49,32 @@ _(exposition only*)_
 - `v`: a Callable that accepts every possible alternative from every variant in Variants
 - `values`: list of variants to pass to the visitor
 
+## Return value
+1. The result of the `INVOKE` operation on the selected alternative combination. The deduced return type is `decltype` applied to that invocation result.
+2. Nothing if `R` is cv-qualified `void`; otherwise, the result of the corresponding `INVOKE<R>` operation.
+
+The exposition-only `as-variant` overloads conceptually normalize derived-from-`std::variant` arguments into the underlying variant type before dispatch.
+
+## Exceptions
+Throws [std::bad_variant_access](/cpp/utility/variant/bad_variant_access/) if any visited variant is currently [valueless_by_exception](/cpp/utility/variant/valueless_by_exception/).
+
+Any exception thrown by invoking the selected visitor overload is propagated to the caller.
+
+## Complexity
+- If zero or one variant argument is visited, dispatch is implemented in constant time with respect to the number of alternative types.
+- If more than one variant is visited, the standard imposes no complexity requirement on the dispatch itself.
+
 ## Notes
-Let n be (1 * ... * [std::variant_size_v](/cpp/utility/variant/variant_size/)<[std::remove_reference_t](/cpp/types/remove_reference/)<VariantBases>>), implementations usually generate a table equivalent to an (possibly multidimensional) array of n function pointers for every specialization of std::visit, which is similar to the implementation of [virtual functions](/cpp/language/virtual/).
+Let n be `(1 * ... * std::variant_size_v<std::remove_reference_t<VariantBases>>)`, implementations usually generate a table equivalent to a (possibly multidimensional) array of `n` function pointers for every specialization of `std::visit`, which is similar to the implementation of [virtual functions](/cpp/language/virtual/).
 
 Implementations may also generate a [switch statement](/cpp/language/switch/) with n branches for std::visit (e.g., the MSVC STL implementation uses a switch statement when n is not greater than 256).
 
 On typical implementations, the time complexity of the invocation of v can be considered equal to that of access to an element in an (possibly multidimensional) array or execution of a switch statement.
+
+### Feature-test macro
+| Macro | Value | Std | Feature |
+| --- | --- | --- | --- |
+| `__cpp_lib_variant` | `202102L` | C++23 (DR17) | `std::visit` supports classes derived from `std::variant` |
 
 ## Example
 ```cpp
@@ -125,8 +145,8 @@ int main()
 ## Defect reports
 | DR | Applied to | Behavior as published | Correct behavior |
 | --- | --- | --- | --- |
-| LWG 2970 | C++17 | the return type of overload (1) did not preserve thevalue category of the result of the INVOKE operation | preserves |
-| LWG 3052(P2162R2) | C++17 | the effects were unspecified if any typein Variants is not a std::variant | specified |
+| LWG 2970 | C++17 | the return type of overload (1) did not preserve the value category of the result of the `INVOKE` operation | preserves |
+| LWG 3052 (P2162R2) | C++17 | the effects were unspecified if any type in `Variants` is not a `std::variant` | specified |
 
 ## See also
 - [visit](/cpp/utility/variant/visit/)

@@ -21,11 +21,7 @@ class bad_expected_access<void> : public std::exception
 ```
 _(since C++23)_
 
-## Return value
+## Notes
 Pointer to a null-terminated string with explanatory information. The string is suitable for conversion and display as a [std::wstring](/cpp/string/basic_string/). The pointer is guaranteed to be valid at least until the exception object from which it is obtained is destroyed, or until a non-const member function (e.g. copy assignment operator) on the exception object is called.
 
-## Notes
 Implementations are allowed but not required to override what().
-
-## Example
-This section is incompleteReason: no example

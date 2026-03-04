@@ -23,8 +23,5 @@ _(since C++23)_
 ## Parameters
 - `default_value`: the value to use in case *this does not contain an unexpected value
 
-## Example
-This section is incompleteReason: no example
-
 ## See also
 - [error](/cpp/utility/expected/error/)
