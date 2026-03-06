@@ -125,7 +125,7 @@ struct PointCmp
  
 std::ostream& operator<<(std::ostream& os, Point pt)
 {
-    return os << '(' << pt.x << ',' << pt.x << ')';
+    return os << '(' << pt.x << ',' << pt.y << ')';
 }
  
 void println(auto rem, const auto& seq)
