@@ -1,7 +1,12 @@
-baseURL = "http://localhost/"
+baseURL = "https://cppdocs.dev"
 title = "cppdocs.dev"
 contentDir = "content"
 languageCode = "en-us"
+
+[params]
+  github_repo = "https://github.com/cppdocs/cppdocs"
+  github_branch = "main"
+  site_url = "https://cppdocs.dev"
 
 [markup]
   [markup.goldmark]

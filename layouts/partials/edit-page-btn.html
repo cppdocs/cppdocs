@@ -1,0 +1,10 @@
+{{- with .File -}}{{- with .Path -}}
+{{- if $.Params.source_path -}}
+<div class="page-heading-actions">
+  <a class="edit-page-btn"
+     href="{{ $.Site.Params.github_repo }}/edit/{{ $.Site.Params.github_branch }}/content/{{ . }}"
+     target="_blank" rel="noopener"
+     title="Edit this page on GitHub">Edit page</a>
+</div>
+{{- end -}}
+{{- end -}}{{- end -}}

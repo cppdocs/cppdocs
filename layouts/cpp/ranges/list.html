@@ -165,7 +165,10 @@
 
 <section class="section-hero ranges-hub-hero">
   <p class="section-kicker">Section hub</p>
-  <h1>{{ .Title }}</h1>
+  <div class="page-heading">
+    <h1>{{ .Title }}</h1>
+    {{ partial "edit-page-btn.html" . }}
+  </div>
   <div class="min-standard-page-notice" data-min-standard-page-notice hidden>
     <span class="min-standard-page-notice-label">Min standard notice:</span>
     <span data-min-standard-page-notice-text></span>

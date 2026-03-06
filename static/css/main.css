@@ -1076,6 +1076,28 @@
   font-size: 0.72rem;
   white-space: nowrap;
 }
+.page-heading-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.edit-page-btn {
+  font-size: 0.72rem;
+  padding: 0.22rem 0.6rem;
+  border: 1px solid var(--border-muted);
+  border-radius: 4px;
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s;
+}
+.edit-page-btn:hover {
+  border-color: var(--border);
+  color: var(--text-primary);
+}
 .pin-toggle {
   border: 1px solid var(--border-muted);
   background: var(--bg-elevated);
@@ -1744,6 +1766,24 @@ html[data-theme="light"] .build-info {
 footer { margin: 3rem 0 2rem; border-top: 1px solid var(--border-muted); padding-top: 1rem; display: flex; align-items: center; justify-content: space-between; }
 .footer-github { color: var(--text-muted); display: inline-flex; align-items: center; text-decoration: none; transition: color 0.15s ease; }
 .footer-github:hover { color: var(--text-secondary); }
+.footer-contribute {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.footer-contribute-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.footer-contribute-sep { color: var(--border); }
+.footer-contribute-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-contribute-link:hover { color: var(--text-primary); }
 .build-info {
   font-size: 0.82rem;
   color: var(--text-muted);

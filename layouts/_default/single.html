@@ -11,15 +11,18 @@
       {{- else -}}
         <h1>{{ .Title }}</h1>
       {{- end -}}
-      <button
-        class="pin-toggle"
-        type="button"
-        data-pin-url="{{ .RelPermalink }}"
-        data-pin-title="{{ .Title }}"
-        aria-pressed="false"
-      >
-        ☆ Pin
-      </button>
+      <div class="page-heading-actions">
+        {{ partial "edit-page-btn.html" . }}
+        <button
+          class="pin-toggle"
+          type="button"
+          data-pin-url="{{ .RelPermalink }}"
+          data-pin-title="{{ .Title }}"
+          aria-pressed="false"
+        >
+          ☆ Pin
+        </button>
+      </div>
     </div>
     {{ if hasPrefix .RelPermalink "/cpp/" }}
       <div class="min-standard-page-notice" data-min-standard-page-notice hidden>

@@ -122,7 +122,10 @@
 
 <section class="section-hero ranges-hub-hero">
   <p class="section-kicker">Section hub</p>
-  <h1>{{ .Title }}</h1>
+  <div class="page-heading">
+    <h1>{{ .Title }}</h1>
+    {{ partial "edit-page-btn.html" . }}
+  </div>
   <div class="section-intro ranges-hub-intro">
     {{ .Content }}
     <p>This hub groups the ranges library by user task rather than by raw reference tree shape. View types and adaptor objects are presented as the same conceptual item.</p>

@@ -135,7 +135,10 @@
 
 <section class="section-hero algorithm-hub-hero">
   <p class="section-kicker">Section hub</p>
-  <h1>{{ .Title }}</h1>
+  <div class="page-heading">
+    <h1>{{ .Title }}</h1>
+    {{ partial "edit-page-btn.html" . }}
+  </div>
   <div class="section-intro algorithm-hub-intro">
     {{ .Content }}
     <p>This hub groups algorithms by task first, then points back to the canonical reference page. Ranges forms and execution-policy overloads stay attached to the same conceptual item.</p>

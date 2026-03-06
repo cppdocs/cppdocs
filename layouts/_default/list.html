@@ -109,7 +109,10 @@
   {{- end -}}
   <section class="section-hero">
     <p class="section-kicker">Section</p>
-    <h1>{{ .Title }}</h1>
+    <div class="page-heading">
+      <h1>{{ .Title }}</h1>
+      {{ partial "edit-page-btn.html" . }}
+    </div>
     {{ if .Content }}<div class="section-intro">{{ .Content }}</div>{{ end }}
     <div class="section-meta section-chips">
       <span class="meta-chip">{{ len .RegularPagesRecursive }} pages</span>
