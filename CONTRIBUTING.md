@@ -12,6 +12,17 @@ This repository is a Hugo-based reference site. Most contributions should be sma
 
 If you are making a one-page content fix, you usually do not need to touch templates, generators, or data files.
 
+## Quickest Way to Contribute
+
+Every reference page has two shortcuts in the footer:
+
+- **Edit page** — opens the source Markdown file directly in the GitHub editor. Make your change and open a pull request from there.
+- **Open issue** — opens a pre-filled issue with the page URL, a Problem field, and a Suggestion field. Use this when you spot something wrong but are not ready to edit directly.
+
+Reference pages also have an **Edit page** button next to the page title for faster access.
+
+These links go directly to the correct file. No need to navigate the repository manually.
+
 ## Repository Structure
 
 - `content/`
